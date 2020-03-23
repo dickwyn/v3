@@ -7,11 +7,9 @@ const IndexPage = () => (
     <SEO title="index" />
     <header>header</header>
 
-    <nav>nav</nav>
-
-    <main>main</main>
-
-    <aside>aside</aside>
+    <main>
+      <div className="container-fluid">Hello</div>
+    </main>
 
     <footer>footer</footer>
   </div>
