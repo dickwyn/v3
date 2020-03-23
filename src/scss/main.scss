@@ -1,3 +1,5 @@
+@import "./index.scss";
+
 html,
 body,
 #___gatsby,
@@ -22,7 +24,7 @@ body,
     flex-direction: column;
     flex-grow: 1;
     width: 100%;
-    max-width: 768px;
+    max-width: 960px;
 
     .container-fluid {
       height: 100%;
