@@ -1,0 +1,9 @@
+footer {
+  background-color: #f3f0ee;
+
+  .links {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.25em;
+  }
+}
