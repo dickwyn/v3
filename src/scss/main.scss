@@ -39,8 +39,12 @@ body {
     width: 100%;
 
     .content-container {
-      background-color: green;
+      color: var(--text);
       margin: 0px 20px 1.45rem;
+
+      a {
+        color: var(--accent);
+      }
     }
   }
 }

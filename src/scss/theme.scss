@@ -2,10 +2,12 @@ body {
   &.dark {
     --background: #000;
     --text: #fff;
+    --accent: #d32f2f;
   }
 
   &.light {
     --background: #fff;
     --text: #000;
+    --accent: #f44336;
   }
 }

@@ -1,7 +1,9 @@
 header {
   position: relative;
   display: flex;
-  background-color: #6a0dad77;
+  background-color: var(--accent);
+  animation: mte 1.5s 0s forwards ease-in-out;
+  transition: background-color 100ms ease-in-out, color 200ms ease-in-out !important;
 
   font-family: 'Roboto Condensed', sans-serif;
 

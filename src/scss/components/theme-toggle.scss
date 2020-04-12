@@ -1,10 +1,13 @@
 button {
-  color: inherit;
+  /* Button styles override */
+  background: inherit;
   border: none;
   padding: 8px;
   font: inherit;
   cursor: pointer;
   outline: inherit;
-  background: red;
+
+  color: var(--text);
   height: 65px;
+  font-size: 1.5rem;
 }
