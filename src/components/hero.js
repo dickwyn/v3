@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from './image';
-import '../scss/hero.scss';
 
 const Hero = () => (
   <div className="hero-container">

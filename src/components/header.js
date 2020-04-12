@@ -1,6 +1,5 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import '../scss/header.scss';
 
 const Header = () => (
   <header>

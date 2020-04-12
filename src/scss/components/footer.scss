@@ -1,0 +1,14 @@
+footer {
+  background-color: var(--background);
+  color: var(--text);
+  text-align: center;
+
+  ul.links {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.25em;
+    justify-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
