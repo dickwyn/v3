@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ThemeToggler } from 'gatsby-plugin-dark-mode';
-import { FiSun, FiMoon } from 'react-icons/fi';
+import { MdBrightnessHigh, MdBrightnessLow, MdBrightnessAuto } from 'react-icons/md';
 import '../scss/components/theme-toggle.scss';
 
 class ThemeToggle extends Component {
@@ -12,12 +12,35 @@ class ThemeToggle extends Component {
   }
 
   handleToggle = (theme, toggleTheme) => {
+    this.setState(
+      prevState => ({
+        mode: (prevState.mode + 1) % 3,
+      }),
+      this.updateMode(theme, toggleTheme)
+    );
+  };
+
+  updateMode = (theme, toggleTheme) => {
     const { mode } = this.state;
-    this.setState(prevState => ({
-      mode: (prevState.mode + 1) % 3,
-    }));
-    if (mode !== 2) {
+
+    if (mode === 0) {
+      localStorage.removeItem('theme');
+    } else {
       toggleTheme(theme === 'light' ? 'dark' : 'light');
+    }
+  };
+
+  renderToggle = () => {
+    const { mode } = this.state;
+    switch (mode) {
+      case 0:
+        return <MdBrightnessAuto />;
+      case 1:
+        return <MdBrightnessHigh />;
+      case 2:
+        return <MdBrightnessLow />;
+      default:
+        return <MdBrightnessAuto />;
     }
   };
 
@@ -26,7 +49,7 @@ class ThemeToggle extends Component {
       <ThemeToggler>
         {({ theme, toggleTheme }) => (
           <button type="button" onClick={() => this.handleToggle(theme, toggleTheme)}>
-            {theme === 'light' ? <FiMoon className="lightLogo" /> : <FiSun className="darkLogo" />}
+            {this.renderToggle()}
           </button>
         )}
       </ThemeToggler>
