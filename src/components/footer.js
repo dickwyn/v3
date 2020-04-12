@@ -1,5 +1,5 @@
-import React from 'react'
-import '../scss/footer.scss'
+import React from 'react';
+import '../scss/footer.scss';
 
 const Footer = () => (
   <footer>
@@ -11,8 +11,8 @@ const Footer = () => (
       <a href="https://twitter.com/dickwyn">youtube</a>
     </div>
 
-    <p className="credit">© {new Date().getFullYear()} - DICK WYN YONG</p>
+    <p className="credit">©{new Date().getFullYear()} - DICK WYN YONG</p>
   </footer>
-)
+);
 
-export default Footer
+export default Footer;
