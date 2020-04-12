@@ -24,6 +24,7 @@
     "sweetalert": "^2.1.2"
   },
   "devDependencies": {
+    "eslint-config-react-app": "^5.2.1",
     "prettier": "^1.19.1"
   },
   "keywords": [
