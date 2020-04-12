@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Dick Wyn Yong`,
+    description: `Dick Wyn Yong, Software Engineer in Phoenix.`,
+    author: `@dickwyn`,
   },
   plugins: [
+    `gatsby-plugin-dark-mode`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
