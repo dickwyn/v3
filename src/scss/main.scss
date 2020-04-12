@@ -20,10 +20,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Roboto', sans-serif;
 
-  background: #1a2a6c;
-  background: linear-gradient(to top, #fdbb2d, #b21f1f, #1a2a6c);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: var(--background);
+
+  animation: mte 1.5s 0s forwards ease-in-out;
+  transition: background-color 100ms ease-in-out, color 200ms ease-in-out !important;
 }
 
 .root-container {
