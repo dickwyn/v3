@@ -8,7 +8,12 @@ class ThemeToggle extends Component {
     super(props);
     this.state = {
       mode: 0,
+      theme: 'dark',
     };
+  }
+
+  componentDidMount() {
+    this.detectSystemColorScheme();
   }
 
   handleToggle = (theme, toggleTheme) => {
@@ -18,6 +23,26 @@ class ThemeToggle extends Component {
       }),
       this.updateMode(theme, toggleTheme)
     );
+  };
+
+  detectSystemColorScheme = () => {
+    if (this.prefersColorScheme('dark')) {
+      this.setState({
+        theme: 'dark',
+      });
+    } else if (this.prefersColorScheme('light')) {
+      this.setState({
+        theme: 'light',
+      });
+    } else {
+      console.log(
+        'Error: System theme not supported by this browser. Requires prefers-color-scheme. https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme'
+      );
+    }
+  };
+
+  prefersColorScheme = theme => {
+    return window.matchMedia(`(prefers-color-scheme: ${theme})`).matches;
   };
 
   updateMode = (theme, toggleTheme) => {
