@@ -4,7 +4,7 @@ import Hero from '../components/hero';
 import ThemeToggle from '../components/theme-toggle';
 
 const IndexPage = () => (
-  <Layout page="">
+  <Layout page="" hideHeader hideFooter>
     <ThemeToggle />
     <Hero />
   </Layout>

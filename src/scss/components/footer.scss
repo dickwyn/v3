@@ -2,6 +2,10 @@ footer {
   color: var(--text);
   text-align: center;
 
+  &.hide {
+    display: none;
+  }
+
   ul.links {
     display: grid;
     grid-template-columns: repeat(5, 1fr);

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import shortid from 'shortid';
 
 // eslint-disable-next-line no-unused-vars
@@ -30,10 +31,14 @@ const SOCIAL_LINKS = [
   },
 ];
 
-const Footer = () => (
-  <footer>
+const Footer = ({ hide }) => (
+  <footer className={hide && 'hide'}>
     <p className="credit">©{new Date().getFullYear()} - DICK WYN YONG</p>
   </footer>
 );
+
+Footer.propTypes = {
+  hide: PropTypes.bool.isRequired,
+};
 
 export default Footer;
