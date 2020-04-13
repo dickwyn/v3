@@ -4,29 +4,6 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
-  max-width: 840px;
+  max-width: 960px;
   margin: 0 auto;
-
-  .content-container {
-    .profile-card {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      margin: 0 0 1rem;
-    }
-
-    .title {
-      grid-column: span 2;
-      align-self: center;
-    }
-
-    .description {
-      grid-column: span 3;
-    }
-  }
-
-  .gatsby-image-wrapper {
-    width: 300px;
-  }
 }
