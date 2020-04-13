@@ -24,13 +24,21 @@ class ThemeToggle extends Component {
     return window.matchMedia(`(prefers-color-scheme: ${theme})`).matches;
   };
 
-  updateMode = (theme, toggleTheme) => {
+  updateMode = toggleTheme => {
     const { mode } = this.state;
 
-    if (mode === 2) {
-      localStorage.removeItem('theme');
-    } else {
-      toggleTheme(theme === 'light' ? 'dark' : 'light');
+    switch (mode) {
+      case 0:
+        toggleTheme('dark');
+        break;
+      case 1:
+        toggleTheme('light');
+        break;
+      case 2:
+        localStorage.removeItem('theme');
+        break;
+      default:
+        toggleTheme('dark');
     }
   };
 
@@ -51,11 +59,11 @@ class ThemeToggle extends Component {
   render() {
     return (
       <ThemeToggler>
-        {({ theme, toggleTheme }) => (
+        {({ toggleTheme }) => (
           <button
             className="theme-toggler"
             type="button"
-            onClick={() => this.handleToggle(theme, toggleTheme)}
+            onClick={() => this.handleToggle(toggleTheme)}
           >
             {this.renderToggle()}
           </button>
