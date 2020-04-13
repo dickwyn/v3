@@ -48,7 +48,7 @@ class ThemeToggle extends Component {
   updateMode = (theme, toggleTheme) => {
     const { mode } = this.state;
 
-    if (mode === 0) {
+    if (mode === 2) {
       localStorage.removeItem('theme');
     } else {
       toggleTheme(theme === 'light' ? 'dark' : 'light');
@@ -79,6 +79,7 @@ class ThemeToggle extends Component {
             onClick={() => this.handleToggle(theme, toggleTheme)}
           >
             {this.renderToggle()}
+            {this.state.mode}
           </button>
         )}
       </ThemeToggler>
