@@ -73,7 +73,11 @@ class ThemeToggle extends Component {
     return (
       <ThemeToggler>
         {({ theme, toggleTheme }) => (
-          <button type="button" onClick={() => this.handleToggle(theme, toggleTheme)}>
+          <button
+            className="theme-toggler"
+            type="button"
+            onClick={() => this.handleToggle(theme, toggleTheme)}
+          >
             {this.renderToggle()}
           </button>
         )}
