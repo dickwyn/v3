@@ -4,7 +4,7 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
-  max-width: 840px;
+  max-width: 768px;
   margin: 0 auto;
 
   .content-container {
@@ -14,15 +14,38 @@
       justify-content: space-between;
       flex-wrap: wrap;
       margin: 0 0 1rem;
-    }
 
-    .title {
-      grid-column: span 2;
-      align-self: center;
-    }
+      .title {
+        grid-column: span 2;
+        align-self: center;
 
-    .description {
-      grid-column: span 3;
+        h2 {
+          color: gray;
+          font-family: 'Roboto Condensed', sans-serif;
+        }
+      }
+
+      .profile-picture {
+        border-radius: 50%;
+      }
+
+      @media only screen and (max-width: 768px) {
+        justify-content: center;
+
+        .title {
+          order: 1;
+          width: 300px;
+          text-align: center;
+        }
+
+        .gatsby-image-wrapper {
+          margin: 0 0 1rem;
+        }
+      }
+
+      .description {
+        grid-column: span 3;
+      }
     }
   }
 
