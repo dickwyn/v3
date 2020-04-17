@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { MdBrightnessHigh, MdBrightnessAuto } from 'react-icons/md';
-import { IoMdMoon } from 'react-icons/io';
+import { MdBrightnessAuto, MdBrightness4, MdBrightnessHigh } from 'react-icons/md';
 import '../../scss/components/theme-toggle.scss';
 
 class Toggle extends Component {
@@ -36,18 +35,18 @@ class Toggle extends Component {
         toggleLight();
         break;
       case 2:
-        this.autoDetectTheme();
+        this.autoDetectTheme(mode);
         break;
       default:
         this.autoDetectTheme();
     }
   };
 
-  autoDetectTheme = () => {
+  autoDetectTheme = toggleMode => {
     const { toggleDark, toggleLight } = this.props;
     const { mode } = this.state;
 
-    if (mode === 0 || mode === 2) {
+    if (mode === 0 || toggleMode === 2) {
       const date = new Date();
       const sunrise = '7:28';
       const sunset = '19:28';
@@ -72,7 +71,7 @@ class Toggle extends Component {
       case 0:
         return <MdBrightnessAuto />;
       case 1:
-        return <IoMdMoon />;
+        return <MdBrightness4 />;
       case 2:
         return <MdBrightnessHigh />;
       default:
