@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { MdBrightnessAuto, MdBrightness4, MdBrightnessHigh } from 'react-icons/md';
-import '../../scss/components/theme-toggle.scss';
+import '../scss/components/dark-mode-toggle.scss';
 
-class Toggle extends Component {
+const LOCAL_STORAGE_KEY = 'darkMode';
+
+class DarkModeToggle extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,39 +13,45 @@ class Toggle extends Component {
   }
 
   componentDidMount() {
-    this.autoDetectTheme();
+    const lsDarkMode = localStorage.getItem(LOCAL_STORAGE_KEY);
+
+    if (lsDarkMode === null) {
+      this.autoDetectTheme();
+    } else if (lsDarkMode === 'true') {
+      this.handleToggle('', 1);
+    } else if (lsDarkMode === 'false') {
+      this.handleToggle('', 2);
+    }
   }
 
-  handleToggle = () => {
+  handleToggle = (_e, savedMode) => {
     this.setState(
       prevState => ({
-        mode: (prevState.mode + 1) % 3,
+        mode: savedMode || (prevState.mode + 1) % 3,
       }),
-      this.updateMode()
+      this.updateMode
     );
   };
 
   updateMode = () => {
-    const { toggleDark, toggleLight } = this.props;
     const { mode } = this.state;
 
     switch (mode) {
-      case 0:
-        toggleDark();
-        break;
       case 1:
-        toggleLight();
+        this.updateBodyClass('dark');
+        localStorage.setItem(LOCAL_STORAGE_KEY, true);
         break;
       case 2:
-        this.autoDetectTheme(mode);
+        this.updateBodyClass('light');
+        localStorage.setItem(LOCAL_STORAGE_KEY, false);
         break;
       default:
-        this.autoDetectTheme();
+        this.autoDetectTheme(mode);
+        localStorage.removeItem(LOCAL_STORAGE_KEY);
     }
   };
 
   autoDetectTheme = toggleMode => {
-    const { toggleDark, toggleLight } = this.props;
     const { mode } = this.state;
 
     if (mode === 0 || toggleMode === 2) {
@@ -53,15 +61,19 @@ class Toggle extends Component {
       const currentTime = `${date.getHours()}:${date.getMinutes()}`;
 
       if ((currentTime < sunrise && currentTime > sunset) || this.prefersColorScheme('dark')) {
-        toggleDark();
+        this.updateBodyClass('dark');
       } else {
-        toggleLight();
+        this.updateBodyClass('light');
       }
     }
   };
 
   prefersColorScheme = theme => {
     return window.matchMedia(`(prefers-color-scheme: ${theme})`).matches;
+  };
+
+  updateBodyClass = theme => {
+    document.body.className = theme;
   };
 
   renderToggle = () => {
@@ -88,4 +100,4 @@ class Toggle extends Component {
   }
 }
 
-export default Toggle;
+export default DarkModeToggle;

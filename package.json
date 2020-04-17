@@ -12,7 +12,6 @@
     "gatsby-plugin-react-helmet": "^3.1.24",
     "gatsby-plugin-sass": "^2.2.0",
     "gatsby-plugin-sharp": "^2.4.13",
-    "gatsby-plugin-use-dark-mode": "^1.1.2",
     "gatsby-source-filesystem": "^2.1.56",
     "gatsby-transformer-sharp": "^2.3.19",
     "node-sass": "^4.13.1",

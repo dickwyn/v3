@@ -5,13 +5,6 @@ module.exports = {
     author: `@dickwyn`,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-use-dark-mode`,
-      options: {
-        classNameDark: 'dark',
-        classNameLight: 'light',
-      },
-    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

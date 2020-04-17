@@ -1,11 +1,11 @@
 import React from 'react';
 import Layout from '../components/layout';
 import Hero from '../components/hero';
-import ThemeToggle from '../components/ThemeToggle';
+import DarkModeToggle from '../components/dark-mode-toggle';
 
 const IndexPage = () => (
   <Layout page="" hideHeader hideFooter>
-    <ThemeToggle />
+    <DarkModeToggle />
     <Hero />
   </Layout>
 );
