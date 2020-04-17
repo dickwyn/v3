@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ThemeToggler } from 'gatsby-plugin-dark-mode';
-import { MdBrightnessHigh, MdBrightnessLow, MdBrightnessAuto } from 'react-icons/md';
+import { MdBrightnessHigh, MdBrightnessAuto } from 'react-icons/md';
+import { IoMdMoon } from 'react-icons/io';
 import '../scss/components/theme-toggle.scss';
 
 class ThemeToggle extends Component {
@@ -48,9 +49,9 @@ class ThemeToggle extends Component {
       case 0:
         return <MdBrightnessAuto />;
       case 1:
-        return <MdBrightnessHigh />;
+        return <IoMdMoon />;
       case 2:
-        return <MdBrightnessLow />;
+        return <MdBrightnessHigh />;
       default:
         return <MdBrightnessAuto />;
     }
