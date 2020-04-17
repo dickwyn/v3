@@ -5,7 +5,13 @@ module.exports = {
     author: `@dickwyn`,
   },
   plugins: [
-    `gatsby-plugin-dark-mode`,
+    {
+      resolve: `gatsby-plugin-use-dark-mode`,
+      options: {
+        classNameDark: 'dark',
+        classNameLight: 'light',
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -33,4 +39,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

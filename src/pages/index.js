@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
 import Hero from '../components/hero';
-import ThemeToggle from '../components/theme-toggle';
+import ThemeToggle from '../components/ThemeToggle';
 
 const IndexPage = () => (
   <Layout page="" hideHeader hideFooter>
