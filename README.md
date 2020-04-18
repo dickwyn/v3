@@ -1,5 +1,7 @@
 # dickwyn.xyz v5 ⚡
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/55ea29f3-f556-45b2-8607-e57839dcfb2f/deploy-status)](https://app.netlify.com/sites/v5-dickwyn-xyz/deploys)
+
 Hi! Thanks for dropping by the repo for my portfolio site. This fifth iteration of my personal portfolio. Access it on [www.dickwyn.xyz](https://www.dickwyn.xyz/)
 
 ## Project Dependencies
