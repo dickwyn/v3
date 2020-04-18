@@ -4,7 +4,7 @@ import Hero from '../components/hero';
 import DarkModeToggle from '../components/dark-mode-toggle';
 
 const IndexPage = () => (
-  <Layout  hideHeader hideFooter>
+  <Layout hideHeader hideFooter>
     <DarkModeToggle />
     <Hero />
   </Layout>
