@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
 import getDevelopmentPosts from '../utils/get-development-posts';
+import getPosts from '../utils/get-posts';
 import PostPreview from '../components/post-preview';
 
 const BlogPage = () => {
