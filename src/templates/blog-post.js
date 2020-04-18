@@ -3,13 +3,9 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { library } from '@fortawesome/fontawesome-svg-core';
-// import { fab } from '@fortawesome/free-brands-svg-icons';
+import TwitterIcon from '@material-ui/icons/Twitter';
 import moment from 'moment';
 import Layout from '../components/layout';
-
-// library.add(fab);
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
@@ -67,7 +63,7 @@ const BlogPost = ({ data, pageContext }) => {
           <h1 className="post-title">{title}</h1>
           <h2 className="post-subtitle">
             <a href="https://twitter.com/dickwyn" target="_blank" rel="noopener noreferrer">
-              {/* <FontAwesomeIcon icon={['fab', 'twitter']} /> */}
+              <TwitterIcon />
               @dickwyn
             </a>{' '}
             ・{normalizedDate}・{timeToRead} min read
