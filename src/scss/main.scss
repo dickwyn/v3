@@ -44,6 +44,14 @@ body {
       a {
         color: var(--accent);
       }
+
+      .MuiButton-outlined {
+        border-color: var(--text-secondary);
+
+        &:hover {
+          background-color: var(--background-secondary);
+        }
+      }
     }
   }
 }

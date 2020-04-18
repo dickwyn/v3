@@ -1,4 +1,5 @@
 import React from 'react';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
 import Image from './image';
 
@@ -11,6 +12,26 @@ const Hero = () => (
             Dick Wyn <b>Yong</b>
           </h1>
           <h2>Software Engineer in Phoenix</h2>
+          <ButtonGroup color="primary" aria-label="outlined primary button group">
+            <Button
+              variant="outlined"
+              color="default"
+              href="https://www.github.com/dickwyn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github
+            </Button>
+            <Button
+              variant="outlined"
+              color="default"
+              href="https://www.linkedin.com/in/dickwyn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin
+            </Button>
+          </ButtonGroup>
         </div>
         <Image className="profile-picture" />
       </div>
@@ -20,18 +41,18 @@ const Hero = () => (
           <a href="http://www.prismstudios.io" target="_blank" rel="noopener noreferrer">
             Prism Studios
           </a>
-          . During my free time, I create videos for my YouTube channel, experimenting with new
-          recipes in the kitchen, capture photos and travel.
+          . I'm also a Malaysian living in America and I enjoy creating videos for my{' '}
+          <a href="https://www.youtube.com/dickwyn" target="_blank" rel="noopener noreferrer">
+            YouTube
+          </a>{' '}
+          channel, experimenting with new recipes in the kitchen and travelling the world.
         </p>
         <p>
-          Feel free to send me a message on{' '}
+          You can reach me out on{' '}
           <a href="https://www.twitter.com/dickwyn" target="_blank" rel="noopener noreferrer">
             Twitter
           </a>
-        </p>
-        <Button variant="outlined" color="default" href="https://www.youtube.com/dickwyn">
-          subscribe on youtube
-        </Button>
+        </p>{' '}
       </div>
     </div>
   </div>
