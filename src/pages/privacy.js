@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 
 const PrivacyPage = () => {
   return (
-    <Layout page="privacy">
+    <Layout page="Privacy Policy">
       <div className="wrapper">
         <div className="content-container with-margin">
           <h1>Privacy Policy</h1>
