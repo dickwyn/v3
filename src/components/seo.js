@@ -33,8 +33,8 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-     defaultTitle={`${site.siteMetadata.title}`}
+      titleTemplate={`%s · ${site.siteMetadata.title}`}
+      defaultTitle={`${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -77,7 +77,7 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-  title: ''
+  title: '',
 };
 
 SEO.propTypes = {
