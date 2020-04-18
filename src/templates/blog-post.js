@@ -55,7 +55,7 @@ const BlogPost = ({ data, pageContext }) => {
   return (
     <Layout>
       <div className="wrapper">
-        <div className="content-container blog-post">
+        <div className="content-container blog-post with-padding">
           <Helmet titleTemplate="%s - Blog">
             <title>{`${title}`}</title>
             <meta name="description" content={`${description}`} />
