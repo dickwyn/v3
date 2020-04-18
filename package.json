@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "www.dickwyn.xyz",
+  "description": "Dickwyn's website",
+  "version": "5.0.0",
+  "author": "Dick Wyn Yong <dickwyn@outlook.com>",
   "dependencies": {
     "gatsby": "^2.19.45",
     "gatsby-image": "^2.2.44",
@@ -35,7 +34,10 @@
     "prettier": "^1.19.1"
   },
   "keywords": [
-    "gatsby"
+    "dickwyn",
+    "dick wyn yong",
+    "portfolio",
+    "blog"
   ],
   "license": "MIT",
   "scripts": {
@@ -49,9 +51,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/dickwyn/v5"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+    "url": "https://github.com/dickwyn/v5/issues"
+  },
+  "homepage": "https://github.com/dickwyn/v5"
 }
