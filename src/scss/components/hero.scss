@@ -8,20 +8,33 @@
   margin: 0 auto;
 
   .content-container {
+    p {
+      line-height: 1.75rem;
+    }
+
     .profile-card {
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      margin: 0 0 1rem;
+      margin: 0 0 1.75rem;
 
       .title {
         grid-column: span 2;
         align-self: center;
 
+        h1,
         h2 {
-          color: gray;
           font-family: 'Roboto Condensed', sans-serif;
+          font-weight: 100;
+        }
+
+        h1 {
+          text-transform: uppercase;
+        }
+
+        h2 {
+          text-transform: lowercase;
         }
       }
 
@@ -31,6 +44,7 @@
 
       @media only screen and (max-width: 768px) {
         justify-content: center;
+        margin: 0 0 1rem;
 
         .title {
           order: 1;
@@ -39,6 +53,7 @@
         }
 
         .gatsby-image-wrapper {
+          width: 200px;
           margin: 0 0 1rem;
         }
       }

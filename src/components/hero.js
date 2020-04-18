@@ -7,19 +7,21 @@ const Hero = () => (
     <div className="content-container">
       <div className="profile-card">
         <div className="title">
-          <h1>Dick Wyn Yong</h1>
+          <h1>
+            Dick Wyn <b>Yong</b>
+          </h1>
           <h2>Software Engineer in Phoenix</h2>
-          <Button variant="outlined" color="default" href="https://www.youtube.com/dickwyn">
-            subscribe on youtube
-          </Button>
         </div>
         <Image className="profile-picture" />
       </div>
       <div className="description">
         <p>
-          I am a Computer Science graduate from Arizona State University. I have a strong passion
-          for web development, mobile computing and human-computer interaction. I also enjoy writing
-          blogs, taking photos and travelling.
+          Hi there! My name is Dickwyn and I'm a Senior Front End Engineer at{' '}
+          <a href="http://www.prismstudios.io" target="_blank" rel="noopener noreferrer">
+            Prism Studios
+          </a>
+          . During my free time, I create videos for my YouTube channel, experimenting with new
+          recipes in the kitchen, capture photos and travel.
         </p>
         <p>
           Feel free to send me a message on{' '}
@@ -27,6 +29,9 @@ const Hero = () => (
             Twitter
           </a>
         </p>
+        <Button variant="outlined" color="default" href="https://www.youtube.com/dickwyn">
+          subscribe on youtube
+        </Button>
       </div>
     </div>
   </div>
