@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import { MdBrightnessAuto, MdBrightness4, MdBrightnessHigh } from 'react-icons/md';
+import Tooltip from '@material-ui/core/Tooltip';
+import IconButton from '@material-ui/core/IconButton';
+import BrightnessAutoIcon from '@material-ui/icons/BrightnessAuto';
+import BrightnessLowIcon from '@material-ui/icons/Brightness4';
+import BrightnessHighIcon from '@material-ui/icons/BrightnessHigh';
 import '../scss/components/dark-mode-toggle.scss';
 
 const LOCAL_STORAGE_KEY = 'darkMode';
@@ -80,22 +84,24 @@ class DarkModeToggle extends Component {
     const { mode } = this.state;
 
     switch (mode) {
-      case 0:
-        return <MdBrightnessAuto />;
       case 1:
-        return <MdBrightness4 />;
+        return <BrightnessLowIcon />;
       case 2:
-        return <MdBrightnessHigh />;
+        return <BrightnessHighIcon />;
       default:
-        return <MdBrightnessAuto />;
+        return <BrightnessAutoIcon />;
     }
   };
 
   render() {
     return (
-      <button className="theme-toggler" type="button" onClick={this.handleToggle}>
-        {this.renderToggle()}
-      </button>
+      <div className="dark-mode-toggle-container">
+        <Tooltip title="Toggle site theme">
+          <IconButton aria-label="Toggle automatic/light/dark mode" onClick={this.handleToggle}>
+            {this.renderToggle()}
+          </IconButton>
+        </Tooltip>
+      </div>
     );
   }
 }

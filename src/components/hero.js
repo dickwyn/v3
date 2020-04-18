@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 import Image from './image';
 
 const Hero = () => (
@@ -8,11 +9,9 @@ const Hero = () => (
         <div className="title">
           <h1>Dick Wyn Yong</h1>
           <h2>Software Engineer in Phoenix</h2>
-          <button type="button">
-            <a href="https://www.youtube.com/dickwyn" target="_blank" rel="noopener noreferrer">
-              subscribe on youtube
-            </a>
-          </button>
+          <Button variant="outlined" color="default" href="https://www.youtube.com/dickwyn">
+            subscribe on youtube
+          </Button>
         </div>
         <Image className="profile-picture" />
       </div>
