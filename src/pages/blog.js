@@ -9,8 +9,8 @@ const BlogPage = () => {
 
   return (
     <Layout page="Blog">
-      <div className="hero-container">
-        <div className="content-container">
+      <div className="wrapper">
+        <div className="content-container with-padding">
           {posts.length > 0
             ? posts.map(post => <PostPreview key={post.slug} post={post} />)
             : 'new posts coming soon. stay tuned.'}
