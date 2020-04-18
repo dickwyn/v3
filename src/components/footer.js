@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 
@@ -33,7 +34,18 @@ const SOCIAL_LINKS = [
 
 const Footer = ({ hide }) => (
   <footer className={hide && 'hide'}>
-    <p className="credit">©{new Date().getFullYear()} - DICK WYN YONG</p>
+    <div className="wrapper">
+      <div className="content-container">
+        <div className="left">© {new Date().getFullYear()} Dick Wyn Yong</div>
+        <div className="right">
+          <a href="https://instagram.com/dickwyn">Instagram</a>
+          <a href="https://twitter.com/dickwyn">Twitter</a>
+          <Link to="/">Blog</Link>
+          <a href="mailto:dickwyn@outlook.com">Contact</a>
+          <Link to="/privacy">Privacy</Link>
+        </div>
+      </div>
+    </div>
   </footer>
 );
 

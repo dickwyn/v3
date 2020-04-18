@@ -54,39 +54,41 @@ const BlogPost = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <div className="content blog-post">
-        <Helmet titleTemplate="%s - Blog">
-          <title>{`${title}`}</title>
-          <meta name="description" content={`${description}`} />
-        </Helmet>
-        <div className="heading">
-          <h1 className="post-title">{title}</h1>
-          <h2 className="post-subtitle">
-            <a href="https://twitter.com/dickwyn" target="_blank" rel="noopener noreferrer">
-              <TwitterIcon />
-              @dickwyn
-            </a>{' '}
-            ・{normalizedDate}・{timeToRead} min read
-          </h2>
+      <div className="wrapper">
+        <div className="content-container blog-post">
+          <Helmet titleTemplate="%s - Blog">
+            <title>{`${title}`}</title>
+            <meta name="description" content={`${description}`} />
+          </Helmet>
+          <div className="heading">
+            <h1 className="post-title">{title}</h1>
+            <h2 className="post-subtitle">
+              <a href="https://twitter.com/dickwyn" target="_blank" rel="noopener noreferrer">
+                <TwitterIcon />
+                @dickwyn
+              </a>{' '}
+              ・{normalizedDate}・{timeToRead} min read
+            </h2>
+          </div>
+          <Img fluid={fluid} imgStyle={{ objectFit: 'cover' }} />
+          <div className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
+          <div className="post-tags">
+            <p className="label">Tagged</p>
+            {tags.map(tag => (
+              <p>{tag}</p>
+            ))}
+          </div>
+          {previous && (
+            <Link to={`/blog/${previous.fields.slug}`} className="previous-post">
+              ← {previous.frontmatter.title}
+            </Link>
+          )}
+          {next && (
+            <Link to={`/blog/${next.fields.slug}`} className="next-post">
+              {next.frontmatter.title} →
+            </Link>
+          )}
         </div>
-        <Img fluid={fluid} imgStyle={{ objectFit: 'cover' }} />
-        <div className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
-        <div className="post-tags">
-          <p className="label">Tagged</p>
-          {tags.map(tag => (
-            <p>{tag}</p>
-          ))}
-        </div>
-        {previous && (
-          <Link to={`/blog/${previous.fields.slug}`} className="previous-post">
-            ← {previous.frontmatter.title}
-          </Link>
-        )}
-        {next && (
-          <Link to={`/blog/${next.fields.slug}`} className="next-post">
-            {next.frontmatter.title} →
-          </Link>
-        )}
       </div>
     </Layout>
   );

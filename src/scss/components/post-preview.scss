@@ -1,0 +1,34 @@
+.post-preview {
+  max-width: 58ch;
+  padding: 0 0 1rem;
+  margin: 2rem auto 0;
+
+  h2.title {
+    margin: 0.7ch 0;
+    font-weight: 500;
+    font-size: 22px;
+
+    a {
+      color: var(--text);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .subtitle {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: var(--secondary-text);
+  }
+
+  p.description {
+    margin: 1ch 0;
+    line-height: 25px;
+  }
+}

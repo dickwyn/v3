@@ -1,7 +1,7 @@
 header {
   position: relative;
   display: flex;
-  background-color: var(--accent);
+  background-color: #000;
   animation: mte 1.5s 0s forwards ease-in-out;
   transition: background-color 100ms ease-in-out, color 200ms ease-in-out !important;
   font-family: 'Roboto Condensed', sans-serif;
@@ -10,12 +10,42 @@ header {
     display: none;
   }
 
-  p {
-    margin: 0;
+  a {
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
   }
 
-  a {
-    text-decoration: none;
-    color: white;
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+
+    & > .title {
+      font-family: 'Staatliches', cursive;
+      font-size: 1.96rem;
+      text-transform: uppercase;
+      color: #757575;
+
+      &:hover {
+        color: var(--background-secondary);
+      }
+    }
+
+    button {
+      font-size: 1.46rem;
+    }
+  }
+
+  @media (max-width: 368px) {
+    .title {
+      font-size: 1.7rem;
+    }
+    .content {
+      button {
+        font-size: 1.2rem;
+      }
+    }
   }
 }

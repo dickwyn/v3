@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 @import 'theme.scss';
+
 @import 'pages/index.scss';
 @import 'components/footer.scss';
 @import 'components/header.scss';
 @import 'components/hero.scss';
 @import 'components/layout.scss';
+@import 'components/alert-banner.scss';
+@import 'components/post-preview.scss';
+@import 'templates/blog-post.scss';
 
 html,
 body,
@@ -23,6 +29,15 @@ body {
 
   animation: mte 1.5s 0s forwards ease-in-out;
   transition: background-color 100ms ease-in-out, color 200ms ease-in-out !important;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Roboto', sans-serif;
+  }
 }
 
 .root-container {
@@ -31,18 +46,24 @@ body {
   flex-direction: column;
   min-height: 100%;
 
-  main {
+  .wrapper {
     display: flex;
-    flex-direction: column;
     flex-grow: 1;
+    flex-direction: column;
+    height: 100%;
     width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
 
     .content-container {
       color: var(--text);
-      margin: 0px 20px 1.45rem;
 
-      a {
-        color: var(--accent);
+      &.with-margin {
+        margin: 1.45rem 1.0875rem;
+      }
+
+      &.with-padding {
+        padding: 1.45rem 1.0875rem;
       }
 
       .MuiButton-outlined {

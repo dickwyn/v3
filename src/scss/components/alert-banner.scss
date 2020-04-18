@@ -1,0 +1,11 @@
+.banner.alert {
+  background-color: #ffc107;
+  padding: 0 1rem;
+
+  span,
+  p,
+  a {
+    font-family: inherit;
+    display: inline-block;
+  }
+}

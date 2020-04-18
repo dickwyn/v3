@@ -4,8 +4,8 @@ import Button from '@material-ui/core/Button';
 import Image from './image';
 
 const Hero = () => (
-  <div className="hero-container">
-    <div className="content-container">
+  <div className="wrapper">
+    <div className="content-container with-margin">
       <div className="profile-card">
         <div className="title">
           <h1>

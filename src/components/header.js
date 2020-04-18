@@ -5,10 +5,14 @@ import DarkModeToggle from './dark-mode-toggle';
 
 const Header = ({ hide }) => (
   <header className={hide && 'hide'}>
-    <p>
-      <Link to="/">DICKWYN.XYZ</Link>
-    </p>
-    <DarkModeToggle />
+    <div className="wrapper">
+      <div className="content-container with-padding">
+        <Link to="/" className="title">
+          My Name is Dickwyn
+        </Link>
+        <DarkModeToggle />
+      </div>
+    </div>
   </header>
 );
 
