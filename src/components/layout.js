@@ -17,13 +17,14 @@ const Layout = ({ page, children, hideHeader, hideFooter }) => {
 };
 
 Layout.propTypes = {
-  page: PropTypes.string.isRequired,
+  page: PropTypes.string,
   children: PropTypes.node.isRequired,
   hideHeader: PropTypes.bool,
   hideFooter: PropTypes.bool,
 };
 
 Layout.defaultProps = {
+  page: '',
   hideHeader: false,
   hideFooter: false,
 };
