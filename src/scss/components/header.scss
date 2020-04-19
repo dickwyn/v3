@@ -1,7 +1,6 @@
 header {
   position: relative;
   display: flex;
-  background-color: #000;
   animation: mte 1.5s 0s forwards ease-in-out;
   transition: background-color 100ms ease-in-out, color 200ms ease-in-out !important;
   font-family: 'Roboto Condensed', sans-serif;
@@ -10,26 +9,36 @@ header {
     display: none;
   }
 
-  a {
-    color: var(--text);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-  }
-
   .content-container {
     display: flex;
     justify-content: space-between;
-    margin: 0;
+    padding: 0.5rem 0;
 
-    & > .title {
-      font-family: 'Staatliches', cursive;
-      font-size: 1.96rem;
-      text-transform: uppercase;
-      color: #757575;
+    nav {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
 
-      &:hover {
-        color: var(--background-secondary);
+      a {
+        font-family: 'Staatliches', cursive;
+        font-size: 1.5rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 0 0 0 12px;
+        margin: 0;
+
+        color: var(--text-secondary);
+
+        & + a::before {
+          content: '·';
+          padding: 0 14px 0 4px;
+        }
+
+        &:hover {
+          color: var(--text);
+        }
       }
     }
 

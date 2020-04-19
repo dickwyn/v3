@@ -4,10 +4,10 @@
   justify-content: center;
 
   button {
-    color: #757575;
+    color: var(--text-secondary);
 
     &:hover {
-      color: var(--background-secondary);
+      color: var(--text);
     }
   }
 }
