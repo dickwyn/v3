@@ -1,4 +1,6 @@
 .blog-post {
+  color: var(--text);
+
   .gatsby-image-wrapper {
     max-height: 430px;
   }
@@ -13,7 +15,7 @@
   h2.post-subtitle,
   figure figcaption {
     font-family: 'Roboto Slab', serif;
-    color: var(--secondary-text);
+    color: var(--text-secondary);
     font-size: 1rem;
     line-height: 1.75;
     margin: 0.25rem 0 0;
@@ -28,13 +30,12 @@
   }
 
   .heading {
-    margin: 1.8rem 0;
+    margin: 0 0 1.8rem;
   }
 
   ul > li,
   p {
     font-family: 'Roboto Slab', serif;
-    color: #424242;
     font-size: 1rem;
     line-height: 1.75;
   }
@@ -80,7 +81,7 @@
       text-transform: lowercase;
 
       &.label {
-        background-color: var(--background);
+        background-color: var(--background-secondary);
       }
 
       &:not(:last-child) {
