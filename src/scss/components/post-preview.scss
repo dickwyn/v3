@@ -2,8 +2,12 @@
   color: var(--text);
   max-width: 58ch;
   padding: 0 0 1rem;
-  margin: 2rem auto 0;
+  margin: 0 auto;
   border-bottom: 2px dotted var(--text-secondary);
+
+  &:not(:first-child) {
+    margin-top: 2rem;
+  }
 
   h2.title {
     margin: 0.7ch 0;
