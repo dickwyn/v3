@@ -1,0 +1,21 @@
+.NotFoundPage {
+  color: var(--text);
+
+  ul {
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+
+    li {
+      display: flex;
+
+      span {
+        margin-right: 0.5rem;
+      }
+
+      p {
+        display: inline-block;
+      }
+    }
+  }
+}
