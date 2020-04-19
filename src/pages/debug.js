@@ -11,7 +11,6 @@ const DebugPage = () => {
     <Layout page="Debug" className="DebugPage">
       <div className="wrapper">
         <div className="content-container with-padding">
-          {console.log(window.navigator)}
           <pre>
             <code>
               <p>System information</p>
