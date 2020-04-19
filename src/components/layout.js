@@ -6,11 +6,11 @@ import Footer from './footer';
 import '../scss/main.scss';
 import PackageJson from '../../package.json';
 
-const Layout = ({ page, children, hideHeader, hideFooter }) => {
+const Layout = ({ page, children, hideHeader, hideFooter, invisible }) => {
   return (
     <div className="root-container">
       <SEO title={page} />
-      <Header hide={hideHeader} />
+      <Header hide={hideHeader} invisible={invisible} />
       <main>{children}</main>
       <Footer hide={hideFooter} />
       {process.browser &&
@@ -34,12 +34,14 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
   hideHeader: PropTypes.bool,
   hideFooter: PropTypes.bool,
+  invisible: PropTypes.bool,
 };
 
 Layout.defaultProps = {
   page: '',
   hideHeader: false,
   hideFooter: false,
+  invisible: false,
 };
 
 export default Layout;

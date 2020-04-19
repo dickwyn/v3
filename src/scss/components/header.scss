@@ -9,9 +9,20 @@ header {
     display: none;
   }
 
+  &.invisible {
+    .content-container {
+      border-bottom: none;
+    }
+  }
+
   .content-container {
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid var(--text-secondary);
+
+    &.invisible {
+      border-bottom: none;
+    }
 
     nav {
       display: flex;
@@ -19,13 +30,14 @@ header {
       margin: 0;
       padding: 0;
       align-items: center;
+      padding: 0 0 0 1.0875rem;
 
       a {
         font-family: 'Staatliches', cursive;
+        // font-weight: 700;
         font-size: 1.5rem;
         text-decoration: none;
         text-transform: uppercase;
-        padding: 0 0 0 1.0875rem;
         margin: 0;
 
         color: var(--text-secondary);
@@ -39,22 +51,16 @@ header {
           color: var(--text);
         }
       }
+
+      .separator {
+        color: var(--text-secondary);
+        padding: 0 1.0875rem;
+      }
     }
 
     button {
       font-size: 1.46rem;
       padding: 1.0875rem;
-    }
-  }
-
-  @media (max-width: 368px) {
-    .title {
-      font-size: 1.7rem;
-    }
-    .content {
-      button {
-        font-size: 1.2rem;
-      }
     }
   }
 }

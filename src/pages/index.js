@@ -5,7 +5,7 @@ import Layout from '../components/layout';
 import Image from '../components/image';
 
 const IndexPage = () => (
-  <Layout hideFooter>
+  <Layout hideFooter invisible>
     <div className="wrapper">
       <div className="content-container with-margin">
         <div className="profile-card">
