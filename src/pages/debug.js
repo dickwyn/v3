@@ -15,22 +15,30 @@ const DebugPage = () => {
             <code>
               <p>System information</p>
               <p>----------------------</p>
-              <p>language: {window.navigator.language}</p>
-              <p>platform: {window.navigator.platform}</p>
-              <p>maxTouchPoints: {window.navigator.maxTouchPoints}</p>
-              <p>vendor: {window.navigator.vendor}</p>
-              <p>userAgent: {window.navigator.userAgent}</p>
-              <br />
-              <p>Dark mode information</p>
-              <p>----------------------</p>
-              <p>
-                darkMode ls key:{' '}
-                {localStorage.getItem('darkMode') ? localStorage.getItem('darkMode') : 'undefined'}
-              </p>
-              <p>
-                system darkMode:{' '}
-                {window.matchMedia('(prefers-color-scheme: dark)').matches.toString()}
-              </p>
+              {typeof window !== `undefined` ? (
+                <>
+                  <p>language: {window.navigator.language}</p>
+                  <p>platform: {window.navigator.platform}</p>
+                  <p>maxTouchPoints: {window.navigator.maxTouchPoints}</p>
+                  <p>vendor: {window.navigator.vendor}</p>
+                  <p>userAgent: {window.navigator.userAgent}</p>
+                  <br />
+                  <p>Dark mode information</p>
+                  <p>----------------------</p>
+                  <p>
+                    darkMode ls key:{' '}
+                    {localStorage.getItem('darkMode')
+                      ? localStorage.getItem('darkMode')
+                      : 'undefined'}
+                  </p>
+                  <p>
+                    system darkMode:{' '}
+                    {window.matchMedia('(prefers-color-scheme: dark)').matches.toString()}
+                  </p>{' '}
+                </>
+              ) : (
+                ''
+              )}
               <p>sunset/sunrise: {currentTime < sunrise && currentTime > sunset ? 'yes' : 'no'}</p>
             </code>
           </pre>
