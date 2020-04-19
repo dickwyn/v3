@@ -1,62 +1,64 @@
-.content-container {
-  color: var(--text);
+.homepage {
+  .content-container {
+    color: var(--text);
 
-  p {
-    line-height: 1.75rem;
-  }
-
-  .profile-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 0 0 1.75rem;
-
-    .title {
-      grid-column: span 2;
-      align-self: center;
-
-      h1,
-      h2 {
-        font-family: 'Roboto Condensed', sans-serif;
-        font-weight: 100;
-      }
-
-      h1 {
-        text-transform: uppercase;
-      }
-
-      h2 {
-        text-transform: lowercase;
-      }
+    p {
+      line-height: 1.75rem;
     }
 
-    .profile-picture {
-      border-radius: 50%;
-    }
-
-    @media only screen and (max-width: 768px) {
-      justify-content: center;
-      margin: 0 0 1rem;
+    .profile-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 0 0 1.75rem;
 
       .title {
-        order: 1;
-        width: 300px;
-        text-align: center;
+        grid-column: span 2;
+        align-self: center;
+
+        h1,
+        h2 {
+          font-family: 'Roboto Condensed', sans-serif;
+          font-weight: 100;
+        }
+
+        h1 {
+          text-transform: uppercase;
+        }
+
+        h2 {
+          text-transform: lowercase;
+        }
       }
 
-      .gatsby-image-wrapper {
-        width: 200px;
+      .profile-picture {
+        border-radius: 50%;
+      }
+
+      @media only screen and (max-width: 768px) {
+        justify-content: center;
         margin: 0 0 1rem;
-      }
-    }
 
-    .description {
-      grid-column: span 3;
+        .title {
+          order: 1;
+          width: 300px;
+          text-align: center;
+        }
+
+        .gatsby-image-wrapper {
+          width: 200px;
+          margin: 0 0 1rem;
+        }
+      }
+
+      .description {
+        grid-column: span 3;
+      }
     }
   }
-}
 
-.gatsby-image-wrapper {
-  width: 300px;
+  .gatsby-image-wrapper {
+    width: 300px;
+  }
 }
