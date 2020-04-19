@@ -6,7 +6,6 @@
 @import 'pages/index.scss';
 @import 'components/footer.scss';
 @import 'components/header.scss';
-@import 'components/hero.scss';
 @import 'components/layout.scss';
 @import 'components/alert-banner.scss';
 @import 'components/post-preview.scss';
@@ -65,6 +64,7 @@ body {
       }
 
       .MuiButton-outlined {
+        color: var(--text);
         border-color: var(--text-secondary);
 
         &:hover {
