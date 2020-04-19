@@ -1,5 +1,5 @@
 footer {
-  color: var(--text);
+  color: var(--text-secondary);
   font-size: 0.75rem;
 
   &.hide {
@@ -10,13 +10,18 @@ footer {
     display: flex;
     margin: 1.45rem 1.0875rem;
 
-    ul.links {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-gap: 0.25em;
-      justify-items: center;
-      max-width: 960px;
-      margin: 0 auto;
+    .MuiSvgIcon-root,
+    a {
+      color: var(--text-secondary);
+
+      &:hover {
+        color: var(--text);
+        border-radius: 50%;
+      }
+    }
+
+    .MuiSvgIcon-root {
+      font-size: 1rem;
     }
 
     a {
@@ -34,10 +39,6 @@ footer {
       // background-color: cyan;
       display: flex;
       justify-content: flex-end;
-
-      .MuiSvgIcon-root {
-        font-size: 1rem;
-      }
 
       a:not(:last-child) {
         margin-right: 1rem;
