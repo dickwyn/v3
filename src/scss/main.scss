@@ -5,6 +5,7 @@
 
 @import 'pages/index.scss';
 @import 'pages/404.scss';
+@import 'pages/debug.scss';
 @import 'components/footer.scss';
 @import 'components/header.scss';
 @import 'components/layout.scss';
@@ -77,6 +78,10 @@ body {
         &:hover {
           background-color: var(--background-secondary);
         }
+      }
+
+      pre {
+        background-color: var(--background-secondary);
       }
     }
   }
