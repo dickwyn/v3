@@ -63,6 +63,12 @@ body {
         padding: 1.45rem 1.0875rem;
       }
 
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
       .MuiButton-outlined {
         color: var(--text);
         border-color: var(--text-secondary);
