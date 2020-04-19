@@ -35,7 +35,7 @@ Layout.propTypes = {
   hideHeader: PropTypes.bool,
   hideFooter: PropTypes.bool,
   invisible: PropTypes.bool,
-  cssClassName: PropTypes.string,
+  className: PropTypes.string,
 };
 
 Layout.defaultProps = {
@@ -43,7 +43,7 @@ Layout.defaultProps = {
   hideHeader: false,
   hideFooter: false,
   invisible: false,
-  cssClassNameL: '',
+  className: '',
 };
 
 export default Layout;

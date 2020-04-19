@@ -6,28 +6,26 @@ import DarkModeToggle from './dark-mode-toggle';
 
 const NAV_LINKS = [
   {
-    ie: shortid.generate(),
+    id: shortid.generate(),
     name: 'dickwyn',
     path: '/',
   },
   {
-    ie: shortid.generate(),
+    id: shortid.generate(),
     name: 'blog',
     path: '/blog',
   },
 ];
 
 const Header = ({ hide, invisible }) => (
-  <header className={hide && 'hide'}>
-    <div className={`content-container ${invisible && 'invisible'}`}>
+  <header className={hide ? 'hide' : undefined}>
+    <div className={`content-container ${invisible ? 'invisible' : undefined}`}>
       <nav role="navigation">
         {NAV_LINKS.map((item, index) => (
-          <>
-            <Link key={item.id} to={item.path}>
-              {item.name}
-            </Link>
+          <React.Fragment key={item.id}>
+            <Link to={item.path}>{item.name}</Link>
             {index < NAV_LINKS.length - 1 ? <div className="separator">&#8226;</div> : ''}
-          </>
+          </React.Fragment>
         ))}
       </nav>
       <DarkModeToggle />

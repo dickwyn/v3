@@ -6,6 +6,7 @@ import Img from 'gatsby-image';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import moment from 'moment';
 import Layout from '../components/layout';
+import shortid from 'shortid';
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
@@ -75,7 +76,7 @@ const BlogPost = ({ data, pageContext }) => {
           <div className="post-tags">
             <p className="label">Tagged</p>
             {tags.map(tag => (
-              <p>{tag}</p>
+              <p key={shortid.generate()}>{tag}</p>
             ))}
           </div>
           {previous && (
