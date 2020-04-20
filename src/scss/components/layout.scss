@@ -3,6 +3,7 @@ main {
   flex-direction: column;
   flex-grow: 1;
   width: 100%;
+  background-color: var(--background-secondary);
 
   a {
     color: var(--accent);
