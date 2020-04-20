@@ -4,6 +4,7 @@
   padding: 0 0 1rem;
   margin: 0 auto;
   border-bottom: 2px dotted var(--text-secondary);
+  font-family: 'Roboto Slab', serif;
 
   &:not(:first-child) {
     margin-top: 2rem;
@@ -13,6 +14,7 @@
     margin: 0.7ch 0;
     font-weight: 500;
     font-size: 22px;
+    font-family: 'Roboto Slab', serif;
 
     a {
       color: var(--text);

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 @import 'theme.scss';
 
@@ -24,10 +24,9 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Slab', serif;
 
   background-color: var(--background);
-
   animation: mte 1.5s 0s forwards ease-in-out;
   transition: background-color 100ms ease-in-out, color 200ms ease-in-out !important;
 
@@ -37,7 +36,11 @@ body {
   h4,
   h5,
   h6 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+  }
+
+  a {
+    font-family: 'Roboto Slab', serif;
   }
 }
 

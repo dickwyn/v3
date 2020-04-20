@@ -1,4 +1,5 @@
 .homepage {
+  font-family: 'Roboto Slab', serif;
   .content-container {
     color: var(--text);
 
@@ -29,6 +30,10 @@
 
         h2 {
           text-transform: lowercase;
+        }
+
+        .MuiButton-label {
+          font-family: 'Roboto Slab', serif;
         }
       }
 
