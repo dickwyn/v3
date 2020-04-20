@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Dick Wyn Yong',
     description:
-      'Dick Wyn is a software engineer, content creator and aviation enthusiast. He is a Malaysian living in America and enjoys experimenting with new recipes in the kitchen and travelling the world',
+      'Dick Wyn is a software engineer, content creator and aviation enthusiast. He is a Malaysian living in America and enjoys experimenting with new recipes in the kitchen and travelling the world.',
     siteUrl: 'https://dickwyn.xyz',
     image: 'https://dickwyn.xyz/images/dick-wyn-yong.jpg',
     author: 'Dick Wyn Yong',
