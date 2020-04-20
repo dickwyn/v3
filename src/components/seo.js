@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({ description, lang, meta, title, image, isBlogPost }) {
+const SEO = ({ description, lang, meta, title, image, isBlogPost }) => {
   const {
     site: {
       siteMetadata: {
@@ -114,7 +114,7 @@ function SEO({ description, lang, meta, title, image, isBlogPost }) {
       link={[{ rel: 'canonical', href: siteUrl }]}
     />
   );
-}
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
