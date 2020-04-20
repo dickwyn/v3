@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import TwitterIcon from '@material-ui/icons/Twitter';
@@ -54,13 +53,9 @@ const BlogPost = ({ data, pageContext }) => {
     .format('MMMM DD, YYYY');
 
   return (
-    <Layout>
+    <Layout title={title} description={description} isBlogPost>
       <div className="wrapper">
         <div className="content-container blog-post with-padding">
-          <Helmet titleTemplate="%s - Blog">
-            <title>{`${title}`}</title>
-            <meta name="description" content={`${description}`} />
-          </Helmet>
           <div className="heading">
             <h1 className="post-title">{title}</h1>
             <h2 className="post-subtitle">

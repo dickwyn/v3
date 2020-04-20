@@ -6,10 +6,19 @@ import Footer from './footer';
 import '../scss/main.scss';
 import PackageJson from '../../package.json';
 
-const Layout = ({ page, children, hideHeader, hideFooter, invisible, className }) => {
+const Layout = ({
+  page,
+  children,
+  hideHeader,
+  hideFooter,
+  invisible,
+  className,
+  isBlogPost,
+  description,
+}) => {
   return (
     <div className="root-container">
-      <SEO title={page} />
+      <SEO title={page} description={description} isBlogPost={isBlogPost} />
       <Header hide={hideHeader} invisible={invisible} />
       <main className={className}>{children}</main>
       <Footer hide={hideFooter} />
@@ -36,6 +45,8 @@ Layout.propTypes = {
   hideFooter: PropTypes.bool,
   invisible: PropTypes.bool,
   className: PropTypes.string,
+  isBlogPost: PropTypes.bool,
+  description: PropTypes.string,
 };
 
 Layout.defaultProps = {
@@ -44,6 +55,8 @@ Layout.defaultProps = {
   hideFooter: false,
   invisible: false,
   className: '',
+  isBlogPost: false,
+  description: '',
 };
 
 export default Layout;
