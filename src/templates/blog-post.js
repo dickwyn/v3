@@ -53,7 +53,7 @@ const BlogPost = ({ data, pageContext }) => {
     .format('MMMM DD, YYYY');
 
   return (
-    <Layout title={title} description={description} isBlogPost>
+    <Layout page={title} description={description} isBlogPost>
       <div className="wrapper">
         <div className="content-container blog-post with-padding">
           <div className="heading">
