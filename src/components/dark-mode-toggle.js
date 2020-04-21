@@ -5,8 +5,7 @@ import BrightnessAutoIcon from '@material-ui/icons/BrightnessAuto';
 import BrightnessLowIcon from '@material-ui/icons/Brightness4';
 import BrightnessHighIcon from '@material-ui/icons/BrightnessHigh';
 import '../scss/components/dark-mode-toggle.scss';
-
-const LOCAL_STORAGE_KEY = 'darkMode';
+import { DARK_MODE } from '../utils/constants';
 
 class DarkModeToggle extends Component {
   constructor(props) {
@@ -17,8 +16,7 @@ class DarkModeToggle extends Component {
   }
 
   componentDidMount() {
-    const lsDarkMode = localStorage.getItem(LOCAL_STORAGE_KEY);
-
+    const lsDarkMode = localStorage.getItem(DARK_MODE.LOCAL_STORAGE_KEY);
     if (lsDarkMode === null) {
       this.autoDetectTheme();
     } else if (lsDarkMode === 'true') {
@@ -43,15 +41,15 @@ class DarkModeToggle extends Component {
     switch (mode) {
       case 1:
         this.updateBodyClass('dark');
-        localStorage.setItem(LOCAL_STORAGE_KEY, true);
+        localStorage.setItem(DARK_MODE.LOCAL_STORAGE_KEY, true);
         break;
       case 2:
         this.updateBodyClass('light');
-        localStorage.setItem(LOCAL_STORAGE_KEY, false);
+        localStorage.setItem(DARK_MODE.LOCAL_STORAGE_KEY, false);
         break;
       default:
         this.autoDetectTheme(mode);
-        localStorage.removeItem(LOCAL_STORAGE_KEY);
+        localStorage.removeItem(DARK_MODE.LOCAL_STORAGE_KEY);
     }
   };
 
