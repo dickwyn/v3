@@ -8,7 +8,6 @@ const buildTimestamp = preval`module.exports = new Date().getTime();`;
 
 function initialize() {
   const updateBodyClass = theme => {
-    console.log('fired');
     document.body.className = theme;
   };
 
