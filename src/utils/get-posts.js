@@ -5,7 +5,7 @@ const getPosts = () => {
     query {
       allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
-        filter: { fileAbsolutePath: { regex: "/data/blog//" } }
+        filter: { fileAbsolutePath: { regex: "/data/blog/" } }
       ) {
         nodes {
           fields {
@@ -13,6 +13,7 @@ const getPosts = () => {
           }
           frontmatter {
             title
+            subtitle
             date
             description
           }
@@ -25,6 +26,7 @@ const getPosts = () => {
   return data.allMarkdownRemark.nodes.map(post => ({
     slug: post.fields.slug,
     title: post.frontmatter.title,
+    subtitle: post.frontmatter.subtitle,
     date: post.frontmatter.date,
     description: post.frontmatter.description,
     timeToRead: post.timeToRead,

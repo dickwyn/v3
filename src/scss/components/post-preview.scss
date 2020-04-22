@@ -10,28 +10,42 @@
     margin-top: 2rem;
   }
 
+  .timestamp {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+  }
+
+  h2.title,
+  h3.subtitle {
+    font-family: 'Roboto Slab', serif;
+  }
+
   h2.title {
     margin: 0.7ch 0;
     font-weight: 500;
-    font-size: 22px;
-    font-family: 'Roboto Slab', serif;
+    font-size: 1.38rem;
 
     a {
       color: var(--text);
     }
   }
 
-  .subtitle {
+  h3.subtitle {
     margin: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1.5px;
-    color: var(--secondary-text);
+    font-size: 1rem;
+    color: var(--text-secondary);
   }
 
   p.description {
-    margin: 1ch 0;
+    margin: 2ch 0 1ch;
     line-height: 25px;
+  }
+
+  a {
+    color: var(--text);
   }
 }

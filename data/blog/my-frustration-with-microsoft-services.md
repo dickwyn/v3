@@ -2,6 +2,7 @@
 templateKey: blog-post
 author: Dick Wyn Yong
 title: My frustration with Microsoft services
+subtitle: Not as advertised
 date: 2019-12-29T01:46:29.791Z
 description: >-
   A few issues that I have encountered while using applications and/or services from Microsoft

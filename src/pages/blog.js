@@ -5,7 +5,10 @@ import getPosts from '../utils/get-posts';
 import PostPreview from '../components/post-preview';
 
 const BlogPage = () => {
-  const posts = process.env.NODE_ENV === 'development' ? getDevelopmentPosts() : getPosts();
+  const posts = [
+    ...getPosts(),
+    ...(process.env.NODE_ENV === 'development' ? getDevelopmentPosts() : []),
+  ];
 
   return (
     <Layout page="Blog">
