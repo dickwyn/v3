@@ -18,7 +18,11 @@ const Layout = ({
   return (
     <div className="root-container">
       <SEO title={page} description={description} isBlogPost={isBlogPost} />
+      <a class="a11y-skip-link" href="#content">
+        Skip to Main Content
+      </a>
       <Header hide={hideHeader} invisible={invisible} />
+      <div id="content" />
       <main className={className}>{children}</main>
       <Footer hide={hideFooter} />
     </div>
