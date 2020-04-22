@@ -1,5 +1,6 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, navigate } from 'gatsby';
+import Pagination from '@material-ui/lab/Pagination';
 import Layout from '../components/layout';
 import PostPreview from '../components/post-preview';
 
@@ -7,6 +8,7 @@ const BlogPostPreview = ({
   data: {
     allMarkdownRemark: { edges },
   },
+  pageContext: { numberOfPages, currentPage },
 }) => {
   return (
     <Layout page="Blog">
@@ -15,6 +17,16 @@ const BlogPostPreview = ({
           {edges.map(({ node }) => {
             return <PostPreview key={node.fields.slug} post={node} />;
           })}
+          {numberOfPages > 1 && (
+            <Pagination
+              shape="rounded"
+              count={numberOfPages}
+              page={currentPage}
+              onChange={(_event, value) => {
+                navigate(`/blog${value > 1 ? `/${value}` : ''}`);
+              }}
+            />
+          )}
         </div>
       </div>
     </Layout>
