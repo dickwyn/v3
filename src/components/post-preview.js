@@ -3,42 +3,51 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import moment from 'moment';
 
-const PostPreview = ({ post }) => (
+const PostPreview = ({
+  post: {
+    fields: { slug },
+    frontmatter: { date, title, subtitle, description },
+  },
+}) => (
   <div className="post-preview">
     <p className="timestamp">
-      {moment.duration(moment(new Date()).diff(post.date)).asDays() < 90
-        ? moment(post.date)
+      {moment.duration(moment(new Date()).diff(date)).asDays() < 90
+        ? moment(date)
             .local()
             .format('MMM DD')
-        : moment(post.date)
+        : moment(date)
             .local()
             .format('MMM YYYY')}
     </p>
     <h2 className="title">
-      <Link to={`blog${post.slug}`}>{post.title}</Link>
+      <Link to={`blog${slug}`}>{title}</Link>
     </h2>
 
-    {post.subtitle && <h3 className="subtitle">{post.subtitle}</h3>}
-    <p className="description">{post.description}</p>
-    <Link to={`blog${post.slug}`}>continue reading →</Link>
+    {subtitle && <h3 className="subtitle">{subtitle}</h3>}
+    <p className="description">{description}</p>
+    <Link to={`blog${slug}`}>continue reading →</Link>
   </div>
 );
 
 PostPreview.propTypes = {
   post: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string,
-    date: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    slug: PropTypes.string.isRequired,
-    timeToRead: PropTypes.number.isRequired,
+    fields: PropTypes.shape({ slug: PropTypes.string.isRequired }),
+    frontmatter: PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      subtitle: PropTypes.string,
+      date: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      slug: PropTypes.string.isRequired,
+    }),
   }).isRequired,
 };
 
 PostPreview.defaultProps = {
   post: PropTypes.shape({
-    subtitle: '',
-  }).isRequired,
+    frontmatter: PropTypes.shape({
+      subtitle: '',
+    }),
+  }),
 };
 
 export default PostPreview;

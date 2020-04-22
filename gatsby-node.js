@@ -4,6 +4,8 @@ const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
+  const blogPostFilter =
+    process.env.NODE_ENV === 'development' ? '/data/blog/|/data/dev-blog/' : '/data/blog/';
 
   return graphql(
     `
@@ -40,7 +42,7 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     `,
-    { posts: process.env.NODE_ENV === 'development' ? '/blog/' : '/data/blog/' }
+    { posts: blogPostFilter }
   ).then(result => {
     if (result.errors) {
       result.errors.forEach(e => console.error(e.toString()));
@@ -59,6 +61,23 @@ exports.createPages = ({ actions, graphql }) => {
           id,
           previous: edge.previous,
           next: edge.next,
+        },
+      });
+    });
+
+    const postsPerPage = 10;
+    const numPages = Math.ceil(posts.length / postsPerPage);
+
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+        component: path.resolve('src/templates/blog-index.js'),
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages,
+          currentPage: i + 1,
+          blogPostFilter,
         },
       });
     });
