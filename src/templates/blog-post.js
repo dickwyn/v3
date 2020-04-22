@@ -7,30 +7,8 @@ import moment from 'moment';
 import Layout from '../components/layout';
 import shortid from 'shortid';
 
-export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      frontmatter {
-        date
-        title
-        description
-        tags
-        featuredImage {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-      timeToRead
-      html
-    }
-  }
-`;
-
-const BlogPost = ({ data, pageContext }) => {
-  const {
+const BlogPost = ({
+  data: {
     markdownRemark: {
       frontmatter: {
         title,
@@ -44,10 +22,9 @@ const BlogPost = ({ data, pageContext }) => {
       timeToRead,
       html,
     },
-  } = data;
-
-  const { previous, next } = pageContext;
-
+  },
+  pageContext: { previous, next },
+}) => {
   const normalizedDate = moment(date)
     .local()
     .format('MMMM DD, YYYY');
@@ -102,3 +79,25 @@ BlogPost.propTypes = {
 };
 
 export default BlogPost;
+
+export const pageQuery = graphql`
+  query blogPostQuery($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      frontmatter {
+        date
+        title
+        description
+        tags
+        featuredImage {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+      timeToRead
+      html
+    }
+  }
+`;
