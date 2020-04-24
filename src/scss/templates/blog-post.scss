@@ -52,6 +52,9 @@
 
     figure {
       margin: 2ch 0;
+      padding: 1ch;
+      border: 0.1ch solid var(--background-tertiary);
+      border-radius: 4px;
 
       img {
         width: 100%;
@@ -62,8 +65,9 @@
       }
 
       figcaption {
-        padding-bottom: 3px;
-        border-bottom: 0.75px solid var(--divider);
+        padding-top: 1ch;
+        text-align: center;
+        border-top: 0.75px solid var(--background-tertiary);
       }
     }
 

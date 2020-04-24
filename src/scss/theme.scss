@@ -2,6 +2,7 @@ body {
   &.dark {
     --background: #000;
     --background-secondary: #212121;
+    --background-tertiary: #424242;
     --divider: #bdbdbd;
     --text: #fff;
     --text-secondary: #757575;
@@ -11,6 +12,7 @@ body {
   &.light {
     --background: #fff;
     --background-secondary: #fafafa;
+    --background-tertiary: #e0e0e0;
     --divider: #bdbdbd;
     --text: #000;
     --text-secondary: #757575;
