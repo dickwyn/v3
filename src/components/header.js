@@ -23,7 +23,7 @@ const Header = ({ hide, invisible }) => (
     <div className={'content-container'}>
       <nav role="navigation">
         <Link to="/" activeClassName="active" className="home">
-          <img src={LOGO}></img>
+          <img src={LOGO} alt="dickwyn logo"></img>
           <p className="name">dickwyn</p>
           <p className="short-name">dw</p>
         </Link>
