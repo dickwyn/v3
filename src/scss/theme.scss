@@ -1,21 +1,21 @@
 body {
   &.dark {
-    --background: #000;
-    --background-secondary: #212121;
+    --background: #121212;
+    --background-secondary: #202020;
     --background-tertiary: #424242;
     --divider: #bdbdbd;
     --text: #fff;
-    --text-secondary: #757575;
-    --accent: #d32f2f;
+    --text-secondary: #bdbdbd;
+    --accent: #ff5252;
   }
 
   &.light {
-    --background: #fff;
+    --background: #e1e0e1;
     --background-secondary: #fafafa;
-    --background-tertiary: #e0e0e0;
+    --background-tertiary: #bdbdbd;
     --divider: #bdbdbd;
     --text: #000;
-    --text-secondary: #757575;
-    --accent: #f44336;
+    --text-secondary: #616161;
+    --accent: #d50000;
   }
 }
