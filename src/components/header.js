@@ -15,16 +15,20 @@ const NAV_LINKS = [
     name: 'blog',
     path: '/blog',
   },
+  {
+    id: shortid.generate(),
+    name: 'experiments',
+    path: '/experiments',
+  },
 ];
 
 const Header = ({ hide, invisible }) => (
   <header className={hide ? 'hide' : undefined}>
     <div className={`content-container ${invisible ? 'invisible' : undefined}`}>
       <nav role="navigation">
-        {NAV_LINKS.map((item, index) => (
+        {NAV_LINKS.map(item => (
           <React.Fragment key={item.id}>
             <Link to={item.path}>{item.name}</Link>
-            {index < NAV_LINKS.length - 1 ? <div className="separator">&#8226;</div> : ''}
           </React.Fragment>
         ))}
       </nav>
