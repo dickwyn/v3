@@ -7,6 +7,9 @@ body {
     --text: #fff;
     --text-secondary: #bdbdbd;
     --accent: #ff5252;
+    --box-shadow-layer-1: rgba(255, 255, 255, 0.2);
+    --box-shadow-layer-2: rgba(255, 255, 255, 0.14);
+    --box-shadow-layer-3: rgba(255, 255, 255, 0.12);
   }
 
   &.light {
@@ -17,5 +20,8 @@ body {
     --text: #000;
     --text-secondary: #616161;
     --accent: #d50000;
+    --box-shadow-layer-1: rgba(0, 0, 0, 0.2);
+    --box-shadow-layer-2: rgba(0, 0, 0, 0.14);
+    --box-shadow-layer-3: rgba(0, 0, 0, 0.12);
   }
 }

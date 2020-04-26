@@ -4,6 +4,10 @@ header {
   animation: mte 1.5s 0s forwards ease-in-out;
   transition: background-color 100ms ease-in-out, color 200ms ease-in-out !important;
   padding: 0.4rem 0.5875rem 0.4rem 1.0875rem;
+  -webkit-box-shadow: 0 3px 1px -2px var(--box-shadow-layer-1),
+    0 2px 2px 0 var(--box-shadow-layer-2), 0 1px 5px 0 var(--box-shadow-layer-3);
+  box-shadow: 0 3px 1px -2px var(--box-shadow-layer-1), 0 2px 2px 0 var(--box-shadow-layer-2),
+    0 1px 5px 0 var(--box-shadow-layer-3);
 
   &.hide {
     display: none;
