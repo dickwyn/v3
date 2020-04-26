@@ -57,7 +57,7 @@ header {
             width: 1.3rem;
             height: 1.3rem;
             margin: 0 0.25rem 0 0;
-            vertical-align: middle;
+            vertical-align: top;
             opacity: 0.75;
           }
 
@@ -86,27 +86,6 @@ header {
     button {
       font-size: 1.46rem;
       padding: 0.5rem;
-    }
-
-    @media (max-width: 375px) {
-      nav {
-        a {
-          &.home {
-            p {
-              display: inline-block;
-              margin: 0;
-
-              &.name {
-                display: none;
-              }
-
-              &.short-name {
-                display: inline-block;
-              }
-            }
-          }
-        }
-      }
     }
 
     @media (max-width: 320px) {

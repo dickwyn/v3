@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import DarkModeToggle from './dark-mode-toggle';
-import { LOGO } from '../utils/constants';
 
 const NAV_LINKS = [
   {
@@ -23,9 +22,7 @@ const Header = ({ hide, invisible }) => (
     <div className={'content-container'}>
       <nav role="navigation">
         <Link to="/" activeClassName="active" className="home">
-          <img src={LOGO} alt="dickwyn logo"></img>
           <p className="name">dickwyn</p>
-          <p className="short-name">dw</p>
         </Link>
         {NAV_LINKS.map(item => (
           <React.Fragment key={item.id}>
