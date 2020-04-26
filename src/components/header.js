@@ -28,7 +28,9 @@ const Header = ({ hide, invisible }) => (
       <nav role="navigation">
         {NAV_LINKS.map(item => (
           <React.Fragment key={item.id}>
-            <Link to={item.path}>{item.name}</Link>
+            <Link to={item.path} activeClassName="active">
+              {item.name}
+            </Link>
           </React.Fragment>
         ))}
       </nav>

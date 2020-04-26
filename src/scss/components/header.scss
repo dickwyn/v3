@@ -44,7 +44,8 @@ header {
           padding-left: 0;
         }
 
-        &:hover {
+        &:hover,
+        &.active {
           color: var(--text);
         }
       }
