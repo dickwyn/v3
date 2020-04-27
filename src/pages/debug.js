@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
 
 const date = new Date();
@@ -8,10 +8,25 @@ const sunset = '19:28';
 const currentTime = `${date.getHours()}:${date.getMinutes()}`;
 
 const DebugPage = () => {
+  const {
+    allSitePage: { nodes: allPaths },
+  } = useStaticQuery(
+    graphql`
+      query {
+        allSitePage {
+          nodes {
+            path
+          }
+        }
+      }
+    `
+  );
   return (
     <Layout page="Debug" className="DebugPage">
       <div className="wrapper">
         <div className="content-container with-padding">
+          <h1>Debug</h1>
+          <h2>Diagnostic information:</h2>
           <pre>
             <code>
               <p>System information</p>
@@ -43,6 +58,15 @@ const DebugPage = () => {
               <p>sunset/sunrise: {currentTime < sunrise && currentTime > sunset ? 'yes' : 'no'}</p>
             </code>
           </pre>
+          <h2>List of pages ({allPaths.length}):</h2>
+          <ul>
+            {allPaths.map(item => (
+              <li>
+                <a href={item.path}>{item.path}</a>
+              </li>
+            ))}
+          </ul>
+          <h2>Links:</h2>
           <ul>
             <li>
               <span aria-label="information" role="img">
