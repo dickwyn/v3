@@ -50,12 +50,14 @@ const DebugPage = () => {
                   <p>
                     system darkMode:{' '}
                     {window.matchMedia('(prefers-color-scheme: dark)').matches.toString()}
-                  </p>{' '}
+                  </p>
+                  <p>
+                    sunset/sunrise: {currentTime < sunrise && currentTime > sunset ? 'yes' : 'no'}
+                  </p>
                 </>
               ) : (
-                ''
+                <p>window element is undefined</p>
               )}
-              <p>sunset/sunrise: {currentTime < sunrise && currentTime > sunset ? 'yes' : 'no'}</p>
             </code>
           </pre>
           <h2>List of pages ({allPaths.length}):</h2>
