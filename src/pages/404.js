@@ -47,14 +47,15 @@ class NotFoundPage extends Component {
                   ℹ️
                 </span>
                 <p>
+                  View{' '}
                   <a
                     href="https://dickwyn.wordpress.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    View
+                    legacy blog posts
                   </a>{' '}
-                  legacy blog posts on the wordpress site.
+                  on the wordpress site.
                 </p>
               </li>
               <li>

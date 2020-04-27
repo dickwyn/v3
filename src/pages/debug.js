@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Layout from '../components/layout';
 
 const date = new Date();
@@ -42,6 +43,16 @@ const DebugPage = () => {
               <p>sunset/sunrise: {currentTime < sunrise && currentTime > sunset ? 'yes' : 'no'}</p>
             </code>
           </pre>
+          <ul>
+            <li>
+              <span aria-label="information" role="img">
+                💅
+              </span>
+              <p>
+                <Link to="/styleguide">View</Link> the style guide.
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </Layout>
