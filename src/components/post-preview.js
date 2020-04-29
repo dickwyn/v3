@@ -37,7 +37,6 @@ PostPreview.propTypes = {
       subtitle: PropTypes.string,
       date: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
-      slug: PropTypes.string.isRequired,
     }),
   }).isRequired,
 };
