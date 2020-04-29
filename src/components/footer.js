@@ -56,7 +56,7 @@ const Footer = ({ hide }) => (
       <div className="content-container">
         <div className="left">© {new Date().getFullYear()} Dick Wyn Yong</div>
         <div className="right">
-          {SOCIAL_LINKS.map(item => (
+          {SOCIAL_LINKS.map((item) => (
             <IconButton
               key={item.id}
               size="small"

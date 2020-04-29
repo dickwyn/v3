@@ -24,7 +24,7 @@ const Header = ({ hide, invisible }) => (
         <Link to="/" activeClassName="active" className="home">
           <p className="name">dickwyn</p>
         </Link>
-        {NAV_LINKS.map(item => (
+        {NAV_LINKS.map((item) => (
           <React.Fragment key={item.id}>
             <Link to={item.path} activeClassName="active">
               {item.name}

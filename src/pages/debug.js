@@ -62,7 +62,7 @@ const DebugPage = () => {
           </pre>
           <h2>List of pages ({allPaths.length}):</h2>
           <ul>
-            {allPaths.map(item => (
+            {allPaths.map((item) => (
               <li>
                 <a href={item.path}>{item.path}</a>
               </li>

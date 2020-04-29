@@ -25,9 +25,7 @@ const BlogPost = ({
   },
   pageContext: { previous, next },
 }) => {
-  const normalizedDate = moment(date)
-    .local()
-    .format('MMMM DD, YYYY');
+  const normalizedDate = moment(date).local().format('MMMM DD, YYYY');
 
   return (
     <Layout page={title} description={description} isBlogPost>
@@ -47,7 +45,7 @@ const BlogPost = ({
           <div className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
           <div className="post-tags">
             <p className="label">Tagged</p>
-            {tags.map(tag => (
+            {tags.map((tag) => (
               <p key={shortid.generate()}>{tag}</p>
             ))}
           </div>

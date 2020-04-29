@@ -28,7 +28,7 @@ class DarkModeToggle extends Component {
 
   handleToggle = (_e, savedMode) => {
     this.setState(
-      prevState => ({
+      (prevState) => ({
         mode: savedMode || (prevState.mode + 1) % 3,
       }),
       this.updateMode
@@ -37,6 +37,7 @@ class DarkModeToggle extends Component {
 
   updateMode = () => {
     const { mode } = this.state;
+    (a) => {};
 
     switch (mode) {
       case 1:
@@ -53,7 +54,7 @@ class DarkModeToggle extends Component {
     }
   };
 
-  autoDetectTheme = toggleMode => {
+  autoDetectTheme = (toggleMode) => {
     const { mode } = this.state;
 
     if (mode === 0 || toggleMode === 2) {
@@ -70,11 +71,11 @@ class DarkModeToggle extends Component {
     }
   };
 
-  prefersColorScheme = theme => {
+  prefersColorScheme = (theme) => {
     return window.matchMedia(`(prefers-color-scheme: ${theme})`).matches;
   };
 
-  updateBodyClass = theme => {
+  updateBodyClass = (theme) => {
     document.body.className = theme;
   };
 
