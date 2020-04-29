@@ -17,6 +17,7 @@ module.exports = {
         trackingId: `${process.env.GA_TRACKING_ID}`,
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
