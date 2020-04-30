@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
-@import 'theme.scss';
+@import 'normalize-scss/sass/normalize/import-now';
 
+@import 'theme.scss';
 @import 'pages/index.scss';
 @import 'pages/404.scss';
 @import 'pages/debug.scss';
@@ -45,6 +46,10 @@ body {
 
   a {
     font-family: 'Roboto Slab', serif;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
@@ -71,12 +76,6 @@ body {
 
       &.with-padding {
         padding: 1.45rem 1.0875rem;
-      }
-
-      a {
-        &:hover {
-          text-decoration: none;
-        }
       }
 
       .MuiButton-outlined {

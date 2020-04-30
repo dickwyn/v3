@@ -49,7 +49,13 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ['node_modules'],
+      },
+    },
+
     {
       resolve: `gatsby-transformer-remark`,
       options: {

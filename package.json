@@ -24,6 +24,7 @@
     "moment": "^2.24.0",
     "node-fetch": "^2.6.0",
     "node-sass": "^4.14.0",
+    "normalize-scss": "^7.0.1",
     "preval.macro": "^5.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
