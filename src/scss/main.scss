@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap');
 @import 'normalize-scss/sass/normalize/import-now';
 
 @import 'theme.scss';
@@ -57,6 +57,27 @@ body {
   }
   h6 {
     font-size: 0.804rem;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+    }
+    h3 {
+      font-size: 1.053rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+    h5 {
+      font-size: 0.83rem;
+    }
+    h6 {
+      font-size: 0.67rem;
+    }
   }
 }
 
