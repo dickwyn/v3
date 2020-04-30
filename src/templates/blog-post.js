@@ -30,7 +30,7 @@ const BlogPost = ({
   return (
     <Layout page={title} description={description} isBlogPost>
       <div className="wrapper">
-        <div className="content-container blog-post with-padding">
+        <article className="content-container blog-post with-padding">
           <div className="heading">
             <h1 className="post-title">{title}</h1>
             <h2 className="post-subtitle">
@@ -59,7 +59,7 @@ const BlogPost = ({
               {next.frontmatter.title} →
             </Link>
           )}
-        </div>
+        </article>
       </div>
     </Layout>
   );

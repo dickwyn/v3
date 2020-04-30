@@ -23,6 +23,7 @@ body,
 
 html {
   overflow-y: auto;
+  font-size: 18px;
 }
 
 body {
@@ -30,26 +31,32 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Roboto Slab', serif;
-
   background-color: var(--background);
+  color: var(--text);
   animation: mte 1.5s 0s forwards ease-in-out;
   transition: background-color 100ms ease-in-out, color 200ms ease-in-out !important;
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: 'Roboto Slab', serif;
+  p {
+    font-size: 1rem;
+    line-height: 1.6rem;
   }
-
-  a {
-    font-family: 'Roboto Slab', serif;
-
-    &:hover {
-      text-decoration: none;
-    }
+  h1 {
+    font-size: 2.4rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.404rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  h5 {
+    font-size: 0.996rem;
+  }
+  h6 {
+    font-size: 0.804rem;
   }
 }
 
@@ -59,6 +66,26 @@ body {
   flex-direction: column;
   min-height: 100%;
 
+  main {
+    a {
+      color: var(--text);
+      text-decoration: none;
+      background-position: 0 0;
+      background-image: linear-gradient(
+        to top,
+        var(--accent),
+        var(--accent) 0.15em,
+        transparent 0.15em,
+        transparent
+      );
+
+      &:hover {
+        color: var(--accent);
+        background-image: none;
+      }
+    }
+  }
+
   .wrapper {
     display: flex;
     flex-grow: 1;
@@ -67,7 +94,6 @@ body {
     width: 100%;
     max-width: 768px;
     margin: 0 auto;
-    color: var(--text);
 
     .content-container {
       &.with-margin {
