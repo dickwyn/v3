@@ -8,12 +8,12 @@ const NAV_LINKS = [
   {
     id: shortid.generate(),
     name: 'blog',
-    path: '/blog',
+    path: '/blog/',
   },
   {
     id: shortid.generate(),
     name: 'experiments',
-    path: '/experiments',
+    path: '/experiments/',
   },
 ];
 
