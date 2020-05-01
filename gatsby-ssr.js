@@ -7,11 +7,11 @@ import { DARK_MODE } from './src/utils/constants.js';
 const buildTimestamp = preval`module.exports = new Date().getTime();`;
 
 function initialize() {
-  const updateBodyClass = theme => {
+  const updateBodyClass = (theme) => {
     document.body.className = theme;
   };
 
-  const prefersColorScheme = theme => {
+  const prefersColorScheme = (theme) => {
     return window.matchMedia(`(prefers-color-scheme: ${theme})`).matches;
   };
 
@@ -36,9 +36,8 @@ function initialize() {
               
 Looking for something?
 
-👨‍💻 https://www.github.com/dickwyn/v5
+👨‍💻 https://www.github.com/dickwyn
 📄 https://www.dropbox.com/s/n1qj7bfp9599lg2/resume-dick-wyn-yong.pdf?dl=0
-📧 dickwyn@outlook.com
 
 built: unsetTimestamp`,
       'font-family:monospace;'
