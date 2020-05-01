@@ -4,7 +4,6 @@
   padding: 0 0 1rem;
   margin: 0 auto;
   border-bottom: 2px dotted var(--text-secondary);
-  font-family: 'Roboto Slab', serif;
 
   &:not(:first-child) {
     margin-top: 2rem;
@@ -17,11 +16,6 @@
     font-weight: 500;
     letter-spacing: 1.5px;
     color: var(--accent);
-  }
-
-  h2.title,
-  h3.subtitle {
-    font-family: 'Roboto Slab', serif;
   }
 
   h2.title {
