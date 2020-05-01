@@ -1,5 +1,26 @@
-nav.MuiPagination-root {
-  margin: 1rem 0;
-  display: flex;
-  justify-content: center;
+.blog-index {
+  .hero-image-container {
+    position: relative;
+
+    img {
+      height: 230px;
+      width: 100%;
+      filter: var(--invert);
+    }
+
+    h1 {
+      position: absolute;
+      color: var(--text);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+    }
+  }
+
+  nav.MuiPagination-root {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+  }
 }

@@ -11,7 +11,11 @@ const BlogPostPreview = ({
   pageContext: { numberOfPages, currentPage },
 }) => {
   return (
-    <Layout page="Blog">
+    <Layout page="Blog" className="blog-index">
+      <div className="hero-image-container">
+        <img src="/images/adrien-olichon-gOdavfpH-3s-unsplash.jpg"></img>
+        <h1>My Name is Dick Wyn</h1>
+      </div>
       <div className="wrapper">
         <div className="content-container with-padding">
           {edges.map(({ node }) => {
