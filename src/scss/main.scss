@@ -41,7 +41,7 @@ body {
     line-height: 1.6rem;
   }
   h1 {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
   }
   h2 {
     font-size: 1.8rem;
@@ -59,83 +59,95 @@ body {
     font-size: 0.804rem;
   }
 
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 1.8rem;
-    }
-    h2 {
-      font-size: 1.35rem;
-    }
-    h3 {
-      font-size: 1.053rem;
-    }
-    h4 {
-      font-size: 1rem;
-    }
-    h5 {
-      font-size: 0.83rem;
-    }
-    h6 {
-      font-size: 0.67rem;
-    }
-  }
-}
-
-.root-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-
-  main {
-    a {
-      color: var(--text);
-      text-decoration: none;
-      background-position: 0 0;
-      background-image: linear-gradient(
-        to top,
-        var(--accent),
-        var(--accent) 0.15em,
-        transparent 0.15em,
-        transparent
-      );
-
-      &:hover {
-        color: var(--accent);
-        background-image: none;
-      }
-    }
-  }
-
-  .wrapper {
+  .root-container {
+    position: relative;
     display: flex;
-    flex-grow: 1;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
-    max-width: 768px;
-    margin: 0 auto;
+    min-height: 100%;
 
-    .content-container {
-      &.with-margin {
-        margin: 1.45rem 1.0875rem;
-      }
-
-      &.with-padding {
-        padding: 1.45rem 1.0875rem;
-      }
-
-      .MuiButton-outlined {
+    main {
+      a {
         color: var(--text);
-        border-color: var(--text-secondary);
+        text-decoration: none;
+        background-position: 0 0;
+        background-image: linear-gradient(
+          to top,
+          var(--accent),
+          var(--accent) 0.15em,
+          transparent 0.15em,
+          transparent
+        );
 
         &:hover {
+          color: var(--accent);
+          background-image: none;
+        }
+      }
+    }
+
+    .wrapper {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      max-width: 768px;
+      margin: 0 auto;
+
+      .content-container {
+        &.with-margin {
+          margin: 1.45rem 1.0875rem;
+        }
+
+        &.with-padding {
+          padding: 1.45rem 1.0875rem;
+        }
+
+        .MuiButton-outlined {
+          color: var(--text);
+          border-color: var(--text-secondary);
+
+          &:hover {
+            background-color: var(--background-secondary);
+          }
+        }
+
+        pre {
           background-color: var(--background-secondary);
         }
       }
+    }
 
-      pre {
-        background-color: var(--background-secondary);
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.7rem;
+      }
+      h2 {
+        font-size: 1.35rem;
+      }
+      h3 {
+        font-size: 1.053rem;
+      }
+      h4 {
+        font-size: 1rem;
+      }
+      h5 {
+        font-size: 0.83rem;
+      }
+      h6 {
+        font-size: 0.67rem;
+      }
+
+      .wrapper {
+        .content-container {
+          &.with-margin {
+            margin: 1.45rem 0.9rem;
+          }
+
+          &.with-padding {
+            padding: 1.45rem 0.9rem;
+          }
+        }
       }
     }
   }

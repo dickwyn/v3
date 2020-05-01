@@ -25,12 +25,13 @@
   }
 
   h2.title {
-    margin: 0.7ch 0;
+    margin: 0.35ch 0 0.7ch;
     font-weight: 500;
     font-size: 1.38rem;
 
     a {
       color: var(--text);
+      background: none;
     }
   }
 

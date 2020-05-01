@@ -31,15 +31,13 @@ footer {
 
     .left {
       flex: 2;
-      // background-color: green;
-      // text-transform: uppercase;
     }
 
     .right {
       flex: 3;
-      // background-color: cyan;
       display: flex;
       justify-content: flex-end;
+      align-items: center;
 
       a:not(:last-child) {
         margin-right: 1rem;
@@ -52,7 +50,6 @@ footer {
       .left {
         display: flex;
         justify-content: space-evenly;
-        // background-color: yellow;
         padding: 0.75rem 0;
       }
 

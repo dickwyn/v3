@@ -25,7 +25,7 @@ const BlogPost = ({
   },
   pageContext: { previous, next },
 }) => {
-  const normalizedDate = moment(date).local().format('MMMM DD, YYYY');
+  const normalizedDate = moment(date).local().format('MMM DD, YYYY');
 
   return (
     <Layout page={title} description={description} isBlogPost>
@@ -35,10 +35,9 @@ const BlogPost = ({
             <h1 className="post-title">{title}</h1>
             <h2 className="post-subtitle">
               <a href="https://twitter.com/dickwyn" target="_blank" rel="noopener noreferrer">
-                <TwitterIcon />
                 @dickwyn
               </a>{' '}
-              ・{normalizedDate}・{timeToRead} min read
+              | {normalizedDate} | {timeToRead} min read
             </h2>
           </div>
           <Img fluid={fluid} imgStyle={{ objectFit: 'cover' }} />

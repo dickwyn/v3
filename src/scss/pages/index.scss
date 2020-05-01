@@ -21,7 +21,7 @@
         h1,
         h2 {
           font-family: 'Roboto Slab', sans-serif;
-          font-weight: 100;
+          font-weight: 400;
         }
 
         h1 {
@@ -32,9 +32,18 @@
           text-transform: lowercase;
           font-size: 1.3rem;
         }
+        .MuiButtonGroup-root {
+          a {
+            background: none;
 
-        .MuiButton-label {
-          font-family: 'Roboto Slab', serif;
+            &:hover {
+              color: var(--accent);
+            }
+
+            .MuiButton-label {
+              font-family: 'Roboto Slab', serif;
+            }
+          }
         }
       }
 
