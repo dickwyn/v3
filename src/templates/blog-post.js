@@ -40,7 +40,7 @@ const BlogPost = ({
               | {normalizedDate} | {timeToRead} min read
             </h2>
           </div>
-          <Img fluid={fluid} imgStyle={{ objectFit: 'cover' }} />
+          <Img fluid={fluid} />
           <div className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
           <div className="post-tags">
             <p className="label">Tagged</p>

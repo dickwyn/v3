@@ -4,6 +4,11 @@
   .gatsby-image-wrapper {
     max-height: 430px;
     margin-bottom: 1rem;
+
+    img {
+      object-fit: cover !important;
+      object-position: top !important;
+    }
   }
 
   h1.post-title {
