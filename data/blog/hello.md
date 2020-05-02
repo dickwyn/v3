@@ -11,7 +11,6 @@ featuredImage: ../../static/images/kevin-hornsby-img_1088.jpg
 tags:
   - hello word
   - personal
-  - ''
 ---
 
 Hello there.

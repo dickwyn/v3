@@ -44,9 +44,7 @@ const BlogPost = ({
           <div className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
           <div className="post-tags">
             <p className="label">Tagged</p>
-            {tags.map((tag) => (
-              <p key={shortid.generate()}>{tag}</p>
-            ))}
+            {tags.map((tag) => tag && <p key={shortid.generate()}>{tag}</p>)}
           </div>
           {previous && (
             <Link to={`/blog/${previous.fields.slug}`} className="previous-post">
