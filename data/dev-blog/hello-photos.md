@@ -5,7 +5,7 @@ title: Hello Photos
 date: 2019-11-25T02:05:14.626Z
 description: Test post with photos
 featuredPost: false
-featuredImage: /images/disney-plus.png
+featuredImage: ../../static/images/disney-plus.png
 tags:
   - test
   - hello

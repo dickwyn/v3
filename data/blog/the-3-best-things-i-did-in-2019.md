@@ -7,7 +7,7 @@ description: >-
   My first year in adulthood, this is sort of a retrospective of some successful
   trends / things that i did this year.
 featuredPost: false
-featuredImage: /images/p4220795.jpg
+featuredImage: ../../static/images/p4220795.jpg
 tags:
   - '2019'
   - review

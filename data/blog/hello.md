@@ -7,7 +7,7 @@ description: >-
   Welcome to my blog aptly named "My name is Dick Wyn". This is a continuation
   of my (now old) Wordpress blog.
 featuredPost: true
-featuredImage: /images/kevin-hornsby-img_1088.jpg
+featuredImage: ../../static/images/kevin-hornsby-img_1088.jpg
 tags:
   - hello word
   - personal

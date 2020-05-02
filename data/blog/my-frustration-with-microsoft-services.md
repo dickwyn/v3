@@ -7,7 +7,7 @@ date: 2019-12-29T01:46:29.791Z
 description: >-
   A few issues that I have encountered while using applications and/or services from Microsoft
 featuredPost: false
-featuredImage: /images/office.com-screenshot-apps.png
+featuredImage: ../../static/images/office.com-screenshot-apps.png
 tags:
   - microsoft
   - setup
