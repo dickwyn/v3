@@ -44,7 +44,7 @@ header {
         text-decoration: none;
         text-transform: uppercase;
         margin: 0;
-        padding: calc(0.5rem - 2px) 0.5rem;
+        padding: 0.2rem 0.5rem;
         color: var(--text-secondary);
 
         &.home {
@@ -102,7 +102,7 @@ header {
         }
 
         a {
-          padding: calc(0.5rem - 2px) 0.25rem;
+          padding: 0.2rem 0.25rem;
         }
       }
     }
