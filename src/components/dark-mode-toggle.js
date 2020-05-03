@@ -29,7 +29,7 @@ class DarkModeToggle extends Component {
           const sunsetSunriseData = SunCalc.getTimes(new Date(), data.latitude, data.longitude);
           this.setState({
             sunrise: `${sunsetSunriseData.sunrise.getHours()}:${sunsetSunriseData.sunrise.getMinutes()}`,
-            sunset: sunsetSunriseData.sunset,
+            sunset: `${sunsetSunriseData.sunset.getHours()}:${sunsetSunriseData.sunset.getMinutes()}`,
           });
         }
       })
