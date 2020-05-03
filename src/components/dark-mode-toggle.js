@@ -6,17 +6,37 @@ import BrightnessLowIcon from '@material-ui/icons/Brightness4';
 import BrightnessHighIcon from '@material-ui/icons/BrightnessHigh';
 import '../scss/components/dark-mode-toggle.scss';
 import { DARK_MODE } from '../utils/constants';
+import axios from 'axios';
+import SunCalc from 'suncalc';
 
 class DarkModeToggle extends Component {
   constructor(props) {
     super(props);
     this.state = {
       mode: 0,
+      sunrise: '7:28',
+      sunset: '19:28',
     };
   }
 
   componentDidMount() {
     const lsDarkMode = localStorage.getItem(DARK_MODE.LOCAL_STORAGE_KEY);
+
+    axios
+      .post(`https://geolocation-db.com/json/${process.env.GEOLOCATIONDB_API_KEY}`)
+      .then(({ status, data }) => {
+        if (status === 200) {
+          const sunsetSunriseData = SunCalc.getTimes(new Date(), data.latitude, data.longitude);
+          this.setState({
+            sunrise: `${sunsetSunriseData.sunrise.getHours()}:${sunsetSunriseData.sunrise.getMinutes()}`,
+            sunset: sunsetSunriseData.sunset,
+          });
+        }
+      })
+      .catch(function (error) {
+        console.log('Failed to get geolocation from geolocationdb with error: ', error);
+      });
+
     if (lsDarkMode === null) {
       this.autoDetectTheme();
     } else if (lsDarkMode === 'true') {
@@ -55,12 +75,10 @@ class DarkModeToggle extends Component {
   };
 
   autoDetectTheme = (toggleMode) => {
-    const { mode } = this.state;
+    const { mode, sunrise, sunset } = this.state;
 
     if (mode === 0 || toggleMode === 2) {
       const date = new Date();
-      const sunrise = '7:28';
-      const sunset = '19:28';
       const currentTime = `${date.getHours()}:${date.getMinutes()}`;
 
       if ((currentTime < sunrise && currentTime > sunset) || this.prefersColorScheme('dark')) {
