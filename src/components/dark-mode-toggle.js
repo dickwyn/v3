@@ -6,8 +6,7 @@ import BrightnessLowIcon from '@material-ui/icons/Brightness4';
 import BrightnessHighIcon from '@material-ui/icons/BrightnessHigh';
 import '../scss/components/dark-mode-toggle.scss';
 import { DARK_MODE } from '../utils/constants';
-import axios from 'axios';
-import SunCalc from 'suncalc';
+import getSunriseSunset from '../utils/getSunriseSunset';
 
 class DarkModeToggle extends Component {
   constructor(props) {
@@ -20,22 +19,27 @@ class DarkModeToggle extends Component {
   }
 
   componentDidMount() {
-    const lsDarkMode = localStorage.getItem(DARK_MODE.LOCAL_STORAGE_KEY);
-
-    axios
-      .post(`https://geolocation-db.com/json/${process.env.GEOLOCATIONDB_API_KEY}`)
-      .then(({ status, data }) => {
-        if (status === 200) {
-          const sunsetSunriseData = SunCalc.getTimes(new Date(), data.latitude, data.longitude);
-          this.setState({
-            sunrise: `${sunsetSunriseData.sunrise.getHours()}:${sunsetSunriseData.sunrise.getMinutes()}`,
-            sunset: `${sunsetSunriseData.sunset.getHours()}:${sunsetSunriseData.sunset.getMinutes()}`,
-          });
+    getSunriseSunset()
+      .then((response) => {
+        if (!response.error) {
+          this.setState(
+            {
+              sunrise: response.sunrise,
+              sunset: response.sunset,
+            },
+            this.restoreTheme
+          );
+        } else {
+          console.error('Error with getting sunrise/sunset information: ', response.error);
         }
       })
-      .catch(function (error) {
-        console.log('Failed to get geolocation from geolocationdb with error: ', error);
+      .catch((error) => {
+        console.error('POST request to geolocationdb failed: ', error);
       });
+  }
+
+  restoreTheme = () => {
+    const lsDarkMode = localStorage.getItem(DARK_MODE.LOCAL_STORAGE_KEY);
 
     if (lsDarkMode === null) {
       this.autoDetectTheme();
@@ -44,7 +48,7 @@ class DarkModeToggle extends Component {
     } else if (lsDarkMode === 'false') {
       this.handleToggle('', 2);
     }
-  }
+  };
 
   handleToggle = (_e, savedMode) => {
     this.setState(
@@ -57,7 +61,6 @@ class DarkModeToggle extends Component {
 
   updateMode = () => {
     const { mode } = this.state;
-    (a) => {};
 
     switch (mode) {
       case 1:
@@ -79,7 +82,7 @@ class DarkModeToggle extends Component {
 
     if (mode === 0 || toggleMode === 2) {
       const date = new Date();
-      const currentTime = `${date.getHours()}:${date.getMinutes()}`;
+      const currentTime = `${date.getHours() - 3}:${date.getMinutes()}`;
 
       if ((currentTime < sunrise && currentTime > sunset) || this.prefersColorScheme('dark')) {
         this.updateBodyClass('dark');
