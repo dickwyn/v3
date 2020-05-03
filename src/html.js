@@ -9,16 +9,6 @@ export default function HTML(props) {
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="anonymous"></link>
-        <link
-          async
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;700&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
-          async
-          href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
-          rel="stylesheet"
-        ></link>
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
