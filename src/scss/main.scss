@@ -59,6 +59,31 @@ body {
     font-size: 0.804rem;
   }
 
+  ul {
+    list-style-type: square;
+  }
+
+  ol,
+  ul {
+    li {
+      margin-bottom: 0.6rem;
+
+      ol,
+      ul {
+        margin-top: 0.6rem;
+      }
+
+      span {
+        margin-right: 0.5rem;
+      }
+
+      p {
+        display: inline-block;
+        margin: 0 0 0.6rem;
+      }
+    }
+  }
+
   .root-container {
     position: relative;
     display: flex;
