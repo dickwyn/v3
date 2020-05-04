@@ -25,6 +25,13 @@ class NotFoundPage extends Component {
           <div className="content-container with-margin">
             <h1>Sorry, we can't find that page</h1>
             <p>It looks like something is wrong.</p>
+            <p>
+              View{' '}
+              <a href="https://dickwyn.wordpress.com/" target="_blank" rel="noopener noreferrer">
+                legacy blog posts
+              </a>{' '}
+              on the wordpress site.
+            </p>
             <pre>
               <code>
                 <p>Diagnostic information</p>
@@ -41,51 +48,6 @@ class NotFoundPage extends Component {
             >
               Go back
             </Button>
-            <ul>
-              <li>
-                <span aria-label="information" role="img">
-                  ℹ️
-                </span>
-                <p>
-                  View{' '}
-                  <a
-                    href="https://dickwyn.wordpress.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    legacy blog posts
-                  </a>{' '}
-                  on the wordpress site.
-                </p>
-              </li>
-              <li>
-                <span aria-label="face with monocle" role="img">
-                  🧐
-                </span>
-                <p>
-                  <a
-                    href={`${PackageJson.repository.url}/issues`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Report
-                  </a>{' '}
-                  an issue if you believe there's a bug on the site.
-                </p>
-              </li>
-              <li>
-                <span aria-label="keyboard" role="img">
-                  ⌨️
-                </span>
-                <p>
-                  View the code for this portfolio / blog on{' '}
-                  <a href={PackageJson.repository.url} target="_blank" rel="noopener noreferrer">
-                    GitHub
-                  </a>
-                  .
-                </p>
-              </li>
-            </ul>
           </div>
         </div>
       </Layout>
