@@ -127,6 +127,7 @@ body {
           transparent 0.15em,
           transparent
         );
+        word-wrap: break-word;
 
         &:hover {
           color: var(--accent);
