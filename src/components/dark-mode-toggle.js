@@ -41,8 +41,6 @@ class DarkModeToggle extends Component {
   restoreTheme = () => {
     const lsDarkMode = localStorage.getItem(DARK_MODE.LOCAL_STORAGE_KEY);
 
-    console.log('restoring');
-
     if (lsDarkMode === null) {
       this.autoDetectTheme();
     } else if (lsDarkMode === 'true') {
