@@ -41,6 +41,8 @@ class DarkModeToggle extends Component {
   restoreTheme = () => {
     const lsDarkMode = localStorage.getItem(DARK_MODE.LOCAL_STORAGE_KEY);
 
+    console.log('restoring');
+
     if (lsDarkMode === null) {
       this.autoDetectTheme();
     } else if (lsDarkMode === 'true') {
@@ -82,7 +84,7 @@ class DarkModeToggle extends Component {
 
     if (mode === 0 || toggleMode === 2) {
       const date = new Date();
-      const currentTime = `${date.getHours() - 3}:${date.getMinutes()}`;
+      const currentTime = `${date.getHours()}:${date.getMinutes()}`;
 
       if ((currentTime < sunrise && currentTime > sunset) || this.prefersColorScheme('dark')) {
         this.updateBodyClass('dark');
