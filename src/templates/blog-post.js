@@ -43,19 +43,34 @@ const BlogPost = ({
           <Img fluid={fluid} />
           <div className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
           <div className="post-tags">
-            <p className="label">Tagged</p>
-            {tags.map((tag) => tag && <p key={shortid.generate()}>{tag}</p>)}
+            <b>tagged</b>:{' '}
+            {tags.map(
+              (tag, index) =>
+                tag && (
+                  <>
+                    {index ? ', ' : ''}
+                    <a href={`/tags/${tag}`} key={shortid.generate()}>
+                      {tag}
+                    </a>
+                  </>
+                )
+            )}
           </div>
-          {previous && (
-            <Link to={`/blog/${previous.fields.slug}`} className="previous-post">
-              ← {previous.frontmatter.title}
-            </Link>
-          )}
-          {next && (
-            <Link to={`/blog/${next.fields.slug}`} className="next-post">
-              {next.frontmatter.title} →
-            </Link>
-          )}
+          <section className="next-read">
+            <h5 className="section-title">Read next</h5>
+            <div className="container">
+              {previous && (
+                <Link to={`/blog/${previous.fields.slug}`} className="previous-post">
+                  <div className="post-preview-container">{previous.frontmatter.title}</div>
+                </Link>
+              )}
+              {next && (
+                <Link to={`/blog/${next.fields.slug}`} className="next-post">
+                  <div className="post-preview-container">{next.frontmatter.title}</div>
+                </Link>
+              )}
+            </div>
+          </section>
         </article>
       </div>
     </Layout>
