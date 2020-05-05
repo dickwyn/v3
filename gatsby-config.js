@@ -75,7 +75,6 @@ module.exports = {
               backgroundColor: 'transparent',
             },
           },
-          `gatsby-embed-tweets`,
         ],
       },
     },
