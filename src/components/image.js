@@ -49,7 +49,7 @@ Image.propTypes = {
 Image.defaultProps = {
   className: '',
   filename: 'dickwyn-picture',
-  alt: 'dickwyn-picture',
+  alt: 'dick-wyn-yong-picture',
 };
 
 export default Image;
