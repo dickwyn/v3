@@ -8,7 +8,7 @@ const NAV_LINKS = [
   {
     id: shortid.generate(),
     name: 'blog',
-    path: '/blog/',
+    path: '/blog',
   },
   {
     id: shortid.generate(),
@@ -26,7 +26,7 @@ const Header = ({ hide, invisible }) => (
         </Link>
         {NAV_LINKS.map((item) => (
           <React.Fragment key={item.id}>
-            <Link to={item.path} activeClassName="active">
+            <Link to={item.path} activeClassName="active" partiallyActive={true}>
               {item.name}
             </Link>
           </React.Fragment>
