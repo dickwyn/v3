@@ -5,6 +5,7 @@
 @import 'pages/index.scss';
 @import 'pages/404.scss';
 @import 'pages/debug.scss';
+@import 'pages/experiments.scss';
 @import 'components/footer.scss';
 @import 'components/header.scss';
 @import 'components/layout.scss';
@@ -42,6 +43,10 @@ body {
   }
   h1 {
     font-size: 2.3rem;
+
+    &.page-title {
+      margin-top: 0;
+    }
   }
   h2 {
     font-size: 1.8rem;
