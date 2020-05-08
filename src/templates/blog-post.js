@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
-import TwitterIcon from '@material-ui/icons/Twitter';
 import moment from 'moment';
 import Layout from '../components/layout';
 import shortid from 'shortid';
@@ -47,12 +46,10 @@ const BlogPost = ({
             {tags.map(
               (tag, index) =>
                 tag && (
-                  <>
+                  <React.Fragment key={shortid.generate()}>
                     {index ? ', ' : ''}
-                    <a href={`/tags/${tag}`} key={shortid.generate()}>
-                      {tag}
-                    </a>
-                  </>
+                    <a href={`/tags/${tag}`}>{tag}</a>
+                  </React.Fragment>
                 )
             )}
           </div>
