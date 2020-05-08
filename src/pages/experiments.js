@@ -12,19 +12,19 @@ const EXPERIMENTS = [
   {
     name: 'Standup Form',
     description:
-      'A simple form built with Angular to generate standup checklist from today and yesterday to share with the team',
+      'A simple form built with Angular to generate standup checklist from today and yesterday to share with the team.',
     url: 'https://standup-form.dickwyn.xyz/',
     repo: 'https://github.com/dickwyn/linkedin-message-template',
   },
   {
     name: 'npmcard',
-    description: "it's me, dickwyn on npm.",
+    description: "It's me, dickwyn on npm.",
     repo: 'https://github.com/dickwyn/linkedin-message-template',
   },
   {
     name: 'LinkedIn Message Template',
     description:
-      'A form to generate messages when I connect with new LinkedIn members. The message template is within the 300 character limit set by LinkedIn',
+      'A form to generate messages when I connect with new LinkedIn members. The message template is within the 300 character limit set by LinkedIn.',
     url: 'https://linkedin-message-template.dickwyn.xyz/',
     repo: 'https://github.com/dickwyn/linkedin-message-template',
   },
