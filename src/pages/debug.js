@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
-import getSunriseSunset from '../utils/getSunriseSunset';
 
 class DebugPage extends Component {
   render() {
     const {
       allSitePage: { nodes: allSitePages },
     } = this.props.data;
-    const { currentTime, sunrise, sunset } = this.state;
 
     return (
       <Layout page="Debug" className="DebugPage">
