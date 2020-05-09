@@ -1,9 +1,11 @@
 header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: var(--background);
+  height: auto;
   animation: mte 1.5s 0s forwards ease-in-out;
   transition: background-color 100ms ease-in-out, color 200ms ease-in-out !important;
-  padding: 0.4rem 0.521rem 0.4rem 0.979rem;
-
   -webkit-box-shadow: 0 3px 1px -2px var(--box-shadow-layer-1),
     0 2px 2px 0 var(--box-shadow-layer-2), 0 1px 5px 0 var(--box-shadow-layer-3);
   box-shadow: 0 3px 1px -2px var(--box-shadow-layer-1), 0 2px 2px 0 var(--box-shadow-layer-2),
@@ -22,6 +24,7 @@ header {
     justify-content: space-between;
     max-width: 1920px;
     margin: 0 auto;
+    padding: 0.4rem 0.521rem 0.4rem 0.979rem;
 
     &.invisible {
       border-bottom: none;
