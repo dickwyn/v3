@@ -6,49 +6,14 @@ import BrightnessLowIcon from '@material-ui/icons/Brightness4';
 import BrightnessHighIcon from '@material-ui/icons/BrightnessHigh';
 import '../scss/components/dark-mode-toggle.scss';
 import { DARK_MODE } from '../utils/constants';
-import getSunriseSunset from '../utils/getSunriseSunset';
 
 class DarkModeToggle extends Component {
   constructor(props) {
     super(props);
     this.state = {
       mode: 0,
-      sunrise: '7:28',
-      sunset: '19:28',
     };
   }
-
-  componentDidMount() {
-    getSunriseSunset()
-      .then((response) => {
-        if (!response.error) {
-          this.setState(
-            {
-              sunrise: response.sunrise,
-              sunset: response.sunset,
-            },
-            this.restoreTheme
-          );
-        } else {
-          console.error('Error with getting sunrise/sunset information: ', response.error);
-        }
-      })
-      .catch((error) => {
-        console.error('POST request to geolocationdb failed: ', error);
-      });
-  }
-
-  restoreTheme = () => {
-    const lsDarkMode = localStorage.getItem(DARK_MODE.LOCAL_STORAGE_KEY);
-
-    if (lsDarkMode === null) {
-      this.autoDetectTheme();
-    } else if (lsDarkMode === 'true') {
-      this.handleToggle('', 1);
-    } else if (lsDarkMode === 'false') {
-      this.handleToggle('', 2);
-    }
-  };
 
   handleToggle = (_e, savedMode) => {
     this.setState(
@@ -78,13 +43,10 @@ class DarkModeToggle extends Component {
   };
 
   autoDetectTheme = (toggleMode) => {
-    const { mode, sunrise, sunset } = this.state;
+    const { mode } = this.state;
 
     if (mode === 0 || toggleMode === 2) {
-      const date = new Date();
-      const currentTime = `${date.getHours()}:${date.getMinutes()}`;
-
-      if ((currentTime < sunrise && currentTime > sunset) || this.prefersColorScheme('dark')) {
+      if (this.prefersColorScheme('dark')) {
         this.updateBodyClass('dark');
       } else {
         this.updateBodyClass('light');

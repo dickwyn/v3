@@ -4,37 +4,6 @@ import Layout from '../components/layout';
 import getSunriseSunset from '../utils/getSunriseSunset';
 
 class DebugPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentTime: '08:00',
-      sunrise: '7:28',
-      sunset: '19:28',
-    };
-  }
-
-  componentDidMount() {
-    const date = new Date();
-    getSunriseSunset()
-      .then((response) => {
-        if (!response.error) {
-          this.setState(
-            {
-              currentTime: `${date.getHours()}:${date.getMinutes()}`,
-              sunrise: response.sunrise,
-              sunset: response.sunset,
-            },
-            this.restoreTheme
-          );
-        } else {
-          console.error('Error with getting sunrise/sunset information: ', response.error);
-        }
-      })
-      .catch((error) => {
-        console.error('POST request to geolocationdb failed: ', error);
-      });
-  }
-
   render() {
     const {
       allSitePage: { nodes: allSitePages },
