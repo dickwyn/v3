@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
  * https://stackoverflow.com/a/56508865
  */
 
-const Image = ({ className, filename, alt }) => (
+const Image = ({ className, fileName, alt }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -29,7 +29,7 @@ const Image = ({ className, filename, alt }) => (
     `}
     render={(data) => {
       const image = data.images.edges.find((n) => {
-        return n.node.relativePath.includes(filename);
+        return n.node.relativePath.includes(fileName);
       });
       if (!image) {
         return null;
@@ -42,13 +42,13 @@ const Image = ({ className, filename, alt }) => (
 
 Image.propTypes = {
   className: PropTypes.string,
-  filename: PropTypes.string,
+  fileName: PropTypes.string,
   alt: PropTypes.string,
 };
 
 Image.defaultProps = {
   className: '',
-  filename: 'dickwyn-picture',
+  fileName: 'dickwyn-picture',
   alt: 'dick-wyn-yong-picture',
 };
 
