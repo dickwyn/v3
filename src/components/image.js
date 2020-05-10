@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
  * https://stackoverflow.com/a/56508865
  */
 
-const Image = ({ className, fileName, alt }) => (
+const Image = ({ className, fileName, alt, objectFit, objectPosition }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -35,7 +35,17 @@ const Image = ({ className, fileName, alt }) => (
         return null;
       }
 
-      return <Img className={className} alt={alt} fluid={image.node.childImageSharp.fluid} />;
+      return (
+        <Img
+          className={className}
+          alt={alt}
+          fluid={image.node.childImageSharp.fluid}
+          imgStyle={{
+            objectFit: objectFit,
+            objectPosition: objectPosition,
+          }}
+        />
+      );
     }}
   />
 );
@@ -44,12 +54,16 @@ Image.propTypes = {
   className: PropTypes.string,
   fileName: PropTypes.string,
   alt: PropTypes.string,
+  objectFit: PropTypes.string,
+  objectPosition: PropTypes.string,
 };
 
 Image.defaultProps = {
   className: '',
   fileName: 'dickwyn-picture',
   alt: 'dick-wyn-yong-picture',
+  objectFit: 'fill',
+  objectPosition: '50% 50%',
 };
 
 export default Image;

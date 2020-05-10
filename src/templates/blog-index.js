@@ -3,6 +3,7 @@ import { graphql, navigate } from 'gatsby';
 import Pagination from '@material-ui/lab/Pagination';
 import Layout from '../components/layout';
 import PostPreview from '../components/post-preview';
+import Image from '../components/image';
 
 const BlogPostPreview = ({
   data: {
@@ -13,7 +14,11 @@ const BlogPostPreview = ({
   return (
     <Layout page="Blog" className="blog-index">
       <div className="hero-image-container">
-        <img src="/images/adrien-olichon-gOdavfpH-3s-unsplash.jpg"></img>
+        <Image
+          className="blog-hero-image"
+          fileName="adrien-olichon-gOdavfpH-3s-unsplash"
+          alt="adrien-olichon-unsplash"
+        ></Image>
         <h1>My Name is Dick Wyn</h1>
       </div>
       <div className="wrapper">
