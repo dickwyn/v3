@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
-import BrightnessAutoIcon from '@material-ui/icons/BrightnessAuto';
-import BrightnessLowIcon from '@material-ui/icons/Brightness4';
-import BrightnessHighIcon from '@material-ui/icons/BrightnessHigh';
-import '../scss/components/dark-mode-toggle.scss';
+import BrightnessAutoTwoToneIcon from '@material-ui/icons/BrightnessAutoTwoTone';
+import Brightness2TwoToneIcon from '@material-ui/icons/Brightness2TwoTone';
+import WbSunnyTwoToneIcon from '@material-ui/icons/WbSunnyTwoTone';
 import { DARK_MODE } from '../utils/constants';
 
 class DarkModeToggle extends Component {
@@ -67,11 +66,11 @@ class DarkModeToggle extends Component {
 
     switch (mode) {
       case 1:
-        return <BrightnessLowIcon />;
+        return <Brightness2TwoToneIcon />;
       case 2:
-        return <BrightnessHighIcon />;
+        return <WbSunnyTwoToneIcon />;
       default:
-        return <BrightnessAutoIcon />;
+        return <BrightnessAutoTwoToneIcon />;
     }
   };
 
