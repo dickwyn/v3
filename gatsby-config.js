@@ -60,7 +60,6 @@ module.exports = {
         includePaths: ['node_modules'],
       },
     },
-
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -90,6 +89,7 @@ module.exports = {
         icon: `static/images/dickwyn-emblem.svg`,
       },
     },
+    `gatsby-plugin-material-ui`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
