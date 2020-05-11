@@ -10,6 +10,10 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import EmailIcon from '@material-ui/icons/Email';
 
+import preval from 'preval.macro';
+
+const buildTimestamp = preval`module.exports = new Date().getTime();`;
+
 // eslint-disable-next-line no-unused-vars
 const SOCIAL_LINKS = [
   {
@@ -54,7 +58,9 @@ const Footer = ({ hide }) => (
   <footer className={hide ? 'hide' : undefined}>
     <div className="wrapper">
       <div className="content-container">
-        <div className="left">© {new Date().getFullYear()} Dick Wyn Yong</div>
+        <div className="left">
+          © {new Date().getFullYear()} Dick Wyn Yong. last built {buildTimestamp}
+        </div>
         <div className="right">
           {SOCIAL_LINKS.map((item) => (
             <IconButton
