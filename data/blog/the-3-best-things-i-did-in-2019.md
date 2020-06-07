@@ -16,7 +16,7 @@ tags:
 
 I haven't done a "retrospective" kind of post in a quite a few years. I remember doing it yearly when I was doing tech blogging. I got the idea to do it when I saw Emma Wedekind's tweet asking about the "best thing that happened to you in 2019!". I thought deeply about it and there was truly a lot of great things that happened to me. I started a job my first development job this year, lived off of my own income for the first time ever, flew half way across the world to spend time with my best friend, etc. The list goes on.
 
-https://twitter.com/EmmaWedekind/status/1207718548833013760
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🎄🎄🎄<br>Hey friends,<br><br>Since it&#39;s the holiday season I want to give away a <a href="https://twitter.com/ThePracticalDev?ref_src=twsrc%5Etfw">@ThePracticalDev</a> gift card for $50 to their merch store!<br><br>If you&#39;re interested, leave a comment below telling me the best thing that happened to you in 2019! 👇<br><br>I&#39;ll pick the recipient tomorrow at 1pm CEST!</p>&mdash; Emma Bostian 🐞 (@EmmaBostian) <a href="https://twitter.com/EmmaBostian/status/1207718548833013760?ref_src=twsrc%5Etfw">December 19, 2019</a></blockquote>
 
 I thought about this for a few days and ended up with the idea to talk about the best things that I did in the past 12 months.
 

@@ -60,6 +60,7 @@ module.exports = {
         includePaths: ['node_modules'],
       },
     },
+    `gatsby-plugin-twitter`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
