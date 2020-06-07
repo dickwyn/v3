@@ -8,12 +8,12 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import shortid from 'shortid';
 import Layout from '../components/layout';
 
-const EXPERIMENTS = [
+const PROJECTS = [
   {
     name: 'Standup Form',
     description:
       'A simple form built with Angular to generate standup checklist from today and yesterday to share with the team.',
-    url: 'https://standup-form.dickwyn.xyz/',
+    tryItUrl: 'https://standup-form.dickwyn.xyz/',
     repo: 'https://github.com/dickwyn/linkedin-message-template',
   },
   {
@@ -25,7 +25,7 @@ const EXPERIMENTS = [
     name: 'LinkedIn Message Template',
     description:
       'A form to generate messages when I connect with new LinkedIn members. The message template is within the 300 character limit set by LinkedIn.',
-    url: 'https://linkedin-message-template.dickwyn.xyz/',
+    tryItUrl: 'https://linkedin-message-template.dickwyn.xyz/',
     repo: 'https://github.com/dickwyn/linkedin-message-template',
   },
   {
@@ -34,16 +34,26 @@ const EXPERIMENTS = [
       'My LaTeX resume template geared towards my computer science background. It is highly customizable and has helped my job searching workflow in the past.',
     repo: 'https://github.com/dickwyn/resume',
   },
+  {
+    name: 'The Technology of Today Malaysia',
+    description: 'Technology news for the Malaysian market',
+    url: 'https://megapowertech-malaysia.dickwyn.xyz',
+  },
+  {
+    name: 'The Technology of Today International',
+    description: 'Technology reviews and news articles',
+    url: 'https://megapowertech.dickwyn.xyz',
+  },
 ];
 
-const ExperimentsPage = () => {
+const ProjectsPage = () => {
   return (
-    <Layout page="Experiments" className="experiments">
+    <Layout page="Projects" className="projects">
       <div className="wrapper">
         <div className="content-container with-margin">
-          <h1 className="page-title">Experiments</h1>
-          <section className="list-of-experiments">
-            {EXPERIMENTS.map((experiment) => (
+          <h1 className="page-title">Projects</h1>
+          <section className="list-of-projects">
+            {PROJECTS.map((experiment) => (
               <Card key={shortid.generate()}>
                 <CardContent>
                   <h4>{experiment.name}</h4>
@@ -57,18 +67,30 @@ const ExperimentsPage = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
+                      View
+                    </Button>
+                  )}
+                  {experiment.tryItUrl && (
+                    <Button
+                      size="small"
+                      href={experiment.tryItUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Try it out
                     </Button>
                   )}
-                  <IconButton
-                    size="small"
-                    href={experiment.repo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="view source on github"
-                  >
-                    <GitHubIcon />
-                  </IconButton>
+                  {experiment.repo && (
+                    <IconButton
+                      size="small"
+                      href={experiment.repo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="view source on github"
+                    >
+                      <GitHubIcon />
+                    </IconButton>
+                  )}
                 </CardActions>
               </Card>
             ))}
@@ -79,4 +101,4 @@ const ExperimentsPage = () => {
   );
 };
 
-export default ExperimentsPage;
+export default ProjectsPage;
