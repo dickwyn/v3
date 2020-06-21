@@ -7,6 +7,10 @@ class DebugPage extends Component {
     const {
       allSitePage: { nodes: allSitePages },
     } = this.props.data;
+    const date = new Date();
+    const currentTime = `${date.getHours()}:${date.getMinutes()}`;
+    const sunrise = '7:28';
+    const sunset = '19:28';
 
     return (
       <Layout page="Debug" className="DebugPage">
