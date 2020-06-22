@@ -18,7 +18,7 @@ button.hamburger-menu {
     z-index: 10;
 
     &.active {
-      div {
+      .bars {
         &:first-child {
           transform: rotate(45deg);
         }
@@ -33,14 +33,13 @@ button.hamburger-menu {
       }
     }
 
-    div {
+    .bars {
       z-index: 99999;
       width: 100%;
       height: 0.18rem;
       background: var(--text-secondary);
-      border-radius: 10px;
+      border-radius: 4px;
       transition: all 0.3s linear;
-      position: relative;
       transform-origin: 1px;
     }
   }

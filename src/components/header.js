@@ -18,30 +18,34 @@ const NAV_LINKS = [
   },
 ];
 
+const SiteLinks = () => (
+  <>
+    {NAV_LINKS.map((item) => (
+      <React.Fragment key={item.id}>
+        <Link to={item.path} activeClassName="active" partiallyActive={true}>
+          {item.name}
+        </Link>
+      </React.Fragment>
+    ))}
+  </>
+);
+
 const Header = ({ hide, invisible }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header>
-      <div
-        className={`desktop ${hide ? 'hide' : undefined} ${invisible ? 'invisible' : undefined}`}
-      >
-        <div className={'content-container'}>
+    <header className={`${hide ? 'hide' : undefined} ${invisible ? 'invisible' : undefined}`}>
+      <div className="common-nav">
+        <div className="content-container">
           <nav role="navigation">
             <Link to="/" activeClassName="active" className="home">
               <p className="name">dickwyn</p>
             </Link>
-            <div className={`desktop-nav`}>
-              {NAV_LINKS.map((item) => (
-                <React.Fragment key={item.id}>
-                  <Link to={item.path} activeClassName="active" partiallyActive={true}>
-                    {item.name}
-                  </Link>
-                </React.Fragment>
-              ))}
+            <div className={`desktop-links`}>
+              <SiteLinks />
             </div>
           </nav>
-          <div className="right">
+          <div className="action-buttons">
             <DarkModeToggle />
             <HamburgerToggle open={open} setOpen={setOpen} />
           </div>
@@ -49,13 +53,7 @@ const Header = ({ hide, invisible }) => {
       </div>
       <div className={`mobile-nav ${open ? undefined : 'hide'}`}>
         <div className="content-container">
-          {NAV_LINKS.map((item) => (
-            <React.Fragment key={item.id}>
-              <Link to={item.path} activeClassName="active" partiallyActive={true}>
-                {item.name}
-              </Link>
-            </React.Fragment>
-          ))}
+          <SiteLinks />
         </div>
       </div>
     </header>
