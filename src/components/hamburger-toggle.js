@@ -2,16 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const HamburgerToggle = ({ open, setOpen }) => (
-  <div className="hamburger-menu-container">
-    <button
-      className={`hamburger-menu ${open ? 'active' : undefined}`}
-      onClick={() => setOpen(!open)}
-    >
+  <button
+    className="hamburger-menu"
+    aria-label="Toggle navigation menu"
+    onClick={() => setOpen(!open)}
+  >
+    <div className={`hamburger-menu-container ${open ? 'active' : undefined}`}>
       <div />
       <div />
       <div />
-    </button>
-  </div>
+    </div>
+  </button>
 );
 
 HamburgerToggle.propTypes = {};

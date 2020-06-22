@@ -11,6 +11,56 @@ header {
   box-shadow: 0 3px 1px -2px var(--box-shadow-layer-1), 0 2px 2px 0 var(--box-shadow-layer-2),
     0 1px 5px 0 var(--box-shadow-layer-3);
 
+  a,
+  p,
+  p.name {
+    font-size: 1.4rem;
+  }
+
+  a {
+    font-family: 'Staatliches', cursive;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0.2rem 0.5rem;
+    color: var(--text-secondary);
+
+    &.home {
+      background-color: var(--background-tertiary);
+      border-radius: 4px;
+      margin-right: 0.5rem;
+
+      &:hover,
+      &.active {
+        img {
+          opacity: 1;
+        }
+      }
+
+      img {
+        width: 1.3rem;
+        height: 1.3rem;
+        margin: 0 0.25rem 0 0;
+        vertical-align: top;
+        opacity: 0.75;
+      }
+
+      p {
+        display: inline-block;
+        margin: 0;
+
+        &.short-name {
+          display: none;
+        }
+      }
+    }
+
+    &:hover,
+    &.active {
+      color: var(--text);
+    }
+  }
+
   .desktop {
     &.hide {
       display: none;
@@ -37,55 +87,6 @@ header {
         margin: 0;
         padding: 0;
         align-items: center;
-
-        a,
-        p {
-          font-size: 1.4rem;
-        }
-
-        a {
-          font-family: 'Staatliches', cursive;
-          text-decoration: none;
-          text-transform: uppercase;
-          margin: 0;
-          padding: 0.2rem 0.5rem;
-          color: var(--text-secondary);
-
-          &.home {
-            background-color: var(--background-tertiary);
-            border-radius: 4px;
-            margin-right: 0.5rem;
-
-            &:hover,
-            &.active {
-              img {
-                opacity: 1;
-              }
-            }
-
-            img {
-              width: 1.3rem;
-              height: 1.3rem;
-              margin: 0 0.25rem 0 0;
-              vertical-align: top;
-              opacity: 0.75;
-            }
-
-            p {
-              display: inline-block;
-              margin: 0;
-
-              &.short-name {
-                display: none;
-              }
-            }
-          }
-
-          &:hover,
-          &.active {
-            color: var(--text);
-          }
-        }
 
         .separator {
           color: var(--text-secondary);
@@ -124,21 +125,20 @@ header {
   }
 
   .mobile-nav {
-    position: absolute;
-    top: 5rem;
-    left: 0px;
     height: 100%;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    background: black;
-
+    background: var(--background-tertiary);
     color: rgb(250, 250, 250);
     transition: height 0.3s ease 0s;
-    z-index: 2;
 
     &.hide {
       display: none;
+    }
+
+    .content-container {
+      padding: 0.4rem 0.521rem 0.4rem 0.979rem;
     }
   }
 }

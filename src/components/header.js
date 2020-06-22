@@ -48,13 +48,15 @@ const Header = ({ hide, invisible }) => {
         </div>
       </div>
       <div className={`mobile-nav ${open ? undefined : 'hide'}`}>
-        {NAV_LINKS.map((item) => (
-          <React.Fragment key={item.id}>
-            <Link to={item.path} activeClassName="active" partiallyActive={true}>
-              {item.name}
-            </Link>
-          </React.Fragment>
-        ))}
+        <div className="content-container">
+          {NAV_LINKS.map((item) => (
+            <React.Fragment key={item.id}>
+              <Link to={item.path} activeClassName="active" partiallyActive={true}>
+                {item.name}
+              </Link>
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     </header>
   );
