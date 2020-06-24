@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
@@ -18,11 +18,16 @@ const NAV_LINKS = [
   },
 ];
 
-const SiteLinks = () => (
+const SiteLinks = ({ toggleMobileNav }) => (
   <>
     {NAV_LINKS.map((item) => (
       <React.Fragment key={item.id}>
-        <Link to={item.path} activeClassName="active" partiallyActive={true}>
+        <Link
+          to={item.path}
+          activeClassName="active"
+          partiallyActive={true}
+          onClick={() => toggleMobileNav && toggleMobileNav()}
+        >
           {item.name}
         </Link>
       </React.Fragment>
@@ -32,6 +37,11 @@ const SiteLinks = () => (
 
 const Header = ({ hide, invisible }) => {
   const [open, setOpen] = useState(false);
+
+  const toggleMobileNav = () => {
+    document.body.style.overflow = open ? 'initial' : 'hidden';
+    setOpen(!open);
+  };
 
   return (
     <header className={`${hide ? 'hide' : undefined} ${invisible ? 'invisible' : undefined}`}>
@@ -47,13 +57,13 @@ const Header = ({ hide, invisible }) => {
           </nav>
           <div className="action-buttons">
             <DarkModeToggle />
-            <HamburgerToggle open={open} setOpen={setOpen} />
+            <HamburgerToggle open={open} toggleMobileNav={toggleMobileNav} />
           </div>
         </div>
       </div>
       <div className={`mobile-nav ${open ? undefined : 'hide'}`}>
         <div className="content-container">
-          <SiteLinks />
+          <SiteLinks toggleMobileNav={toggleMobileNav} />
         </div>
       </div>
     </header>

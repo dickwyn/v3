@@ -101,10 +101,10 @@ header {
   }
 
   .mobile-nav {
+    position: fixed;
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    top: 0px;
     background: var(--background-tertiary);
     transition: height 0.3s ease 0s;
 
@@ -113,7 +113,18 @@ header {
     }
 
     .content-container {
-      padding: 0.4rem 0.521rem 0.4rem 0.979rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0px;
+      padding: 0.4rem 0.979rem0.4rem;
+
+      a {
+        display: block;
+        padding-bottom: 0.5rem;
+      }
     }
   }
 
