@@ -14,12 +14,12 @@ const PROJECTS = [
     description:
       'A simple form built with Angular to generate standup checklist from today and yesterday to share with the team.',
     tryItUrl: 'https://standup-form.dickwyn.xyz/',
-    repo: 'https://github.com/dickwyn/linkedin-message-template',
+    repo: 'https://github.com/dickwyn/standup-form',
   },
   {
     name: 'npmcard',
     description: "It's me, dickwyn on npm.",
-    repo: 'https://github.com/dickwyn/linkedin-message-template',
+    repo: 'https://github.com/dickwyn/npmcard',
   },
   {
     name: 'LinkedIn Message Template',
@@ -37,12 +37,12 @@ const PROJECTS = [
   {
     name: 'The Technology of Today Malaysia',
     description: 'Technology news for the Malaysian market',
-    url: 'https://megapowertech-malaysia.dickwyn.xyz',
+    url: 'https://megapowertech-malaysia.blogspot.com/',
   },
   {
     name: 'The Technology of Today International',
     description: 'Technology reviews and news articles',
-    url: 'https://megapowertech.dickwyn.xyz',
+    url: 'https://megapowertech.blogspot.com/',
   },
 ];
 
