@@ -2,12 +2,7 @@
 
 My personal website and blog. This is the first time I'm combining my portfolio and blog into the same site. For as long as I can remember, I have always had my blog on a separate site/service.
 
-## Project Dependencies
-
-This project is built with:
-
-1. [NodeJS](http://nodejs.org)
-2. [Gatsby](https://github.com/gatsbyjs/gatsby)
+Forked from [Gatsby's starter default](https://github.com/gatsbyjs/gatsby-starter-default) project.
 
 ## Running the Project
 
