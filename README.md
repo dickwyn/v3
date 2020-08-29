@@ -1,4 +1,4 @@
-# dickwyn.xyz v5 ⚡
+# dickwyn.xyz v3 ⚡
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/55ea29f3-f556-45b2-8607-e57839dcfb2f/deploy-status)](https://app.netlify.com/sites/v5-dickwyn-xyz/deploys)
 
@@ -24,7 +24,7 @@ $ yarn start
 
 1. [V1](https://github.com/dickwyn/v1)
 2. [V2](https://github.com/dickwyn/v2)
-3. [V3](https://github.com/dickwyn/blog)
+3. [Blog](https://github.com/dickwyn/blog)
 
 ## License
 
