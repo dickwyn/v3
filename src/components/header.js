@@ -38,9 +38,11 @@ const SiteLinks = ({ toggleMobileNav }) => (
 const Header = ({ hide, invisible }) => {
   const [open, setOpen] = useState(false);
 
-  const toggleMobileNav = () => {
-    document.body.style.overflow = open ? 'initial' : 'hidden';
-    setOpen(!open);
+  const toggleMobileNav = (path) => {
+    if ((path === '/' && open) || typeof path === 'object') {
+      document.body.style.overflow = open ? 'initial' : 'hidden';
+      setOpen(!open);
+    }
   };
 
   return (
@@ -48,7 +50,12 @@ const Header = ({ hide, invisible }) => {
       <div className="common-nav">
         <div className="content-container">
           <nav role="navigation">
-            <Link to="/" activeClassName="active" className="home" onClick={toggleMobileNav}>
+            <Link
+              to="/"
+              activeClassName="active"
+              className="home"
+              onClick={() => toggleMobileNav('/')}
+            >
               <p className="name">dickwyn</p>
             </Link>
             <div className={`desktop-links`}>
