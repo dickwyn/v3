@@ -3,17 +3,13 @@ import PropTypes from 'prop-types';
 
 const HamburgerToggle = ({ open, toggleMobileNav }) => {
   return (
-    <button
-      className="hamburger-menu"
-      aria-label={`${open ? 'Close navigation menu' : 'Open navigation menu'}`}
-      onClick={toggleMobileNav}
-    >
-      <div className={`hamburger-menu-container ${open ? 'active' : undefined}`}>
-        <div className="bars" />
-        <div className="bars" />
-        <div className="bars" />
-      </div>
-    </button>
+        <button
+          className={`hamburger-menu ${open ? 'open' : undefined}`}
+          aria-label={`${open ? 'Close navigation menu' : 'Open navigation menu'}`}
+          onClick={toggleMobileNav}
+        >
+          <div className={`hamburger-menu-bar ${open ? 'open' : undefined}`} />
+        </button>
   );
 };
 
