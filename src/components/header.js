@@ -26,7 +26,7 @@ const SiteLinks = ({ toggleMobileNav }) => (
           to={item.path}
           activeClassName="active"
           partiallyActive={true}
-          onClick={() => toggleMobileNav && toggleMobileNav()}
+          onClick={toggleMobileNav}
         >
           {item.name}
         </Link>
@@ -39,8 +39,8 @@ const Header = ({ hide, invisible }) => {
   const [open, setOpen] = useState(false);
 
   const toggleMobileNav = (path) => {
-    if ((path === '/' && open) || typeof path === 'object') {
-      document.body.style.overflow = open ? 'initial' : 'hidden';
+    document.body.style.overflow = open ? 'initial' : 'hidden';
+    if ((path === '/' && open) || typeof path === 'object' || path === undefined) {
       setOpen(!open);
     }
   };
