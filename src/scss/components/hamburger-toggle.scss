@@ -1,4 +1,4 @@
-button.hamburger-menu {
+button.hamburger-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,7 +8,7 @@ button.hamburger-menu {
   transition: all 0.5s ease-in-out;
   text-align: unset;
 
-  &.open .hamburger-menu-bar {
+  &.open .hamburger-toggle-bar {
     transform: translateX(-0.3rem);
     background: transparent;
     box-shadow: none;
@@ -22,7 +22,7 @@ button.hamburger-menu {
     }
   }
 
-  .hamburger-menu-bar {
+  .hamburger-toggle-bar {
     &,
     &::before,
     &::after {

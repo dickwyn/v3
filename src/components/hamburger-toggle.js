@@ -7,11 +7,11 @@ const HamburgerToggle = ({ open, toggleMobileNav }) => {
     <>
       <Tooltip title="Toggle site menu">
         <button
-          className={`hamburger-menu ${open ? 'open' : undefined}`}
+          className={`hamburger-toggle ${open ? 'open' : undefined}`}
           aria-label={`${open ? 'Close navigation menu' : 'Open navigation menu'}`}
           onClick={toggleMobileNav}
         >
-          <div className={`hamburger-menu-bar ${open ? 'open' : undefined}`} />
+          <div className={`hamburger-toggle-bar ${open ? 'open' : undefined}`} />
         </button>
       </Tooltip>
     </>
