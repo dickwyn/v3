@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Tooltip from '@material-ui/core/Tooltip';
 
 const HamburgerToggle = ({ open, toggleMobileNav }) => {
   return (
+    <>
+      <Tooltip title="Toggle site menu">
         <button
           className={`hamburger-menu ${open ? 'open' : undefined}`}
           aria-label={`${open ? 'Close navigation menu' : 'Open navigation menu'}`}
@@ -10,6 +13,8 @@ const HamburgerToggle = ({ open, toggleMobileNav }) => {
         >
           <div className={`hamburger-menu-bar ${open ? 'open' : undefined}`} />
         </button>
+      </Tooltip>
+    </>
   );
 };
 
