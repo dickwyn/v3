@@ -48,7 +48,7 @@ const Header = ({ hide, invisible }) => {
       <div className="common-nav">
         <div className="content-container">
           <nav role="navigation">
-            <Link to="/" activeClassName="active" className="home">
+            <Link to="/" activeClassName="active" className="home" onClick={toggleMobileNav}>
               <p className="name">dickwyn</p>
             </Link>
             <div className={`desktop-links`}>
