@@ -106,11 +106,12 @@ header {
     width: 100%;
     top: 0px;
     background: var(--background-tertiary);
-    transition: height 0.3s ease 0s;
     z-index: -1;
+    clip-path: circle(80px at 100% -30%);
+    transition: all 1s ease-out;
 
-    &.hide {
-      display: none;
+    &.open {
+      clip-path: circle(1900px at 100% -30%);
     }
 
     .content-container {

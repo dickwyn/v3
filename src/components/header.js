@@ -68,7 +68,7 @@ const Header = ({ hide, invisible }) => {
           </div>
         </div>
       </div>
-      <div className={`mobile-nav ${open ? undefined : 'hide'}`}>
+      <div className={`mobile-nav ${open && 'open'}`}>
         <div className="content-container">
           <SiteLinks toggleMobileNav={toggleMobileNav} />
         </div>
