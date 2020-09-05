@@ -1,6 +1,5 @@
-nav {
+header {
   position: sticky;
-  width: 100%;
   top: 0;
   z-index: 999;
   background: var(--background);
@@ -9,7 +8,10 @@ nav {
     0 2px 2px 0 var(--box-shadow-layer-2), 0 1px 5px 0 var(--box-shadow-layer-3);
   box-shadow: 0 3px 1px -2px var(--box-shadow-layer-1), 0 2px 2px 0 var(--box-shadow-layer-2),
     0 1px 5px 0 var(--box-shadow-layer-3);
-  display: flex;
+ 
+    display: grid;
+    grid-template-columns: 104px 2fr 104px;
+    padding: $padding;
 
   &.hide {
     display: none;
@@ -36,7 +38,6 @@ nav {
     &.home {
       background-color: var(--background-tertiary);
       border-radius: 4px;
-      margin-right: 0.5rem;
 
       &:hover,
       &.active {
@@ -69,8 +70,8 @@ nav {
     }
   }
 
-  .content-container {
-    padding: $padding 0;
+  nav {
+
     background-color: var(--background);
     display: flex;
     justify-content: space-between;
@@ -86,71 +87,66 @@ nav {
       display: flex;
       justify-content: space-between;
       user-select: none;
-      padding: $padding 0;
       margin: 0;
-  
+
+      &.mobile-nav {
+        display: none;
+        background: var(--background-secondary);
+      }
+
       li {
         display: inline-block;
         padding: 0;
         margin: 0;
       }
     }
+  }
 
-    &.invisible {
-      border-bottom: none;
-    }
+  .action-buttons {
+    display: flex;
+    justify-content: flex-end;
 
-    nav {
-      display: flex;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      align-items: center;
-
-      .separator {
-        color: var(--text-secondary);
-        padding: 0 1.0875rem;
-      }
-    }
-
-    .mobile-nav {
-      display: none;
-      background: var(--background-secondary);
-    }
-
-    .action-buttons {
-      display: flex;
+    .dark-mode-toggle-container > button {
+      margin-right: 4px;
     }
   }
 
-
   @media (max-width: 768px) {
-    .content-container {
-      height: $header-height;
-    }
-
     &.open {
       height: 100%;
     }
 
-    .desktop-links {
-      display: none;
-    }
+    .content-container {
+      height: $header-height;
 
-    .mobile-nav {
-      height: 100%;
+      .desktop-links {
+        ul {
+          li {
+            a {
+              display: none;
 
-      &.open {
-        display: block;
-        top: $header-height;
+              &.home {
+                display: block;
+              }
+            }
+
+          }
+        }
       }
 
-      .content-container {
+      .mobile-nav {
         height: 100%;
-        display: flex;
-        flex-direction: column;
-        margin: 0px;
-        padding: 0.521rem 0.521rem 0;
+
+        &.open {
+          display: block;
+          top: $header-height;
+        }
+
+        ul {
+          li {
+            display: block;
+          }
+        }
 
         a {
           display: block;

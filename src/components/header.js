@@ -20,11 +20,6 @@ const NAV_LINKS = [
 
 const SiteLinks = ({ toggleMobileNav }) => (
   <>
-    <li>
-      <Link to="/" activeClassName="active" className="home" onClick={() => toggleMobileNav('/')}>
-        <p className="name">dickwyn</p>
-      </Link>
-    </li>
     {NAV_LINKS.map((item) => (
       <li key={item.id}>
         <Link
@@ -51,23 +46,26 @@ const Header = ({ hide, invisible }) => {
   };
 
   return (
-    <nav
-      className={`${hide && 'hide'} ${invisible && 'invisible'} ${open && 'open'}`}
-      role="navigation"
-    >
-      <div className="content-container">
+    <header>
+      <Link to="/" activeClassName="active" className="home" onClick={() => toggleMobileNav('/')}>
+        <p className="name">dickwyn</p>
+      </Link>
+      <nav
+        className={`${hide && 'hide'} ${invisible && 'invisible'} ${open && 'open'}`}
+        role="navigation"
+      >
         <ul className={`desktop-links`}>
           <SiteLinks />
         </ul>
         <ul className={`mobile-nav ${open && 'open'}`}>
           <SiteLinks toggleMobileNav={toggleMobileNav} />
         </ul>
-        <div className="action-buttons">
-          <DarkModeToggle />
-          <HamburgerToggle open={open} toggleMobileNav={toggleMobileNav} />
-        </div>
+      </nav>
+      <div className="action-buttons">
+        <DarkModeToggle />
+        <HamburgerToggle open={open} toggleMobileNav={toggleMobileNav} />
       </div>
-    </nav>
+    </header>
   );
 };
 

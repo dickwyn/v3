@@ -9,5 +9,9 @@
     &:hover {
       color: var(--text);
     }
+
+    &.MuiIconButton-root {
+      padding: 4px;
+    }
   }
 }
