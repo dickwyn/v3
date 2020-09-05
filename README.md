@@ -7,8 +7,8 @@ Forked from [Gatsby's starter default](https://github.com/gatsbyjs/gatsby-starte
 ## Running the Project
 
 ```sh
-git clone https://github.com/dickwyn/blog.git
-cd v5
+git clone https://github.com/dickwyn/v3.git
+cd v3
 yarn install
 yarn start
 ```
