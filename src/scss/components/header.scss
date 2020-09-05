@@ -1,14 +1,15 @@
-header {
+nav {
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 999;
   background: var(--background);
-  height: $header-height + ($padding * 2);
+  // height: $header-height + ($padding * 2);
   -webkit-box-shadow: 0 3px 1px -2px var(--box-shadow-layer-1),
     0 2px 2px 0 var(--box-shadow-layer-2), 0 1px 5px 0 var(--box-shadow-layer-3);
   box-shadow: 0 3px 1px -2px var(--box-shadow-layer-1), 0 2px 2px 0 var(--box-shadow-layer-2),
     0 1px 5px 0 var(--box-shadow-layer-3);
+  display: flex;
 
   &.hide {
     display: none;
@@ -68,47 +69,65 @@ header {
     }
   }
 
-  .common-nav {
+  .content-container {
     padding: $padding 0;
     background-color: var(--background);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 0.521rem 0 0.979rem;
 
-    .content-container {
+    ul {
+      list-style: none;
       display: flex;
       justify-content: space-between;
-      max-width: 1920px;
-      margin: 0 auto;
-      height: $header-height;
-      padding: 0 0.521rem 0 0.979rem;
-
-      &.invisible {
-        border-bottom: none;
-      }
-
-      nav {
-        display: flex;
-        list-style-type: none;
-        margin: 0;
+      user-select: none;
+      padding: $padding 0;
+      margin: 0;
+  
+      li {
+        display: inline-block;
         padding: 0;
-        align-items: center;
-
-        .separator {
-          color: var(--text-secondary);
-          padding: 0 1.0875rem;
-        }
+        margin: 0;
       }
+    }
 
-      .action-buttons {
-        display: flex;
+    &.invisible {
+      border-bottom: none;
+    }
+
+    nav {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+
+      .separator {
+        color: var(--text-secondary);
+        padding: 0 1.0875rem;
       }
+    }
+
+    .mobile-nav {
+      display: none;
+      background: var(--background-secondary);
+    }
+
+    .action-buttons {
+      display: flex;
     }
   }
 
-  .mobile-nav {
-    display: none;
-    background: var(--background-secondary);
-  }
 
   @media (max-width: 768px) {
+    .content-container {
+      height: $header-height;
+    }
+
     &.open {
       height: 100%;
     }

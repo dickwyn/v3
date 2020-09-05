@@ -20,8 +20,13 @@ const NAV_LINKS = [
 
 const SiteLinks = ({ toggleMobileNav }) => (
   <>
+    <li>
+      <Link to="/" activeClassName="active" className="home" onClick={() => toggleMobileNav('/')}>
+        <p className="name">dickwyn</p>
+      </Link>
+    </li>
     {NAV_LINKS.map((item) => (
-      <React.Fragment key={item.id}>
+      <li key={item.id}>
         <Link
           to={item.path}
           activeClassName="active"
@@ -30,7 +35,7 @@ const SiteLinks = ({ toggleMobileNav }) => (
         >
           {item.name}
         </Link>
-      </React.Fragment>
+      </li>
     ))}
   </>
 );
@@ -46,34 +51,23 @@ const Header = ({ hide, invisible }) => {
   };
 
   return (
-    <header className={`${hide && 'hide'} ${invisible && 'invisible'} ${open && 'open'}`}>
-      <div className="common-nav">
-        <div className="content-container">
-          <nav role="navigation">
-            <Link
-              to="/"
-              activeClassName="active"
-              className="home"
-              onClick={() => toggleMobileNav('/')}
-            >
-              <p className="name">dickwyn</p>
-            </Link>
-            <div className={`desktop-links`}>
-              <SiteLinks />
-            </div>
-          </nav>
-          <div className="action-buttons">
-            <DarkModeToggle />
-            <HamburgerToggle open={open} toggleMobileNav={toggleMobileNav} />
-          </div>
-        </div>
-      </div>
-      <div className={`mobile-nav ${open && 'open'}`}>
-        <div className="content-container">
+    <nav
+      className={`${hide && 'hide'} ${invisible && 'invisible'} ${open && 'open'}`}
+      role="navigation"
+    >
+      <div className="content-container">
+        <ul className={`desktop-links`}>
+          <SiteLinks />
+        </ul>
+        <ul className={`mobile-nav ${open && 'open'}`}>
           <SiteLinks toggleMobileNav={toggleMobileNav} />
+        </ul>
+        <div className="action-buttons">
+          <DarkModeToggle />
+          <HamburgerToggle open={open} toggleMobileNav={toggleMobileNav} />
         </div>
       </div>
-    </header>
+    </nav>
   );
 };
 
