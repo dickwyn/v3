@@ -1,5 +1,6 @@
 @import 'normalize-scss/sass/normalize/import-now';
 
+@import 'variables.scss';
 @import 'theme.scss';
 @import 'pages/index.scss';
 @import 'pages/404.scss';
@@ -122,6 +123,8 @@ body {
     min-height: 100%;
 
     main {
+      padding-top: $header-height + ($padding * 2);
+
       a {
         color: var(--text);
         text-decoration: none;

@@ -46,7 +46,7 @@ const Header = ({ hide, invisible }) => {
   };
 
   return (
-    <header className={`${hide ? 'hide' : undefined} ${invisible ? 'invisible' : undefined}`}>
+    <header className={`${hide && 'hide'} ${invisible && 'invisible'} ${open && 'open'}`}>
       <div className="common-nav">
         <div className="content-container">
           <nav role="navigation">
