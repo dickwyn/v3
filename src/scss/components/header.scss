@@ -1,11 +1,10 @@
 header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 999;
   background: var(--background);
-  height: auto;
-  animation: mte 1.5s 0s forwards ease-in-out;
-  transition: background-color 100ms ease-in-out, color 200ms ease-in-out !important;
+  height: $header-height + ($padding * 2);
   -webkit-box-shadow: 0 3px 1px -2px var(--box-shadow-layer-1),
     0 2px 2px 0 var(--box-shadow-layer-2), 0 1px 5px 0 var(--box-shadow-layer-3);
   box-shadow: 0 3px 1px -2px var(--box-shadow-layer-1), 0 2px 2px 0 var(--box-shadow-layer-2),
@@ -17,6 +16,10 @@ header {
 
   &.invisible {
     border-bottom: none;
+  }
+
+  &.open {
+    height: 100%;
   }
 
   a,
@@ -70,12 +73,16 @@ header {
   }
 
   .common-nav {
+    padding: $padding 0;
+    background-color: var(--background);
+
     .content-container {
       display: flex;
       justify-content: space-between;
       max-width: 1920px;
       margin: 0 auto;
-      padding: 0.4rem 0.521rem 0.4rem 0.979rem;
+      height: $header-height;
+      padding: 0 0.521rem 0 0.979rem;
 
       &.invisible {
         border-bottom: none;
@@ -101,32 +108,32 @@ header {
   }
 
   .mobile-nav {
-    position: fixed;
+    display: none;
     height: 100%;
-    width: 100%;
-    top: 0px;
-    background: var(--background-tertiary);
-    z-index: -1;
-    clip-path: circle(80px at 100% -30%);
-    transition: all 1s ease-out;
+    background: var(--background-secondary);
 
     &.open {
-      clip-path: circle(1900px at 100% -30%);
+      display: block;
+      top: $header-height;
     }
 
     .content-container {
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
       margin: 0px;
-      padding: 0.4rem 0.979rem0.4rem;
+      padding: 0.521rem 0.521rem 0;
 
       a {
         display: block;
-        padding-bottom: 0.8rem;
+        width: fit-content;
         font-size: 1.8rem;
+        padding: 0.5rem 0 0;
+        margin: 0.2rem 0.5rem;
+
+        &.active {
+          border-bottom: 4px solid var(--accent);
+        }
       }
     }
   }
