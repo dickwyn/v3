@@ -48,7 +48,7 @@ const Header = ({ hide, invisible }) => {
   return (
     <header>
       <Link to="/" activeClassName="active" className="home" onClick={() => toggleMobileNav('/')}>
-        <p className="name">dickwyn</p>
+        dickwyn
       </Link>
       <nav
         className={`${hide && 'hide'} ${invisible && 'invisible'} ${open && 'open'}`}
