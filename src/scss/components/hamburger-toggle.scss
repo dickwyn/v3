@@ -2,11 +2,12 @@ button.hamburger-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
+  padding: 0;
   background: transparent;
   border: none;
   transition: all 0.1s ease-in-out;
   text-align: unset;
+  padding: 0 0.3rem;
 
   &.open .hamburger-toggle-bar {
     transform: translateX(-0.3rem);
