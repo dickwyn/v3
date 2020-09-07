@@ -55,7 +55,7 @@ const Header = ({ hide, invisible }) => {
         role="navigation"
       >
         <ul>
-          <SiteLinks />
+          <SiteLinks toggleMobileNav={toggleMobileNav} />
         </ul>
       </nav>
       <div className="action-buttons">
