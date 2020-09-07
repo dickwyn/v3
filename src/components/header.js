@@ -54,11 +54,8 @@ const Header = ({ hide, invisible }) => {
         className={`${hide && 'hide'} ${invisible && 'invisible'} ${open && 'open'}`}
         role="navigation"
       >
-        <ul className={`desktop-links`}>
+        <ul>
           <SiteLinks />
-        </ul>
-        <ul className={`mobile-nav ${open && 'open'}`}>
-          <SiteLinks toggleMobileNav={toggleMobileNav} />
         </ul>
       </nav>
       <div className="action-buttons">

@@ -7,6 +7,7 @@ button.hamburger-toggle {
   border: none;
   transition: all 0.1s ease-in-out;
   text-align: unset;
+  padding: 0 0.3rem;
 
   &.open .hamburger-toggle-bar {
     transform: translateX(-0.3rem);
