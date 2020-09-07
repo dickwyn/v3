@@ -1,14 +1,17 @@
+$height: 48px;
+$padding: 10px;
+
 header {
   position: sticky;
   top: 0;
   z-index: 999;
   display: grid;
   align-items: center;
-  grid-template-columns: 104px 2fr 104px;
-  grid-template-rows: $header-height;
+  grid-template-columns: 104px 1fr 104px;
+  grid-template-rows: $height;
   padding: ($padding / 2) ($padding * 2);
   background: var(--background);
-  height: $header-height;
+  height: $height;
   -webkit-box-shadow: 0 3px 1px -2px var(--box-shadow-layer-1),
     0 2px 2px 0 var(--box-shadow-layer-2), 0 1px 5px 0 var(--box-shadow-layer-3);
   box-shadow: 0 3px 1px -2px var(--box-shadow-layer-1), 0 2px 2px 0 var(--box-shadow-layer-2),
@@ -36,7 +39,7 @@ header {
     color: var(--text-secondary);
 
     &.home {
-      height: $header-height * (2/3);
+      height: $height * (2/3);
       background-color: var(--background-tertiary);
       border-radius: 4px;
       display: flex;
