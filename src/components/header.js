@@ -39,10 +39,10 @@ const Header = ({ hide, invisible }) => {
   const [open, setOpen] = useState(false);
 
   const toggleMobileNav = (path) => {
-    document.body.style.overflow = open ? 'initial' : 'hidden';
     if ((path === '/' && open) || typeof path === 'object' || path === undefined) {
       setOpen(!open);
     }
+    // document.body.style.overflow = open ? 'hidden' : 'auto';
   };
 
   return (
