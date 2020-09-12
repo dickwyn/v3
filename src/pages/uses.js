@@ -29,7 +29,7 @@ class UsesPage extends Component {
       <Layout page="Uses" className="uses-page">
         <div className="wrapper">
           <div className="content-container with-margin">
-            <h1>Uses</h1>
+            <h1>What I use</h1>
             <p>
               From casual web browsing to creating content for YouTube, here's a comprehensive list
               of hardware and software that I use on a daily basis to create and consume content.
