@@ -30,10 +30,15 @@ class UsesPage extends Component {
         <div className="wrapper">
           <div className="content-container with-margin">
             <h1>Uses</h1>
-            <p>All the tech + gear that I use</p>
+            <p>
+              From casual web browsing to creating content for YouTube, here's a comprehensive list
+              of hardware and software that I use on a daily basis to create and consume content.
+            </p>
+            <p>I enjoy trying out new things so this list will be updated accordingly.</p>
             {uses.map((section, sectionIndex) => (
               <React.Fragment key={sectionIndex}>
                 <h2>{section.name}</h2>
+                <p>{section.description}</p>
                 {section.categoryList &&
                   section.categoryList.map((category, categoryIndex) => (
                     <React.Fragment key={`category${categoryIndex}`}>

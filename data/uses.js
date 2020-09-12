@@ -1,8 +1,35 @@
 export const uses = [
   {
     name: 'every day carry',
+    description:
+      'These are the things that I have with me if I am going outside. Obviously not going out that often these days due to the COVID-19 pandemic.',
     itemList: [
-      { name: ' Mission Workshop The Rummy Messenger Bag' },
+      { name: 'Breadband Wallet' },
+      {
+        name: 'Hedley & Bennett Wake Up & Fight Mask',
+        url: 'https://www.hedleyandbennett.com/products/wake-up-and-fight-mask',
+        attributeList: [
+          {
+            name: "Something for this new normal that we're living in",
+          },
+          {
+            name: 'Check out my video review',
+            url: 'https://youtu.be/Yc53Yg2xY6Y',
+          },
+        ],
+      },
+      { name: 'Jabra Elite 75t' },
+      {
+        name: 'Mission Workshop The Rummy Messenger Bag',
+        attributeList: [
+          {
+            name: "The most expensive messenger bag I have bought but it's totally worth it",
+          },
+          {
+            name: "Extremely durable and it's weather proof",
+          },
+        ],
+      },
       {
         name: 'Samsung Galaxy S10+',
         attributeList: [
@@ -14,14 +41,20 @@ export const uses = [
       },
       {
         name: 'Samsung Galaxy Watch Active2 40mm LTE',
+        attributeList: [
+          {
+            name:
+              "I don't actually use the LTE, got it over the bluetooth version because of the stainless steel casing",
+          },
+        ],
       },
-      { name: ' Jabra Elite 75t' },
-      { name: 'Breadband Wallet' },
       { name: 'Tile Pro' },
     ],
   },
   {
     name: 'hardware',
+    description:
+      'Since I spend a lot of time creating content, I have invested in quite a bit of gear to help streamline my workflow',
     categoryList: [
       {
         name: 'setup',
@@ -119,6 +152,8 @@ export const uses = [
   },
   {
     name: 'software',
+    description:
+      "You can't really have hardware without software. Here's a list of programs that I have installed on my devices.",
     categoryList: [
       {
         name: 'common',
@@ -153,6 +188,15 @@ export const uses = [
           { name: 'MiKTeX' },
           { name: 'PhotoScape' },
           { name: 'Windows Terminal' },
+        ],
+      },
+      {
+        name: 'Android',
+        list: [
+          {
+            name: "Check out my What's on my Android phone video",
+            url: 'https://youtu.be/iLKrwYxdtb0',
+          },
         ],
       },
       {
