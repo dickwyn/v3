@@ -5,6 +5,7 @@
 @import 'pages/404.scss';
 @import 'pages/debug.scss';
 @import 'pages/projects.scss';
+@import 'pages/uses.scss';
 @import 'components/footer.scss';
 @import 'components/header.scss';
 @import 'components/layout.scss';
@@ -122,7 +123,6 @@ body {
     min-height: 100%;
 
     main {
-
       a {
         color: var(--text);
         text-decoration: none;
