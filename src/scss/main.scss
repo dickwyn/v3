@@ -43,6 +43,11 @@ body {
     font-size: 1rem;
     line-height: 1.68rem;
   }
+  h2,
+  h4,
+  h6 {
+    font-family: 'Staatliches', cursive;
+  }
   h1 {
     font-size: 2.3rem;
 
@@ -55,6 +60,7 @@ body {
   }
   h3 {
     font-size: 1.404rem;
+    font-style: italic;
   }
   h4 {
     font-size: 1.2rem;
@@ -85,6 +91,10 @@ body {
         margin: 0 0 0.6rem;
       }
     }
+  }
+
+  ul {
+    padding-inline-start: 1.4rem;
   }
 
   figure {
