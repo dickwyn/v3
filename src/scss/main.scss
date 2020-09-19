@@ -43,33 +43,48 @@ body {
     font-size: 1rem;
     line-height: 1.68rem;
   }
-  h2,
-  h4,
-  h6 {
-    font-family: 'Staatliches', cursive;
-  }
-  h1 {
-    font-size: 2.3rem;
 
-    &.page-title {
-      margin-top: 0;
-    }
+  h1,
+  h4,
+  h5 {
+    font-family: 'IBM Plex Sans', sans-serif;
   }
+
+  h2,
+  h3,
+  h6 {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+  }
+
+  h1 {
+    font-size: 3.052rem;
+  }
+
   h2 {
-    font-size: 1.8rem;
+    font-size: 2.441rem;
   }
+
   h3 {
-    font-size: 1.404rem;
+    font-size: 1.953rem;
     font-style: italic;
   }
+
   h4 {
-    font-size: 1.2rem;
+    font-size: 1.563rem;
   }
+
   h5 {
-    font-size: 0.996rem;
+    font-size: 1.25rem;
+    font-style: italic;
   }
+
   h6 {
-    font-size: 0.804rem;
+    font-size: 0.833rem;
+  }
+
+  small,
+  .text_small {
+    font-size: 0.8em;
   }
 
   ol,
@@ -200,24 +215,24 @@ body {
     }
 
     @media (max-width: 768px) {
-      h1 {
-        font-size: 1.7rem;
-      }
-      h2 {
-        font-size: 1.35rem;
-      }
-      h3 {
-        font-size: 1.053rem;
-      }
-      h4 {
-        font-size: 1rem;
-      }
-      h5 {
-        font-size: 0.83rem;
-      }
-      h6 {
-        font-size: 0.67rem;
-      }
+      // h1 {
+      //   font-size: 1.7rem;
+      // }
+      // h2 {
+      //   font-size: 1.35rem;
+      // }
+      // h3 {
+      //   font-size: 1.053rem;
+      // }
+      // h4 {
+      //   font-size: 1rem;
+      // }
+      // h5 {
+      //   font-size: 0.83rem;
+      // }
+      // h6 {
+      //   font-size: 0.67rem;
+      // }
 
       .wrapper {
         .content-container {

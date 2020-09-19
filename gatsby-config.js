@@ -92,13 +92,22 @@ module.exports = {
     },
     `gatsby-plugin-material-ui`,
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
-          `staatliches`,
-          `ibm plex sans\:300,400,400i,500,700`, // you can also specify font weights and styles
+          {
+            family: `IBM Plex Sans`,
+            variants: [`400`, `400i`, `500`, `500i`, `700`],
+          },
+          {
+            family: `IBM Plex Serif`,
+            variants: [`400`, `400i`],
+          },
+          {
+            family: `IBM Plex Sans Condensed`,
+            variants: [`400`, `600`, `600i`],
+          },
         ],
-        display: 'swap',
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
