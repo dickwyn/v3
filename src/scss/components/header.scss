@@ -137,10 +137,7 @@ header {
 
     .action-buttons {
       grid-area: 1 / 2 / 2 / 3;
-
-      .dark-mode-toggle-container > button {
-        margin-right: 19px;
-      }
+      column-gap: 4px;
     }
   }
 }
