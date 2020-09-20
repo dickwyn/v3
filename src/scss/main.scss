@@ -16,6 +16,13 @@
 @import 'templates/blog-index.scss';
 @import 'templates/blog-post.scss';
 
+$h1-size: 3.052rem;
+$h2-size: 2.441rem;
+$h3-size: 1.953rem;
+$h4-size: 1.563rem;
+$h5-size: 1.25rem;
+$h6-size: 0.833rem;
+
 html,
 body,
 #___gatsby,
@@ -57,29 +64,29 @@ body {
   }
 
   h1 {
-    font-size: 3.052rem;
+    font-size: $h1-size;
   }
 
   h2 {
-    font-size: 2.441rem;
+    font-size: $h2-size;
   }
 
   h3 {
-    font-size: 1.953rem;
+    font-size: $h3-size;
     font-style: italic;
   }
 
   h4 {
-    font-size: 1.563rem;
+    font-size: $h4-size;
   }
 
   h5 {
-    font-size: 1.25rem;
+    font-size: $h5-size;
     font-style: italic;
   }
 
   h6 {
-    font-size: 0.833rem;
+    font-size: $h6-size;
   }
 
   small,
@@ -215,24 +222,29 @@ body {
     }
 
     @media (max-width: 768px) {
-      // h1 {
-      //   font-size: 1.7rem;
-      // }
-      // h2 {
-      //   font-size: 1.35rem;
-      // }
-      // h3 {
-      //   font-size: 1.053rem;
-      // }
-      // h4 {
-      //   font-size: 1rem;
-      // }
-      // h5 {
-      //   font-size: 0.83rem;
-      // }
-      // h6 {
-      //   font-size: 0.67rem;
-      // }
+      h1 {
+        font-size: $h1-size * 0.68;
+      }
+
+      h2 {
+        font-size: $h2-size * 0.68;
+      }
+
+      h3 {
+        font-size: $h3-size * 0.68;
+      }
+
+      h4 {
+        font-size: $h4-size * 0.68;
+      }
+
+      h5 {
+        font-size: $h5-size * 0.68;
+      }
+
+      h6 {
+        font-size: $h6-size * 0.68;
+      }
 
       .wrapper {
         .content-container {
