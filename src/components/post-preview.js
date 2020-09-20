@@ -10,11 +10,6 @@ const PostPreview = ({
   },
 }) => (
   <div className="post-preview">
-    <p className="timestamp">
-      {moment.duration(moment(new Date()).diff(date)).asDays() < 90
-        ? moment(date).local().format('MMM DD')
-        : moment(date).local().format('MMM YYYY')}
-    </p>
     <h2 className="title">
       <Link to={`blog${slug}`}>{title}</Link>
     </h2>

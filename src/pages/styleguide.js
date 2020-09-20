@@ -14,6 +14,45 @@ const StyleGuidePage = () => {
             standardized styling for this site.
           </p>
           <hr />
+          <h1 id="colors">Colors</h1>
+          <h2>Primary (primary-*)</h2>
+          <div className="color-palette-container">
+            <div className="color-item primary-100">100</div>
+            <div className="color-item primary-200">200</div>
+            <div className="color-item primary-300">300</div>
+            <div className="color-item primary-400">400</div>
+            <div className="color-item primary-500">500</div>
+            <div className="color-item primary-600">600</div>
+          </div>
+          <h2>Neutral (neutral-*)</h2>
+          <div className="color-palette-container">
+            <div className="color-item neutral-100">100</div>
+            <div className="color-item neutral-200">200</div>
+            <div className="color-item neutral-300">300</div>
+            <div className="color-item neutral-400">400</div>
+            <div className="color-item neutral-500">500</div>
+            <div className="color-item neutral-600">600</div>
+            <div className="color-item neutral-700">700</div>
+          </div>
+          <h2>Success (success-*)</h2>
+          <div className="color-palette-container">
+            <div className="color-item success-100">100</div>
+            <div className="color-item success-200">200</div>
+            <div className="color-item success-300">300</div>
+          </div>
+          <h2>Error (error-*)</h2>
+          <div className="color-palette-container">
+            <div className="color-item error-100">100</div>
+            <div className="color-item error-200">200</div>
+            <div className="color-item error-300">300</div>
+          </div>
+          <h2>Warning (warning-*)</h2>
+          <div className="color-palette-container">
+            <div className="color-item warning-100">100</div>
+            <div className="color-item warning-200">200</div>
+            <div className="color-item warning-300">300</div>
+          </div>
+          <hr />
           <h1 id="headings">Headings</h1>
           <h1>Heading 1</h1>
           <h2>Heading 2</h2>
