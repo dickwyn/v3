@@ -7,8 +7,9 @@ header {
   z-index: 999;
   display: grid;
   align-items: center;
-  grid-template-columns: 104px 1fr 104px;
+  grid-template-columns: auto 1fr auto;
   grid-template-rows: $height;
+  column-gap: 4px;
   padding: ($padding / 2) ($padding * 2);
   background: var(--background);
   height: $height;
@@ -35,14 +36,12 @@ header {
     text-decoration: none;
     text-transform: capitalize;
     margin: 0;
-    padding: 0.2rem 0.5rem;
     color: var(--text-secondary);
-    font-weight: 600;
+    font-weight: 500;
 
     &.home {
+      font-weight: 600;
       color: var(--text);
-      height: $height * (2/3);
-      background-color: var(--background-tertiary);
       border-radius: 4px;
       display: flex;
       align-items: center;
@@ -50,22 +49,30 @@ header {
       padding: 0;
     }
 
-    &:hover,
     &.active {
       color: var(--text);
+    }
+
+    &:hover {
+      background-image: linear-gradient(
+        to top,
+        var(--accent),
+        var(--accent) 0.15em,
+        transparent 0.15em,
+        transparent
+      );
     }
   }
 
   nav {
     background-color: var(--background);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
     height: 100%;
-    padding: 0 $padding;
 
     ul {
       list-style: none;
@@ -78,7 +85,7 @@ header {
       li {
         display: inline-block;
         padding: 0;
-        margin: 0;
+        margin: 0 1rem 0 0;
       }
     }
   }
@@ -89,7 +96,7 @@ header {
   }
 
   @media (max-width: 768px) {
-    grid-template-columns: 104px 1fr;
+    grid-template-columns: auto 1fr;
 
     a.home {
       grid-area: 1 / 1 / 2 / 2;
