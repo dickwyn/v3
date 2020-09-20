@@ -121,11 +121,10 @@ header {
 
         li {
           &:not(:last-child) {
-            margin-bottom: 24px;
+            margin-bottom: 1rem;
           }
 
           a {
-            font-size: 1.8rem;
             padding: 0;
 
             &.active {
