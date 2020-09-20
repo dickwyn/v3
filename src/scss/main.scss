@@ -163,8 +163,7 @@ body {
         word-wrap: break-word;
 
         &:hover {
-          color: var(--accent);
-          background-image: none;
+          background-color: var(--accent);
         }
       }
     }

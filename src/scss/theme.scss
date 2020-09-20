@@ -1,12 +1,36 @@
 body {
+  --primary-100: #dd2c00;
+  --primary-200: #b80012;
+  --primary-300: #18313d;
+  --primary-400: #124f6b;
+  --primary-500: #1d8fc4;
+  --text: #000000;
+  --text-inverted: #ffffff;
+  --neutral-100: #fafafa;
+  --neutral-200: #eeeeee;
+  --neutral-300: #e0e0e0;
+  --neutral-400: #9e9e9e;
+  --neutral-500: #616161;
+  --neutral-600: #202020;
+  --neutral-700: #121212;
+  --success-100: #4caf50;
+  --success-200: #388e3c;
+  --success-300: #2e7d32;
+  --error-100: #ef5350;
+  --error-200: #d32f2f;
+  --error-300: #c62828;
+  --warning-100: #e1c542;
+  --warning-200: #ffa000;
+  --warning-300: #ff6f00;
+
   &.dark {
-    --background: #121212;
-    --background-secondary: #202020;
-    --background-tertiary: #424242;
-    --divider: #bdbdbd;
-    --text: #fff;
-    --text-secondary: #bdbdbd;
-    --accent: #ff5252;
+    --background: var(--neutral-700);
+    --background-secondary: var(--neutral-600);
+    --background-tertiary: var(--neutral-500);
+    --divider: var(--neutral-300);
+    --text: var(--text-inverted);
+    --text-secondary: var(--neutral-300);
+    --accent: var(--primary-100);
     --box-shadow-layer-1: rgba(255, 255, 255, 0.2);
     --box-shadow-layer-2: rgba(255, 255, 255, 0.14);
     --box-shadow-layer-3: rgba(255, 255, 255, 0.12);
@@ -14,13 +38,13 @@ body {
   }
 
   &.light {
-    --background: #e1e0e1;
-    --background-secondary: #fafafa;
-    --background-tertiary: #bdbdbd;
-    --divider: #bdbdbd;
-    --text: #212121;
-    --text-secondary: #616161;
-    --accent: #d50000;
+    --background: var(--neutral-100);
+    --background-secondary: var(--neutral-200);
+    --background-tertiary: var(--neutral-300);
+    --divider: var(--neutral-300);
+    --text: var(--text);
+    --text-secondary: var(--neutral-500);
+    --accent: var(--primary-100);
     --box-shadow-layer-1: rgba(0, 0, 0, 0.2);
     --box-shadow-layer-2: rgba(0, 0, 0, 0.14);
     --box-shadow-layer-3: rgba(0, 0, 0, 0.12);

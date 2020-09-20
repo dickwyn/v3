@@ -27,18 +27,19 @@ header {
 
   a,
   p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   a {
-    font-family: 'Staatliches', cursive;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     margin: 0;
     padding: 0.2rem 0.5rem;
     color: var(--text-secondary);
 
     &.home {
+      font-weight: 600;
       height: $height * (2/3);
       background-color: var(--background-tertiary);
       border-radius: 4px;
