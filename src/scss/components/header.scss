@@ -31,15 +31,16 @@ header {
   }
 
   a {
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     text-decoration: none;
     text-transform: capitalize;
     margin: 0;
     padding: 0.2rem 0.5rem;
     color: var(--text-secondary);
+    font-weight: 600;
 
     &.home {
-      font-weight: 600;
+      color: var(--text);
       height: $height * (2/3);
       background-color: var(--background-tertiary);
       border-radius: 4px;
@@ -51,7 +52,6 @@ header {
 
     &:hover,
     &.active {
-      font-weight: 600;
       color: var(--text);
     }
   }
