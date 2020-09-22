@@ -129,6 +129,7 @@ export const uses = [
         list: [
           { name: 'Rode VideoMic NTG' },
           { name: 'Rode VideoMicro' },
+          { name: 'Sony MDR-7506' },
           { name: 'Tascam DR-10L' },
           { name: 'Zoom H1' },
         ],
@@ -173,7 +174,9 @@ export const uses = [
       {
         name: 'mac',
         list: [
+          { name: '1Password 7 Beta' },
           { name: 'Alfred' },
+          { name: 'Clocker' },
           { name: 'Dozer' },
           { name: 'iTerm2' },
           { name: 'Macs Fan Control' },
