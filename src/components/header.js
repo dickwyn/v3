@@ -10,16 +10,25 @@ const NAV_LINKS = [
     id: shortid.generate(),
     name: 'blog',
     path: '/blog',
+    internal: true,
   },
   {
     id: shortid.generate(),
     name: 'projects',
     path: '/projects/',
+    internal: true,
   },
   {
     id: shortid.generate(),
     name: 'Uses',
     path: '/uses/',
+    internal: true,
+  },
+  {
+    id: shortid.generate(),
+    name: 'Resume',
+    path: '/dickwyn-resume.pdf',
+    internal: false,
   },
 ];
 
@@ -27,14 +36,18 @@ const SiteLinks = ({ toggleMobileNav }) => (
   <>
     {NAV_LINKS.map((item) => (
       <li key={item.id}>
-        <Link
-          to={item.path}
-          activeClassName="active"
-          partiallyActive={true}
-          onClick={toggleMobileNav}
-        >
-          {item.name}
-        </Link>
+        {item.internal ? (
+          <Link
+            to={item.path}
+            activeClassName="active"
+            partiallyActive={true}
+            onClick={toggleMobileNav}
+          >
+            {item.name}
+          </Link>
+        ) : (
+          <a href={item.path}>{item.name}</a>
+        )}
       </li>
     ))}
   </>
