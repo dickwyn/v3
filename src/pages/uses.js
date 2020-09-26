@@ -37,7 +37,7 @@ class UsesPage extends Component {
             <p>I enjoy trying out new things so this list will be updated accordingly.</p>
             {uses.map((section, sectionIndex) => (
               <React.Fragment key={sectionIndex}>
-                <h2>{section.name}</h2>
+                <h2 className="section">{section.name}</h2>
                 <p>{section.description}</p>
                 {section.categoryList &&
                   section.categoryList.map((category, categoryIndex) => (
