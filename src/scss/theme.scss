@@ -4,8 +4,8 @@ body {
   --primary-300: #18313d;
   --primary-400: #124f6b;
   --primary-500: #1d8fc4;
-  --text: #000000;
-  --text-inverted: #ffffff;
+  --default-text: #000000;
+  --default-text-inverted: #ffffff;
   --neutral-100: #fafafa;
   --neutral-200: #eeeeee;
   --neutral-300: #e0e0e0;
@@ -28,7 +28,7 @@ body {
     --background-secondary: var(--neutral-600);
     --background-tertiary: var(--neutral-500);
     --divider: var(--neutral-300);
-    --text: var(--text-inverted);
+    --text: var(--default-text-inverted);
     --text-secondary: var(--neutral-400);
     --accent: var(--primary-100);
     --box-shadow-layer-1: rgba(255, 255, 255, 0.2);
@@ -42,7 +42,7 @@ body {
     --background-secondary: var(--neutral-200);
     --background-tertiary: var(--neutral-300);
     --divider: var(--neutral-300);
-    --text: var(--text);
+    --text: var(--default-text);
     --text-secondary: var(--neutral-500);
     --accent: var(--primary-100);
     --box-shadow-layer-1: rgba(0, 0, 0, 0.2);
