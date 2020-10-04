@@ -54,6 +54,7 @@
   "keywords": [
     "dickwyn",
     "dick wyn yong",
+    "website",
     "portfolio",
     "blog"
   ],
@@ -66,14 +67,14 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy": "gatsby build && git push",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "update-resume": "cp ../latex-docs/resume/dickwyn-resume.pdf static"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dickwyn/v5"
+    "url": "https://github.com/dickwyn/v3"
   },
   "bugs": {
-    "url": "https://github.com/dickwyn/v5/issues"
+    "url": "https://github.com/dickwyn/v3/issues"
   },
-  "homepage": "https://github.com/dickwyn/v5"
+  "homepage": "https://dickwyn.xyz/"
 }
