@@ -14,6 +14,16 @@ class DarkModeToggle extends Component {
     };
   }
 
+  componentDidMount() {
+    const darkMode = localStorage.getItem('darkMode');
+
+    if (darkMode !== null) {
+      this.setState({
+        mode: darkMode === 'true' ? 1 : 2,
+      });
+    }
+  }
+
   handleToggle = (_e, savedMode) => {
     this.setState(
       (prevState) => ({
