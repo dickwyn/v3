@@ -37,7 +37,7 @@ function initialize() {
 Looking for something?
 
 👨‍💻 https://www.github.com/dickwyn
-📄 https://www.dropbox.com/s/n1qj7bfp9599lg2/resume-dick-wyn-yong.pdf?dl=0
+🐛 https://dickwyn.xyz/debug/
 
 built: unsetTimestamp`,
       'font-family:monospace;'
