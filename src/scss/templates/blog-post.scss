@@ -53,6 +53,11 @@
     }
   }
 
+  .post-tags + a {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+
   section.next-read {
     .section-title {
       text-transform: uppercase;

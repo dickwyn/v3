@@ -12,6 +12,7 @@ const BlogPost = ({
       frontmatter: { title, description, tags, date, featuredImage },
       timeToRead,
       html,
+      fileAbsolutePath,
     },
   },
   pageContext: { previous, next },
@@ -45,6 +46,15 @@ const BlogPost = ({
                 )
             )}
           </div>
+          <a
+            href={`https://github.com/dickwyn/v3/tree/main/data/blog/${fileAbsolutePath
+              .split('/')
+              .pop()}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Edit this post
+          </a>
           <section className="next-read">
             <h5 className="section-title">Read next</h5>
             <div className="container">
@@ -97,6 +107,7 @@ export const pageQuery = graphql`
       }
       timeToRead
       html
+      fileAbsolutePath
     }
   }
 `;
