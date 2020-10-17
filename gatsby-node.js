@@ -10,7 +10,11 @@ exports.createPages = ({ actions, graphql }) => {
   return graphql(
     `
       query($posts: String) {
-        allMarkdownRemark(filter: { fileAbsolutePath: { regex: $posts } }, limit: 1000) {
+        allMarkdownRemark(
+          filter: { fileAbsolutePath: { regex: $posts } }
+          limit: 1000
+          sort: { fields: frontmatter___date }
+        ) {
           edges {
             next {
               fields {
@@ -43,15 +47,15 @@ exports.createPages = ({ actions, graphql }) => {
       }
     `,
     { posts: blogPostFilter }
-  ).then(result => {
+  ).then((result) => {
     if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString()));
+      result.errors.forEach((e) => console.error(e.toString()));
       return Promise.reject(result.errors);
     }
 
     const posts = result.data.allMarkdownRemark.edges;
 
-    posts.forEach(edge => {
+    posts.forEach((edge) => {
       const { id } = edge.node;
       createPage({
         path: `/blog${edge.node.fields.slug}`,
