@@ -9,15 +9,7 @@ import shortid from 'shortid';
 const BlogPost = ({
   data: {
     markdownRemark: {
-      frontmatter: {
-        title,
-        description,
-        tags,
-        date,
-        featuredImage: {
-          childImageSharp: { fluid },
-        },
-      },
+      frontmatter: { title, description, tags, date, featuredImage },
       timeToRead,
       html,
     },
@@ -39,7 +31,7 @@ const BlogPost = ({
               | {normalizedDate} | {timeToRead} min read
             </h2>
           </div>
-          <Img fluid={fluid} />
+          {featuredImage && <Img fluid={featuredImage.childImageSharp.fluid} />}
           <div className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
           <div className="post-tags">
             <b>tagged</b>:{' '}
