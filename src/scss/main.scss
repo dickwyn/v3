@@ -150,6 +150,19 @@ body {
     }
   }
 
+  pre[class*='language-'],
+  p > code[class*='language-'],
+  li > code[class*='language-'] {
+    font-size: 0.9rem;
+    border-radius: 8px;
+  }
+
+  p > code[class*='language-'],
+  li > code[class*='language-'] {
+    color: var(--text);
+    background-color: var(--background-tertiary);
+  }
+
   .root-container {
     position: relative;
     display: flex;
