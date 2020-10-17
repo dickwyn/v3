@@ -53,15 +53,6 @@ body {
   }
 
   h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    text-transform: capitalize;
-  }
-
-  h1,
   h4,
   h5 {
     font-family: 'IBM Plex Sans', sans-serif;
@@ -226,22 +217,6 @@ body {
           &:hover {
             background-color: var(--background-secondary);
           }
-        }
-
-        pre {
-          color: var(--text);
-          background-color: var(--background-tertiary);
-          font-family: Consolas, Courier New, monospace;
-          font-feature-settings: normal;
-          text-align: left;
-          white-space: pre;
-          word-break: normal;
-          word-wrap: normal;
-          -moz-tab-size: 4;
-          -o-tab-size: 4;
-          tab-size: 4;
-          overflow: auto;
-          padding: 1.3125rem;
         }
       }
     }
