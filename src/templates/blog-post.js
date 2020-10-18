@@ -9,6 +9,7 @@ import shortid from 'shortid';
 const BlogPost = ({
   data: {
     markdownRemark: {
+      fields: { published, lastModified },
       frontmatter: { title, description, tags, date, featuredImage },
       timeToRead,
       html,
@@ -17,7 +18,7 @@ const BlogPost = ({
   },
   pageContext: { previous, next },
 }) => {
-  const normalizedDate = moment(date).local().format('MMM DD, YYYY');
+  const normalizedDate = moment(date).local().format('D MMM Y, h:mma');
 
   return (
     <Layout page={title} description={description} isBlogPost>
@@ -29,7 +30,8 @@ const BlogPost = ({
               <a href="https://twitter.com/dickwyn" target="_blank" rel="noopener noreferrer">
                 @dickwyn
               </a>{' '}
-              | {normalizedDate} | {timeToRead} min read
+              | {normalizedDate === 'Invalid date' ? published : normalizedDate} | {timeToRead} min
+              read
             </h2>
           </div>
           {featuredImage && <Img fluid={featuredImage.childImageSharp.fluid} />}
@@ -46,15 +48,18 @@ const BlogPost = ({
                 )
             )}
           </div>
-          <a
-            href={`https://github.com/dickwyn/v3/tree/main/data/blog/${fileAbsolutePath
-              .split('/')
-              .pop()}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Edit this post
-          </a>
+          <p>
+            <a
+              href={`https://github.com/dickwyn/v3/tree/main/data/blog/${fileAbsolutePath
+                .split('/')
+                .pop()}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Edit this post
+            </a>{' '}
+            (Last modified on {lastModified})
+          </p>
           <section className="next-read">
             <h5 className="section-title">Read next</h5>
             <div className="container">
@@ -92,6 +97,10 @@ export default BlogPost;
 export const pageQuery = graphql`
   query blogPostQuery($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      fields {
+        lastModified(formatString: "D MMM Y, h:mma")
+        published(formatString: "D MMM Y, h:mma")
+      }
       frontmatter {
         date
         title

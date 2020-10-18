@@ -2,7 +2,6 @@
 templateKey: blog-post
 author: Dick Wyn Yong
 title: How to pass a callback function to a grandchild component in Angular
-date: 2020-10-17T16:57:06.673Z
 description: Calling a function from the child to the parent to the grandparent
 featuredPost: false
 tags:
