@@ -101,24 +101,24 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     });
     /**
-     * Solution from Angelos Orfanakos
-     * https://angelos.dev/2019/09/add-support-for-modification-times-in-gatsby/
-     */
-    createNodeField({
-      node,
-      name: 'published',
-      value: execSync(`git log -1 --pretty=format:%aI ${node.fileAbsolutePath}`).toString(),
-    });
-    /**
      * Solution from Joshua Tzucker
      * https://joshuatz.com/posts/2019/gatsby-better-last-updated-or-modified-dates-for-posts/
      */
     createNodeField({
       node,
-      name: 'lastModified',
+      name: 'published',
       value: execSync(
         `git log --pretty=format:%aI --follow -- ${node.fileAbsolutePath} | tail -n 1`
       ).toString(),
+    });
+    /**
+     * Solution from Angelos Orfanakos
+     * https://angelos.dev/2019/09/add-support-for-modification-times-in-gatsby/
+     */
+    createNodeField({
+      node,
+      name: 'lastModified',
+      value: execSync(`git log -1 --pretty=format:%aI ${node.fileAbsolutePath}`).toString(),
     });
   }
 };
