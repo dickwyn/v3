@@ -161,6 +161,7 @@ body {
   li > code[class*='language-'] {
     color: var(--text);
     background-color: var(--background-tertiary);
+    word-break: break-word;
   }
 
   .root-container {
