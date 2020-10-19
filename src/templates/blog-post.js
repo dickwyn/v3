@@ -69,12 +69,12 @@ const BlogPost = ({
             <h5 className="section-title">Read next</h5>
             <div className="container">
               {previous && (
-                <Link to={`/blog/${previous.fields.slug}`} className="previous-post">
+                <Link to={`/blog${previous.fields.slug}`} className="previous-post">
                   <div className="post-preview-container">{previous.frontmatter.title}</div>
                 </Link>
               )}
               {next && (
-                <Link to={`/blog/${next.fields.slug}`} className="next-post">
+                <Link to={`/blog${next.fields.slug}`} className="next-post">
                   <div className="post-preview-container">{next.frontmatter.title}</div>
                 </Link>
               )}
