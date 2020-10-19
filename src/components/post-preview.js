@@ -1,22 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import moment from 'moment';
 
 const PostPreview = ({
   post: {
     fields: { slug },
-    frontmatter: { date, title, subtitle, description },
+    frontmatter: { title, subtitle, description },
   },
 }) => (
   <div className="post-preview">
     <h2 className="title">
-      <Link to={`blog${slug}`}>{title}</Link>
+      <Link to={`/blog${slug}`}>{title}</Link>
     </h2>
 
     {subtitle && <h3 className="subtitle">{subtitle}</h3>}
     <p className="description">{description}</p>
-    <Link to={`blog${slug}`}>continue reading →</Link>
+    <Link to={`/blog${slug}`}>continue reading →</Link>
   </div>
 );
 
@@ -26,7 +25,6 @@ PostPreview.propTypes = {
     frontmatter: PropTypes.shape({
       title: PropTypes.string.isRequired,
       subtitle: PropTypes.string,
-      date: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
     }),
   }).isRequired,

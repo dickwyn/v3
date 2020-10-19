@@ -2,13 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
-import moment from 'moment';
-import Layout from '../components/layout';
 import shortid from 'shortid';
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+import Layout from '../components/layout';
+
+dayjs.extend(utc);
+dayjs.extend(customParseFormat);
 
 const BlogPost = ({
   data: {
     markdownRemark: {
+      fields: { published, lastModified },
       frontmatter: { title, description, tags, date, featuredImage },
       timeToRead,
       html,
@@ -17,8 +23,6 @@ const BlogPost = ({
   },
   pageContext: { previous, next },
 }) => {
-  const normalizedDate = moment(date).local().format('MMM DD, YYYY');
-
   return (
     <Layout page={title} description={description} isBlogPost>
       <div className="wrapper">
@@ -29,7 +33,11 @@ const BlogPost = ({
               <a href="https://twitter.com/dickwyn" target="_blank" rel="noopener noreferrer">
                 @dickwyn
               </a>{' '}
-              | {normalizedDate} | {timeToRead} min read
+              |{' '}
+              {dayjs(date ? date : published)
+                .local()
+                .format('D MMM YYYY, h:mma')}{' '}
+              | {timeToRead} min read
             </h2>
           </div>
           {featuredImage && <Img fluid={featuredImage.childImageSharp.fluid} />}
@@ -46,25 +54,28 @@ const BlogPost = ({
                 )
             )}
           </div>
-          <a
-            href={`https://github.com/dickwyn/v3/tree/main/data/blog/${fileAbsolutePath
-              .split('/')
-              .pop()}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Edit this post
-          </a>
+          <p>
+            <a
+              href={`https://github.com/dickwyn/v3/tree/main/data/blog/${fileAbsolutePath
+                .split('/')
+                .pop()}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Edit this post
+            </a>{' '}
+            (Last modified on {dayjs(lastModified).local().format('D MMM YYYY, h:mma')})
+          </p>
           <section className="next-read">
             <h5 className="section-title">Read next</h5>
             <div className="container">
               {previous && (
-                <Link to={`/blog/${previous.fields.slug}`} className="previous-post">
+                <Link to={`/blog${previous.fields.slug}`} className="previous-post">
                   <div className="post-preview-container">{previous.frontmatter.title}</div>
                 </Link>
               )}
               {next && (
-                <Link to={`/blog/${next.fields.slug}`} className="next-post">
+                <Link to={`/blog${next.fields.slug}`} className="next-post">
                   <div className="post-preview-container">{next.frontmatter.title}</div>
                 </Link>
               )}
@@ -92,6 +103,10 @@ export default BlogPost;
 export const pageQuery = graphql`
   query blogPostQuery($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      fields {
+        published
+        lastModified
+      }
       frontmatter {
         date
         title
