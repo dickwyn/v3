@@ -23,8 +23,6 @@ const BlogPost = ({
   },
   pageContext: { previous, next },
 }) => {
-  const normalizedDate = dayjs(date).local().format('D MMM YYYY, h:mma');
-
   return (
     <Layout page={title} description={description} isBlogPost>
       <div className="wrapper">
@@ -35,8 +33,11 @@ const BlogPost = ({
               <a href="https://twitter.com/dickwyn" target="_blank" rel="noopener noreferrer">
                 @dickwyn
               </a>{' '}
-              | {normalizedDate === 'Invalid Date' ? published : normalizedDate} | {timeToRead} min
-              read
+              |{' '}
+              {dayjs(date ? date : published)
+                .local()
+                .format('D MMM YYYY, h:mma')}{' '}
+              | {timeToRead} min read
             </h2>
           </div>
           {featuredImage && <Img fluid={featuredImage.childImageSharp.fluid} />}
@@ -63,7 +64,7 @@ const BlogPost = ({
             >
               Edit this post
             </a>{' '}
-            (Last modified on {lastModified})
+            (Last modified on {dayjs(lastModified).local().format('D MMM YYYY, h:mma')})
           </p>
           <section className="next-read">
             <h5 className="section-title">Read next</h5>
@@ -103,8 +104,8 @@ export const pageQuery = graphql`
   query blogPostQuery($id: String!) {
     markdownRemark(id: { eq: $id }) {
       fields {
-        lastModified(formatString: "D MMM Y, h:mma")
-        published(formatString: "D MMM Y, h:mma")
+        published
+        lastModified
       }
       frontmatter {
         date
