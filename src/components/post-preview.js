@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import moment from 'moment';
 
 const PostPreview = ({
   post: {
     fields: { slug },
-    frontmatter: { date, title, subtitle, description },
+    frontmatter: { title, subtitle, description },
   },
 }) => (
   <div className="post-preview">

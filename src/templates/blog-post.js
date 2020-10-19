@@ -2,9 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
-import moment from 'moment';
-import Layout from '../components/layout';
 import shortid from 'shortid';
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+import Layout from '../components/layout';
+
+dayjs.extend(utc);
+dayjs.extend(customParseFormat);
 
 const BlogPost = ({
   data: {
@@ -18,7 +23,7 @@ const BlogPost = ({
   },
   pageContext: { previous, next },
 }) => {
-  const normalizedDate = moment(date).local().format('D MMM Y, h:mma');
+  const normalizedDate = dayjs(date).local().format('D MMM YYYY, h:mma');
 
   return (
     <Layout page={title} description={description} isBlogPost>
@@ -30,7 +35,7 @@ const BlogPost = ({
               <a href="https://twitter.com/dickwyn" target="_blank" rel="noopener noreferrer">
                 @dickwyn
               </a>{' '}
-              | {normalizedDate === 'Invalid date' ? published : normalizedDate} | {timeToRead} min
+              | {normalizedDate === 'Invalid Date' ? published : normalizedDate} | {timeToRead} min
               read
             </h2>
           </div>
