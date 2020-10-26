@@ -66,7 +66,7 @@ const Header = ({ hide, invisible }) => {
   return (
     <header className={`${hide && 'hide'} ${invisible && 'invisible'}`}>
       <Link to="/" activeClassName="active" className="home" onClick={() => toggleMobileNav('/')}>
-        dick wyn yong
+        <img src="/images/dickwyn-logo.svg" alt="dickwyn's logo"></img>
       </Link>
       <nav
         className={`${hide && 'hide'} ${invisible && 'invisible'} ${open && 'open'}`}
