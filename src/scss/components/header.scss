@@ -124,8 +124,7 @@ header {
 
       &.open {
         display: block;
-        height: calc(100vh - 58px);
-      }
+          height: fit-content;
 
       ul {
         flex-direction: column;

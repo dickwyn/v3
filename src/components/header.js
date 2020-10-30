@@ -59,8 +59,6 @@ const Header = ({ hide, invisible }) => {
   const toggleMobileNav = (path) => {
     if ((path === '/' && open) || typeof path === 'object' || path === undefined) {
       setOpen(!open);
-      document.body.style.overflow =
-        document.querySelector('nav.open') === null ? 'hidden' : 'auto';
     }
   };
 
