@@ -11,7 +11,7 @@
     }
 
     &.MuiIconButton-root {
-      padding: 4px;
+      padding: var(--header-icon-padding);
     }
   }
 }

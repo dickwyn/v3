@@ -9,7 +9,7 @@ footer {
 
   .content-container {
     display: flex;
-    margin: 1.45rem 1.0875rem;
+    margin: var(--vertical-padding) calc(var(--horizontal-padding) + var(--header-icon-padding));
 
     .MuiSvgIcon-root,
     a {

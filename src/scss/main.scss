@@ -1,6 +1,7 @@
 @import 'normalize-scss/sass/normalize/import-now';
 
 @import 'theme.scss';
+@import 'variables.scss';
 @import 'pages/index.scss';
 @import 'pages/404.scss';
 @import 'pages/debug.scss';
@@ -16,13 +17,6 @@
 @import 'components/hamburger-toggle.scss';
 @import 'templates/blog-index.scss';
 @import 'templates/blog-post.scss';
-
-$h1-size: 2.488rem;
-$h2-size: 2.074rem;
-$h3-size: 1.728rem;
-$h4-size: 1.44rem;
-$h5-size: 1.2rem;
-$h6-size: 0.833rem;
 
 html,
 body,
@@ -65,29 +59,29 @@ body {
   }
 
   h1 {
-    font-size: $h1-size;
+    font-size: var(--h1-size);
   }
 
   h2 {
-    font-size: $h2-size;
+    font-size: var(--h2-size);
   }
 
   h3 {
-    font-size: $h3-size;
+    font-size: var(--h3-size);
     font-style: italic;
   }
 
   h4 {
-    font-size: $h4-size;
+    font-size: var(--h4-size);
   }
 
   h5 {
-    font-size: $h5-size;
+    font-size: var(--h5-size);
     font-style: italic;
   }
 
   h6 {
-    font-size: $h6-size;
+    font-size: var(--h6-size);
   }
 
   small,
@@ -217,11 +211,14 @@ body {
 
       .content-container {
         &.with-margin {
-          margin: 1.45rem 1.0875rem;
+          margin: var(--vertical-padding)
+            calc(var(--horizontal-padding) + var(--header-icon-padding));
+          margin-top: 0;
         }
 
         &.with-padding {
-          padding: 1.45rem 1.0875rem;
+          padding: var(--vertical-padding)
+            calc((var(--horizontal-padding)) + var(--header-icon-padding));
         }
 
         .MuiButton-outlined {
@@ -230,44 +227,6 @@ body {
 
           &:hover {
             background-color: var(--background-secondary);
-          }
-        }
-      }
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: $h1-size * 0.68;
-      }
-
-      h2 {
-        font-size: $h2-size * 0.68;
-      }
-
-      h3 {
-        font-size: $h3-size * 0.68;
-      }
-
-      h4 {
-        font-size: $h4-size * 0.68;
-      }
-
-      h5 {
-        font-size: $h5-size * 0.68;
-      }
-
-      h6 {
-        font-size: $h6-size * 0.68;
-      }
-
-      .wrapper {
-        .content-container {
-          &.with-margin {
-            margin: 1.45rem 0.9rem;
-          }
-
-          &.with-padding {
-            padding: 1.45rem 0.9rem;
           }
         }
       }

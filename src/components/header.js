@@ -64,20 +64,29 @@ const Header = ({ hide, invisible }) => {
 
   return (
     <header className={`${hide && 'hide'} ${invisible && 'invisible'}`}>
-      <Link to="/" activeClassName="active" className="home" onClick={() => toggleMobileNav('/')}>
-        <img src="/images/dickwyn-logo.svg" alt="dickwyn's logo"></img>
-      </Link>
-      <nav
-        className={`${hide && 'hide'} ${invisible && 'invisible'} ${open && 'open'}`}
-        role="navigation"
-      >
-        <ul>
-          <SiteLinks toggleMobileNav={toggleMobileNav} />
-        </ul>
-      </nav>
-      <div className="action-buttons">
-        <DarkModeToggle />
-        <HamburgerToggle open={open} toggleMobileNav={toggleMobileNav} />
+      <div className="wrapper">
+        <div className="content-container">
+          <Link
+            to="/"
+            activeClassName="active"
+            className="home"
+            onClick={() => toggleMobileNav('/')}
+          >
+            <img src="/images/dickwyn-logo.svg" alt="dickwyn's logo"></img>
+          </Link>
+          <nav
+            className={`${hide && 'hide'} ${invisible && 'invisible'} ${open && 'open'}`}
+            role="navigation"
+          >
+            <ul>
+              <SiteLinks toggleMobileNav={toggleMobileNav} />
+            </ul>
+          </nav>
+          <div className="action-buttons">
+            <DarkModeToggle />
+            <HamburgerToggle open={open} toggleMobileNav={toggleMobileNav} />
+          </div>
+        </div>
       </div>
     </header>
   );
