@@ -4,7 +4,15 @@ export const uses = [
     description:
       'These are the things that I have with me if I am going outside. Obviously not going out that often these days due to the COVID-19 pandemic.',
     itemList: [
-      { name: 'Breadband Wallet' },
+      {
+        name: 'Breadband Wallet',
+        attributeList: [
+          {
+            name: 'Check out other wallets that I like',
+            url: 'https://youtu.be/LNc06yF3IAQ',
+          },
+        ],
+      },
       {
         name: 'Hedley & Bennett Wake Up & Fight Mask',
         url: 'https://www.hedleyandbennett.com/products/wake-up-and-fight-mask',
@@ -34,7 +42,7 @@ export const uses = [
         name: 'Samsung Galaxy S10+',
         attributeList: [
           {
-            name: 'dbrand Black Swarm skin',
+            name: 'dbrand Kind of Purple skin',
             url: 'https://dbrand.com/shop/samsung-galaxy-s10-plus-skins',
           },
         ],
@@ -48,13 +56,31 @@ export const uses = [
           },
         ],
       },
+      {
+        name: 'iPad Pro 11-inch (2nd generation)',
+        attributeList: [
+          { name: 'Apple Pencil 2' },
+          {
+            name: 'Zugu Case The Alpha Case',
+            url: 'https://www.zugucase.com/the-alpha-case-2020-ipad-pro-11-2nd-gen-new-model/',
+          },
+          { name: 'I use this primarily for note taking and visualizing programming problems' },
+        ],
+      },
+      {
+        name: 'Zojirushi Stainless Mug',
+        url: 'https://www.amazon.com/gp/product/B00HYOGUM2?psc=1',
+        attributeList: [
+          { name: "The best water bottle I've used. Keeps cold water cold and hot water hot." },
+        ],
+      },
       { name: 'Tile Pro' },
     ],
   },
   {
     name: 'hardware',
     description:
-      'Since I spend a lot of time creating content, I have invested in quite a bit of gear to help streamline my workflow',
+      'Since I spend a lot of time creating content, I have invested in quite a bit of gear to help streamline my workflow.',
     categoryList: [
       {
         name: 'setup',
@@ -92,7 +118,7 @@ export const uses = [
               },
             ],
           },
-          { name: 'Logitech M720 Triathlon' },
+          { name: 'Logitech MX Anywhere 3' },
           { name: 'World Map Mousepad' },
           { name: 'Tripp Lite 10 Outlet Surge Protector' },
           { name: 'Anker 40W 5-port USB Wall Charger' },
@@ -125,7 +151,7 @@ export const uses = [
         ],
       },
       {
-        name: 'Audio',
+        name: 'audio',
         list: [
           { name: 'Rode VideoMic NTG' },
           { name: 'Rode VideoMicro' },
@@ -135,7 +161,7 @@ export const uses = [
         ],
       },
       {
-        name: 'Camera Accessories',
+        name: 'camera accessories',
         list: [
           { name: 'Giottos Rocket Air Blaster' },
           { name: 'Manfrotto Element Traveller Tripod' },
@@ -162,6 +188,7 @@ export const uses = [
           { name: 'Affinity Photo' },
           { name: 'Davinci Resolve' },
           { name: 'Dropbox' },
+          { name: 'Figma' },
           { name: 'Google Chrome' },
           { name: 'Malwarebytes' },
           { name: 'Microsoft Office' },
@@ -169,19 +196,23 @@ export const uses = [
           { name: 'Spotify' },
           { name: 'Visual Studio Code' },
           { name: 'WhatsApp' },
+          { name: 'Logi Options' },
+          { name: 'Tweeten' },
+          { name: 'Zoom' },
         ],
       },
       {
         name: 'mac',
         list: [
-          { name: '1Password 7 Beta' },
+          { name: '1Password 7' },
           { name: 'Alfred' },
-          { name: 'Clocker' },
           { name: 'Dozer' },
           { name: 'iTerm2' },
           { name: 'Macs Fan Control' },
           { name: 'MacTeX' },
           { name: 'Magnet' },
+          { name: 'iStat Menus' },
+          { name: 'AppCleaner' },
         ],
       },
       {
@@ -194,7 +225,7 @@ export const uses = [
         ],
       },
       {
-        name: 'Android',
+        name: 'android',
         list: [
           {
             name: "Check out my What's on my Android phone video",
@@ -213,13 +244,19 @@ export const uses = [
           { name: 'Honey' },
           { name: 'HTTPS Everywhere' },
           { name: 'META SEO inspector' },
-          { name: 'Privacy Badget' },
+          { name: 'Privacy Badger' },
           { name: 'React Developer Tools' },
           { name: 'uBlock Origin' },
           { name: 'vidIQ Vision for YouTube' },
           { name: 'Wappalyzer' },
           { name: 'WAVE Evaluation Tool' },
           { name: 'WhatFont' },
+          { name: 'Decentraleyes' },
+          { name: 'Disconnect' },
+          { name: 'Rakuten' },
+          { name: 'Save to Pocket' },
+          { name: 'The Camelizer' },
+          { name: 'The Great Suspender' },
         ],
       },
       {
