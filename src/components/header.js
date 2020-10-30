@@ -60,7 +60,7 @@ const Header = ({ hide, invisible }) => {
     if ((path === '/' && open) || typeof path === 'object' || path === undefined) {
       setOpen(!open);
     }
-    // document.body.style.overflow = open ? 'hidden' : 'auto';
+    document.body.style.overflow = document.querySelector('nav.open') === null ? 'hidden' : 'auto';
   };
 
   return (
