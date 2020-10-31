@@ -57,6 +57,10 @@ footer {
         display: flex;
         justify-content: space-evenly;
         padding: 1rem;
+
+        a:not(:last-child) {
+          margin-right: 0.2rem;
+        }
       }
     }
   }
