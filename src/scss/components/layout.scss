@@ -38,4 +38,41 @@ main {
   a {
     color: var(--accent);
   }
+
+  .title-container {
+    max-width: calc(768px - (var(--horizontal-padding) * 2) - (var(--header-icon-padding) * 2));
+    width: 100%;
+    margin: 0 auto;
+
+    .hero-image-container {
+      position: relative;
+
+      &.invert {
+        .blog-hero-image {
+          filter: var(--invert-light);
+        }
+      }
+
+      .blog-hero-image {
+        height: 230px;
+        filter: var(--invert-dark);
+      }
+
+      h1 {
+        font-size: 1.7rem;
+        position: absolute;
+        color: var(--text);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .title-container > h1 {
+      padding: 0 calc((var(--horizontal-padding)) + var(--header-icon-padding));
+    }
+  }
 }
