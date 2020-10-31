@@ -25,7 +25,7 @@ jobs:
         with:
           with:
             major-wording: 'MAJOR'
-            minor-wording: 'feat, refactor'
+            minor-wording: 'feat,refactor'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: 'cat package.json'
