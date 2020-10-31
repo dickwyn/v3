@@ -3,6 +3,7 @@ export const uses = [
     name: 'every day carry',
     description:
       'These are the things that I have with me if I am going outside. Obviously not going out that often these days due to the COVID-19 pandemic.',
+    sort: true,
     itemList: [
       {
         name: 'Breadband Wallet',
@@ -128,6 +129,7 @@ export const uses = [
       },
       {
         name: 'storage',
+        sort: true,
         list: [
           { name: 'Samsung T5 SSD' },
           { name: 'Sandisk Extreme PRO SD Card' },
@@ -137,10 +139,12 @@ export const uses = [
       },
       {
         name: 'camera',
+        sort: true,
         list: [{ name: 'Canon AE-1 Program' }, { name: 'Panasonic Lumix DC-G9' }],
       },
       {
         name: 'lenses',
+        sort: true,
         list: [
           { name: 'Canon 50mm f/1.4 FD' },
           { name: 'Helios 44-2 58mm f/2.0' },
@@ -152,6 +156,7 @@ export const uses = [
       },
       {
         name: 'audio',
+        sort: true,
         list: [
           { name: 'Rode VideoMic NTG' },
           { name: 'Rode VideoMicro' },
@@ -162,6 +167,7 @@ export const uses = [
       },
       {
         name: 'camera accessories',
+        sort: true,
         list: [
           { name: 'Giottos Rocket Air Blaster' },
           { name: 'Manfrotto Element Traveller Tripod' },
@@ -173,6 +179,7 @@ export const uses = [
             name: 'Viltrox EF-M2 II',
             attributeList: [{ name: 'Use this to adapt Canon EF lenses to MFT' }],
           },
+          { name: 'Aputure MC RGBWW LED Light' },
         ],
       },
     ],
@@ -184,6 +191,7 @@ export const uses = [
     categoryList: [
       {
         name: 'common',
+        sort: true,
         list: [
           { name: 'Affinity Photo' },
           { name: 'Davinci Resolve' },
@@ -203,6 +211,7 @@ export const uses = [
       },
       {
         name: 'mac',
+        sort: true,
         list: [
           { name: '1Password 7' },
           { name: 'Alfred' },
@@ -217,6 +226,7 @@ export const uses = [
       },
       {
         name: 'windows',
+        sort: true,
         list: [
           { name: 'FreeFileSync' },
           { name: 'MiKTeX' },
@@ -235,6 +245,7 @@ export const uses = [
       },
       {
         name: 'chrome extensions',
+        sort: true,
         list: [
           { name: '1Password X Beta' },
           { name: 'axe - Web Accessibility Testing' },
@@ -261,6 +272,7 @@ export const uses = [
       },
       {
         name: 'visual studio code extensions',
+        sort: true,
         list: [
           { name: 'Better Comments' },
           { name: 'Code Spell Checker' },
