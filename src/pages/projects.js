@@ -48,10 +48,16 @@ const PROJECTS = [
 
 const ProjectsPage = () => {
   return (
-    <Layout page="Projects" className="projects">
+    <Layout
+      page="Projects"
+      className="projects"
+      mainTitle="Projects"
+      mainHeroImage="timj-ots0EOYuGtU-unsplash"
+      mainHeroImageAlt="timj-unsplash"
+      invertMainImageFilter={true}
+    >
       <div className="wrapper">
-        <div className="content-container with-margin">
-          <h1 className="page-title">Projects</h1>
+        <div className="content-container with-padding">
           <section className="list-of-projects">
             {PROJECTS.map((experiment) => (
               <Card key={shortid.generate()}>

@@ -1,13 +1,12 @@
 {
   "name": "www.dickwyn.xyz",
   "description": "Dickwyn's website",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "author": "Dick Wyn Yong <dickwyn@outlook.com>",
   "dependencies": {
     "@material-ui/core": "^4.9.12",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.51",
-    "axios": "^0.19.2",
     "dayjs": "^1.9.3",
     "gatsby": "^2.21.1",
     "gatsby-image": "^2.4.0",
@@ -35,15 +34,10 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-geolocated": "^3.0.1",
     "react-helmet": "^6.0.0",
-    "react-icons": "^3.10.0",
     "shortid": "^2.2.15",
-    "suncalc": "^1.8.0",
-    "sweetalert": "^2.1.2",
     "terser": "^4.6.12",
-    "unist-util-select": "^3.0.1",
-    "use-dark-mode": "^2.3.1"
+    "unist-util-select": "^3.0.1"
   },
   "devDependencies": {
     "eslint-config-airbnb": "^18.1.0",

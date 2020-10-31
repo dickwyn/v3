@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import SEO from './seo';
 import Header from './header';
 import Footer from './footer';
+import Image from './image';
 import '../scss/main.scss';
 
 const Layout = ({
@@ -14,6 +15,10 @@ const Layout = ({
   className,
   isBlogPost,
   description,
+  mainTitle,
+  mainHeroImage,
+  mainHeroImageAlt,
+  invertMainImageFilter,
 }) => {
   return (
     <div className="root-container">
@@ -23,7 +28,23 @@ const Layout = ({
       </a>
       <Header hide={hideHeader} invisible={invisible} />
       <div id="content" />
-      <main className={className}>{children}</main>
+      <main className={className}>
+        <div className="title-container">
+          {mainHeroImage ? (
+            <div className={`hero-image-container ${invertMainImageFilter && 'invert'}`}>
+              <Image
+                className="blog-hero-image"
+                fileName={mainHeroImage}
+                alt={mainHeroImageAlt}
+              ></Image>
+              <h1>{mainTitle}</h1>
+            </div>
+          ) : (
+            <h1>{mainTitle}</h1>
+          )}
+        </div>
+        {children}
+      </main>
       <Footer hide={hideFooter} />
     </div>
   );
@@ -38,6 +59,10 @@ Layout.propTypes = {
   className: PropTypes.string,
   isBlogPost: PropTypes.bool,
   description: PropTypes.string,
+  mainTitle: PropTypes.string,
+  mainHeroImage: PropTypes.string,
+  mainHeroImageAlt: PropTypes.string,
+  invertMainImageFilter: PropTypes.bool,
 };
 
 Layout.defaultProps = {
@@ -48,6 +73,10 @@ Layout.defaultProps = {
   className: '',
   isBlogPost: false,
   description: '',
+  mainTitle: '',
+  mainHeroImage: '',
+  mainHeroImageAlt: '',
+  invertMainImageFilter: false,
 };
 
 export default Layout;

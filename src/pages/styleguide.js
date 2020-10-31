@@ -3,10 +3,9 @@ import Layout from '../components/layout';
 
 const StyleGuidePage = () => {
   return (
-    <Layout page="Style Guide" className="StyleGuidePage">
+    <Layout page="Style Guide" className="StyleGuidePage" mainTitle="Style Guide">
       <div className="wrapper">
         <div className="content-container with-padding">
-          <h1>Style Guide</h1>
           <p>
             This style guide was adapted from the{' '}
             <a href="https://www.poormansstyleguide.com/">Poor Man's Styleguide</a> created by{' '}

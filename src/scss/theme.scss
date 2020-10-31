@@ -34,7 +34,8 @@ body {
     --box-shadow-layer-1: rgba(255, 255, 255, 0.2);
     --box-shadow-layer-2: rgba(255, 255, 255, 0.14);
     --box-shadow-layer-3: rgba(255, 255, 255, 0.12);
-    --invert: invert(0);
+    --invert-dark: invert(0);
+    --invert-light: invert(1);
   }
 
   &.light {
@@ -48,6 +49,7 @@ body {
     --box-shadow-layer-1: rgba(0, 0, 0, 0.2);
     --box-shadow-layer-2: rgba(0, 0, 0, 0.14);
     --box-shadow-layer-3: rgba(0, 0, 0, 0.12);
-    --invert: invert(1);
+    --invert-dark: invert(1);
+    --invert-light: invert(0);
   }
 }

@@ -13,10 +13,9 @@ class DebugPage extends Component {
     const sunset = '19:28';
 
     return (
-      <Layout page="Debug" className="DebugPage">
+      <Layout page="Debug" className="DebugPage" mainTitle="Debug">
         <div className="wrapper">
           <div className="content-container with-padding">
-            <h1>Debug</h1>
             <h2>Diagnostic information:</h2>
             <div class="gatsby-highlight" data-language="text">
               <pre class="language-text">
