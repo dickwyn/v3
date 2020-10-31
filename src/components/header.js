@@ -72,7 +72,8 @@ const Header = ({ hide, invisible }) => {
             className="home"
             onClick={() => toggleMobileNav('/')}
           >
-            <img src="/images/dickwyn-logo.svg" alt="dickwyn's logo"></img>
+            {/* <img src="/images/dickwyn-logo.svg" alt="dickwyn's logo"></img> */}
+            Dick Wyn Yong
           </Link>
           <nav
             className={`${hide && 'hide'} ${invisible && 'invisible'} ${open && 'open'}`}
