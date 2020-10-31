@@ -158,6 +158,15 @@ body {
     word-break: break-word;
   }
 
+  // TODO remove when styleguide page is refactored
+  pre {
+    overflow: auto;
+
+    & > p {
+      white-space: break-spaces;
+    }
+  }
+
   .root-container {
     position: relative;
     display: flex;
