@@ -159,3 +159,8 @@ pre[class*='language-'] {
     font-weight: normal;
   }
 }
+
+// Sets correct padding for line numbers
+span.line-numbers-rows {
+  padding: 1rem 0rem 0.8rem 1rem;
+}
