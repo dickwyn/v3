@@ -1,9 +1,40 @@
 body {
-  --primary-100: #dd2c00;
-  --primary-200: #b80012;
-  --primary-300: #18313d;
-  --primary-400: #124f6b;
-  --primary-500: #1d8fc4;
+  --dwy-gray: #f5f3f4;
+  --dwy-red: #d62828;
+  --dwy-blue: #0466c8;
+
+  --violet: #663399;
+  --violet-900: #1a004d;
+  --violet-800: #330066;
+  --violet-700: #4d1a80;
+  --violet-300: #804db3;
+  --violet-200: #9966cc;
+  --violet-100: #b380e6;
+
+  --green: #20bf55;
+  --green-900: #004000;
+  --green-800: #007309;
+  --green-700: #07a63c;
+  --green-300: #3ad96f;
+  --green-200: #53f288;
+  --green-100: #86ffbb;
+
+  --orange: #fe9000;
+  --orange-900: #7f1100;
+  --orange-800: #982a00;
+  --orange-700: #cb5d00;
+  --orange-300: #ffaa1a;
+  --orange-200: #ffc333;
+  --orange-10: #ffdd4d;
+
+  --yellow: #fbcf3b;
+  --yellow-900: #956900;
+  --yellow-800: #c89c08;
+  --yellow-700: #e2b622;
+  --yellow-300: #ffe955;
+  --yellow-200: #ffff6e;
+  --yellow-100: #ffff88;
+
   --default-text: #000000;
   --default-text-inverted: #ffffff;
   --neutral-100: #fafafa;
@@ -13,15 +44,6 @@ body {
   --neutral-500: #616161;
   --neutral-600: #202020;
   --neutral-700: #121212;
-  --success-100: #4caf50;
-  --success-200: #388e3c;
-  --success-300: #2e7d32;
-  --error-100: #ef5350;
-  --error-200: #d32f2f;
-  --error-300: #c62828;
-  --warning-100: #e1c542;
-  --warning-200: #ffa000;
-  --warning-300: #ff6f00;
 
   &.dark {
     --background: var(--neutral-700);
@@ -30,7 +52,7 @@ body {
     --divider: var(--neutral-300);
     --text: var(--default-text-inverted);
     --text-secondary: var(--neutral-400);
-    --accent: var(--primary-100);
+    --accent: var(--dwy-red);
     --box-shadow-layer-1: rgba(255, 255, 255, 0.2);
     --box-shadow-layer-2: rgba(255, 255, 255, 0.14);
     --box-shadow-layer-3: rgba(255, 255, 255, 0.12);
@@ -45,7 +67,7 @@ body {
     --divider: var(--neutral-300);
     --text: var(--default-text);
     --text-secondary: var(--neutral-500);
-    --accent: var(--primary-100);
+    --accent: var(--dwy-red);
     --box-shadow-layer-1: rgba(0, 0, 0, 0.2);
     --box-shadow-layer-2: rgba(0, 0, 0, 0.14);
     --box-shadow-layer-3: rgba(0, 0, 0, 0.12);
