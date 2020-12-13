@@ -105,6 +105,7 @@ module.exports = {
               escapeEntities: {},
             },
           },
+          { resolve: `gatsby-remark-responsive-iframe` },
         ],
       },
     },
