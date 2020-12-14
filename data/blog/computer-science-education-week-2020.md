@@ -2,6 +2,7 @@
 templateKey: blog-post
 author: Dick Wyn Yong
 title: Behind the scenes of my CSEdWeek 2020 video series
+date: 2020-12-14T00:42:37.000Z
 description: >-
   The story of how I came up with the idea for this 5-part video series and also some reflecting thoughts about the experience of producing the videos.
 featuredPost: false
