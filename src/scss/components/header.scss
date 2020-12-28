@@ -47,16 +47,10 @@ header {
         justify-content: center;
         padding: 0;
 
-        &:hover,
-        &:active {
-          background-color: var(--background-tertiary);
-          background-image: none;
-        }
 
         img {
           padding: 0 calc(var(--header-icon-padding) / 3) 0 var(--header-icon-padding);
-          width: 3.5rem;
-          filter: var(--invert-light);
+          width: 3.8rem;
         }
       }
 
