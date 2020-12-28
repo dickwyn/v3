@@ -62,16 +62,23 @@ const Header = ({ hide, invisible }) => {
 
   useEffect(() => {
     setDarkMode(isDarkMode());
+    
+    if (typeof window !== `undefined` && !window.MutationObserver) {
+      require('mutationobserver-shim');
+    }
+
+    const mutationObserver = new MutationObserver((mutationsList) => {
+      mutationsList.forEach((mutation) => {
+        if (mutation.attributeName === 'class') {
+          setDarkMode(isDarkMode());
+        }
+      });
+    });
+    
     mutationObserver.observe(document.querySelector('body'), { attributes: true });
   });
 
-  const mutationObserver = new MutationObserver((mutationsList) => {
-    mutationsList.forEach((mutation) => {
-      if (mutation.attributeName === 'class') {
-        setDarkMode(isDarkMode());
-      }
-    });
-  });
+
 
   const toggleMobileNav = (path) => {
     if ((path === '/' && open) || typeof path === 'object' || path === undefined) {
