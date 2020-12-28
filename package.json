@@ -46,6 +46,7 @@
     "eslint-config-react-app": "^5.2.1",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react-hooks": "^3.0.0",
+    "mutationobserver-shim": "^0.3.7",
     "prettier": "^2.0.5"
   },
   "keywords": [
