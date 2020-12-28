@@ -1,9 +1,12 @@
-import React, { useState, useLayoutEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import DarkModeToggle from './dark-mode-toggle';
 import HamburgerToggle from './hamburger-toggle';
+import LogoDark from '../images/brand/logo-dark.svg';
+import LogoLight from '../images/brand/logo-light.svg';
+import isDarkMode from '../utils/isDarkMode';
 
 const NAV_LINKS = [
   {
@@ -55,6 +58,20 @@ const SiteLinks = ({ toggleMobileNav }) => (
 
 const Header = ({ hide, invisible }) => {
   const [open, setOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    setDarkMode(isDarkMode());
+    mutationObserver.observe(document.querySelector('body'), { attributes: true });
+  });
+
+  const mutationObserver = new MutationObserver((mutationsList) => {
+    mutationsList.forEach((mutation) => {
+      if (mutation.attributeName === 'class') {
+        setDarkMode(isDarkMode());
+      }
+    });
+  });
 
   const toggleMobileNav = (path) => {
     if ((path === '/' && open) || typeof path === 'object' || path === undefined) {
@@ -72,8 +89,7 @@ const Header = ({ hide, invisible }) => {
             className="home"
             onClick={() => toggleMobileNav('/')}
           >
-            {/* <img src="/images/dickwyn-logo.svg" alt="dickwyn's logo"></img> */}
-            Dick Wyn Yong
+            <img src={darkMode ? LogoDark : LogoLight} alt="dickwyn icon"></img>
           </Link>
           <nav
             className={`${hide && 'hide'} ${invisible && 'invisible'} ${open && 'open'}`}
