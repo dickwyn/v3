@@ -13,7 +13,6 @@ const IndexPage = () => (
             <h1>
               Dick Wyn <b>Yong</b>
             </h1>
-            <h2>Software Engineer in Phoenix</h2>
             <ButtonGroup color="primary" aria-label="outlined primary button group">
               <Button
                 variant="outlined"
@@ -21,6 +20,7 @@ const IndexPage = () => (
                 href="https://www.github.com/dickwyn"
                 target="_blank"
                 rel="noopener noreferrer"
+                size="small"
               >
                 github
               </Button>
@@ -30,8 +30,19 @@ const IndexPage = () => (
                 href="https://www.linkedin.com/in/dickwyn"
                 target="_blank"
                 rel="noopener noreferrer"
+                size="small"
               >
                 linkedin
+              </Button>
+              <Button
+                variant="outlined"
+                color="default"
+                href="https://www.twitter.com/dickwyn"
+                target="_blank"
+                rel="noopener noreferrer"
+                size="small"
+              >
+                twitter
               </Button>
             </ButtonGroup>
           </div>
@@ -39,22 +50,22 @@ const IndexPage = () => (
         </div>
         <div className="description">
           <p>
-            Hi there! My name is Dickwyn and I'm a Senior Front End Engineer at{' '}
+            Hi there! My name is Dick Wyn and my goal is to make technology accessible for everyone.
+            I believe that technology should make the world a better place for everyone and not just
+            for the majority group.
+          </p>
+          <p>
+            I was born and raised in Malaysia and I'm currently in the United States working as a
+            frontend engineer at{' '}
             <a href="http://www.prismstudios.io" target="_blank" rel="noopener noreferrer">
               Prism Studios
             </a>
-            . I'm also a Malaysian living in America and I enjoy creating videos for my{' '}
+            . Beyond my 9 to 5, I create technology and lifestyle content for my{' '}
             <a href="https://www.youtube.com/dickwyn" target="_blank" rel="noopener noreferrer">
               YouTube
             </a>{' '}
-            channel, experimenting with new recipes in the kitchen and travelling the world.
+            channel. I like eating food, visiting new places and I'm an AvGeek.
           </p>
-          <p>
-            You can reach me out on{' '}
-            <a href="https://www.twitter.com/dickwyn" target="_blank" rel="noopener noreferrer">
-              Twitter
-            </a>
-          </p>{' '}
         </div>
       </div>
     </div>
