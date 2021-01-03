@@ -12,6 +12,10 @@ export const uses = [
             name: 'Check out other wallets that I like',
             url: 'https://youtu.be/LNc06yF3IAQ',
           },
+          {
+            name: 'See all the credit cards that I use',
+            url: 'https://youtu.be/ttq1PKB5RDk',
+          },
         ],
       },
       {
@@ -19,7 +23,7 @@ export const uses = [
         url: 'https://www.hedleyandbennett.com/products/wake-up-and-fight-mask',
         attributeList: [
           {
-            name: "Something for this new normal that we're living in",
+            name: "Something for this new normal that we're living in.",
           },
           {
             name: 'Check out my video review',
@@ -32,10 +36,10 @@ export const uses = [
         name: 'Mission Workshop The Rummy Messenger Bag',
         attributeList: [
           {
-            name: "The most expensive messenger bag I have bought but it's totally worth it",
+            name: "The most expensive messenger bag I have bought but it's totally worth it.",
           },
           {
-            name: "Extremely durable and it's weather proof",
+            name: "Extremely durable and it's weather proof.",
           },
         ],
       },
@@ -51,9 +55,10 @@ export const uses = [
       {
         name: 'Samsung Galaxy Watch Active2 40mm LTE',
         attributeList: [
+          { name: 'Barton Elite Silicone Watch Band', url: 'https://www.amazon.com/dp/B07B5JGM9S' },
           {
             name:
-              "I don't actually use the LTE, got it over the bluetooth version because of the stainless steel casing",
+              "I don't actually use the LTE, got it over the bluetooth version because of the stainless steel casing.",
           },
         ],
       },
@@ -65,11 +70,11 @@ export const uses = [
             name: 'Zugu Case The Alpha Case',
             url: 'https://www.zugucase.com/the-alpha-case-2020-ipad-pro-11-2nd-gen-new-model/',
           },
-          { name: 'I use this primarily for note taking and visualizing programming problems' },
+          { name: 'I use this primarily for note taking and visualizing programming problems.' },
         ],
       },
       {
-        name: 'Zojirushi Stainless Mug',
+        name: 'Zojirushi 600ml Stainless Steel Mug',
         url: 'https://www.amazon.com/gp/product/B00HYOGUM2?psc=1',
         attributeList: [
           { name: "The best water bottle I've used. Keeps cold water cold and hot water hot." },
@@ -106,16 +111,17 @@ export const uses = [
           },
           { name: 'Rain Design iLevel2' },
           { name: 'AmazonBasics Computer Speakers' },
-          {
-            name: 'Happy Hacking Keyboard (HHKB) Professional HYBRID Type-S',
-            url: 'https://happyhackingkb.com/',
-          },
-          { name: 'Logitech MX Anywhere 3' },
-          { name: 'World Map Mousepad' },
           { name: 'Tripp Lite 10 Outlet Surge Protector' },
           { name: 'Anker 40W 5-port USB Wall Charger' },
           { name: 'SitSmart Posture Plus Seat' },
           { name: 'Ikea BEKANT desk' },
+          { name: 'Logitech MX Anywhere 3' },
+          {
+            name: 'Happy Hacking Keyboard (HHKB) Professional HYBRID Type-S',
+            url: 'https://happyhackingkb.com/',
+          },
+          { name: 'LTT Northern Lights Desk Pad (1000mm x 600mm)' },
+          { name: 'DaVinci Resolve Speed Editor' },
         ],
       },
       {
@@ -168,7 +174,7 @@ export const uses = [
           { name: 'Pelican SD Memory Card Case' },
           {
             name: 'Viltrox EF-M2 II',
-            attributeList: [{ name: 'Use this to adapt Canon EF lenses to MFT' }],
+            attributeList: [{ name: 'Used to adapt Canon EF lenses to MFT.' }],
           },
           { name: 'Aputure MC RGBWW LED Light' },
           { name: 'Godox VL150 LED Video Light' },
@@ -177,6 +183,13 @@ export const uses = [
             name: 'Glow EZ Lock Deep Parabolic Quick Softbox (28")',
             attributeList: [{ name: 'Bowens Mount modifier for the Godox VL150' }],
           },
+          { name: 'Elvid 9-Section Acrylic Production Slate with Color Clapper Sticks' },
+          { name: 'Peak Design Camera Cube' },
+          { name: 'Eneloop AA Rechargeable Battery' },
+          { name: 'Amazon Basics AAA Rechargeable Battery' },
+          { name: 'Rycote Undercover with Stickies' },
+          { name: 'Bongo Ties' },
+          { name: 'Peak Design Dual Plate V2' },
         ],
       },
     ],
@@ -191,7 +204,7 @@ export const uses = [
         sort: true,
         list: [
           { name: 'Affinity Photo' },
-          { name: 'Davinci Resolve' },
+          { name: 'Davinci Resolve Studio' },
           { name: 'Dropbox' },
           { name: 'Figma' },
           { name: 'Google Chrome' },
@@ -202,7 +215,6 @@ export const uses = [
           { name: 'Visual Studio Code' },
           { name: 'WhatsApp' },
           { name: 'Logi Options' },
-          { name: 'Zoom' },
           { name: 'Audacity' },
           { name: 'Microsoft To Do' },
         ],
@@ -212,14 +224,16 @@ export const uses = [
         sort: true,
         list: [
           { name: '1Password 7' },
-          { name: 'Alfred' },
+          { name: 'Alfred 4' },
           { name: 'Dozer' },
-          { name: 'iTerm2' },
+          { name: 'iTerm' },
           { name: 'MacTeX' },
           { name: 'Magnet' },
           { name: 'iStat Menus' },
           { name: 'AppCleaner' },
           { name: 'Pixelmator Pro' },
+          { name: 'DevSwatch' },
+          { name: 'IINA' },
         ],
       },
       {
@@ -246,10 +260,8 @@ export const uses = [
         sort: true,
         list: [
           { name: '1Password X Beta' },
-          { name: 'ColorPick Eyedropper' },
           { name: 'GoFullPage - Full Page Screen Capture' },
           { name: 'Grammarly' },
-          { name: 'Honey' },
           { name: 'HTTPS Everywhere' },
           { name: 'META SEO inspector' },
           { name: 'Privacy Badger' },
@@ -258,13 +270,10 @@ export const uses = [
           { name: 'vidIQ Vision for YouTube' },
           { name: 'Wappalyzer' },
           { name: 'WAVE Evaluation Tool' },
-          { name: 'WhatFont' },
           { name: 'Decentraleyes' },
           { name: 'Disconnect' },
-          { name: 'Rakuten' },
           { name: 'Save to Pocket' },
           { name: 'The Camelizer' },
-          { name: 'The Great Suspender' },
         ],
       },
       {
