@@ -47,7 +47,6 @@ header {
         justify-content: center;
         padding: 0;
 
-
         img {
           padding: 0 calc(var(--header-icon-padding) / 3) 0 var(--header-icon-padding);
           width: 3.8rem;
@@ -55,10 +54,11 @@ header {
       }
 
       &.active {
-        color: var(--text);
+        color: var(--divider);
       }
 
-      &:hover {
+      &:hover:not(.active) {
+        color: var(--text);
         background-image: linear-gradient(
           to top,
           var(--accent),
