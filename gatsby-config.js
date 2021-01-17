@@ -130,6 +130,12 @@ module.exports = {
         fonts: [`IBM Plex Sans Condensed\:400,600,600i`],
       },
     },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: ['/debug'],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
