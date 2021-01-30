@@ -50,8 +50,8 @@ const SOCIAL_LINKS = [
   },
 ];
 
-const Footer = ({ hide }) => (
-  <footer className={hide ? 'hide' : undefined}>
+const Footer = () => (
+  <footer>
     <div className="wrapper">
       <div className="content-container">
         <div className="left">© {new Date().getFullYear()} Dick Wyn Yong</div>
@@ -75,8 +75,6 @@ const Footer = ({ hide }) => (
   </footer>
 );
 
-Footer.propTypes = {
-  hide: PropTypes.bool.isRequired,
-};
+Footer.propTypes = {};
 
 export default Footer;

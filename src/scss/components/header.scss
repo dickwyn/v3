@@ -149,4 +149,22 @@ header {
       }
     }
   }
+
+  @media (max-width: 425px) {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    z-index: 999;
+
+    .content-container {
+      box-shadow: 0px 0px 4px 1px var(--divider);
+      
+      nav {
+        top: auto;
+        bottom: calc(var(--vertical-padding) + var(--header-height));
+      }
+    }
+  }
 }
