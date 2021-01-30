@@ -89,7 +89,7 @@
     }
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: $smartphone-breakpoint) {
     .gatsby-image-wrapper {
       height: 250px;
     }

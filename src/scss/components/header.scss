@@ -100,7 +100,7 @@ header {
       justify-content: flex-end;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: $smartphone-breakpoint) {
       grid-template-columns: auto 1fr;
       padding: var(--horizontal-padding);
       padding: calc(var(--vertical-padding) / 2) var(--horizontal-padding);
@@ -150,7 +150,7 @@ header {
     }
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: $smartphone-breakpoint) {
     position: fixed;
     bottom: 0;
     right: 0;

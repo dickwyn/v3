@@ -241,7 +241,7 @@ body {
       }
     }
 
-    @media (max-width: 425px) {
+    @media (max-width: $smartphone-breakpoint) {
       main.noFooter,
       main + footer {
         padding-bottom: 4rem;
