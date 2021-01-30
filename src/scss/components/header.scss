@@ -100,7 +100,7 @@ header {
       justify-content: flex-end;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: $smartphone-breakpoint) {
       grid-template-columns: auto 1fr;
       padding: var(--horizontal-padding);
       padding: calc(var(--vertical-padding) / 2) var(--horizontal-padding);
@@ -146,6 +146,24 @@ header {
       .action-buttons {
         grid-area: 1 / 2 / 2 / 3;
         column-gap: 4px;
+      }
+    }
+  }
+
+  @media (max-width: $smartphone-breakpoint) {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    z-index: 999;
+
+    .content-container {
+      box-shadow: 0px 0px 4px 1px var(--divider);
+      
+      nav {
+        top: auto;
+        bottom: calc(var(--vertical-padding) + var(--header-height));
       }
     }
   }

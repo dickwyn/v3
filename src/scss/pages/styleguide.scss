@@ -82,7 +82,7 @@
         background-color: var(--warning-300);
       }
     }
-    @media (max-width: 768px) {
+    @media (max-width: $smartphone-breakpoint) {
       grid-template-columns: repeat(3, 1fr);
     }
   }

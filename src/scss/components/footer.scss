@@ -44,7 +44,7 @@ footer {
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: $smartphone-breakpoint) {
       flex-direction: column-reverse;
 
       .left {

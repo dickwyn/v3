@@ -70,7 +70,7 @@ main {
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $smartphone-breakpoint) {
     .title-container > h1 {
       padding: 0 calc((var(--horizontal-padding)) + var(--header-icon-padding));
     }

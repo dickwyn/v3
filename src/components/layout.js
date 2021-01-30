@@ -28,7 +28,7 @@ const Layout = ({
       </a>
       <Header hide={hideHeader} invisible={invisible} />
       <div id="content" />
-      <main className={className}>
+      <main className={`${className} ${hideFooter && 'noFooter'}`}>
         <div className="title-container">
           {mainHeroImage ? (
             <div className={`hero-image-container ${invertMainImageFilter && 'invert'}`}>
@@ -45,7 +45,7 @@ const Layout = ({
         </div>
         {children}
       </main>
-      <Footer hide={hideFooter} />
+      {!hideFooter && <Footer />}
     </div>
   );
 };
