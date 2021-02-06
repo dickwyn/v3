@@ -29,7 +29,7 @@ const Layout = ({
       <Header hide={hideHeader} invisible={invisible} />
       <div id="content" />
       <main className={`${className} ${hideFooter && 'noFooter'}`}>
-        <div className="title-container">
+        <div className="title-container" style={{ display: mainHeroImage ? 'block' : 'none' }}>
           {mainHeroImage ? (
             <div className={`hero-image-container ${invertMainImageFilter && 'invert'}`}>
               <Image
