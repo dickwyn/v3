@@ -1,5 +1,5 @@
 .homepage {
-  .content-container {
+  .wrapper .content-container {
     .profile-card {
       display: flex;
       align-items: center;
@@ -11,33 +11,14 @@
         grid-column: span 2;
         align-self: center;
 
-        h1,
-        h2 {
-          font-weight: 400;
-        }
-
         h1 {
-          font-size: 2.3rem;
+          font-weight: 400;
+          font-size: 1.69rem;
           margin: 0 0 1rem;
         }
 
-        h2 {
-          font-size: 1.3rem;
-          margin: 0 0 1.38rem;
-          color: var(--text-secondary);
-        }
-        .MuiButtonGroup-root {
-          a {
-            background: none;
-
-            &:hover {
-              color: var(--accent);
-            }
-
-            .MuiButton-label {
-              font-family: 'IBM Plex Sans', sans-serif;
-            }
-          }
+        a {
+          margin-right: 0.5rem;
         }
       }
 
@@ -50,10 +31,15 @@
     .description {
       p {
         line-height: 1.75;
+        // margin-bottom: 0.69rem;
       }
     }
 
     @media only screen and (max-width: $smartphone-breakpoint) {
+      &.with-margin.homepage {
+        margin-top: 1.5rem;
+      }
+
       .profile-card {
         justify-content: center;
         margin: 0 0 1.25rem;

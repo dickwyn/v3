@@ -38,7 +38,7 @@ body {
   background-color: var(--background);
   color: var(--text);
   animation: mte 1.5s 0s forwards ease-in-out;
-  transition: background-color 100ms ease-in-out, color 200ms ease-in-out !important;
+  transition: background .39s cubic-bezier(.17,.67,.83,.67), color .69s cubic-bezier(.17,.67,.83,.67);
 
   p,
   li {
