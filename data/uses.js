@@ -81,6 +81,11 @@ export const uses = [
         ],
       },
       { name: 'Tile Pro' },
+      {
+        name: 'Roav Sunglasses',
+        url: 'https://roaveyewear.com/collections/origin-series/products/freddy-black-moonrise',
+        attributeList: [{ name: 'I have the Freddy frame/shape in Black/Sunrise colorway' }, { name: 'These are durable, lightweight and folds into my pocket.' }],
+      },
     ],
   },
   {
