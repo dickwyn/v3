@@ -11,8 +11,7 @@ import Layout from '../components/layout';
 const PROJECTS = [
   {
     name: 'Now',
-    description:
-      'A single page application to display what i\'m currently doing',
+    description: "A single page application to display what i'm currently doing",
     tryItUrl: 'https://now.dickwyn.xyz/',
   },
   {
@@ -41,6 +40,12 @@ const PROJECTS = [
     repo: 'https://github.com/dickwyn/resume',
   },
   {
+    name: 'ASUCIS',
+    description:
+      'A set of websites that I developed for the ASU Coalition of International Students for marketing purposes.',
+    repo: 'https://github.com/asucis',
+  },
+  {
     name: 'The Technology of Today Malaysia',
     description: 'Technology news for the Malaysian market',
     url: 'https://megapowertech-malaysia.blogspot.com/',
@@ -64,6 +69,7 @@ const ProjectsPage = () => {
     >
       <div className="wrapper">
         <div className="content-container with-padding">
+          <p>These are some of my technical (and non-technical) projects.</p>
           <section className="list-of-projects">
             {PROJECTS.map((experiment) => (
               <Card key={shortid.generate()}>
