@@ -219,6 +219,10 @@ body {
       margin: 0 auto;
 
       .content-container {
+        p:first-of-type {
+          margin-top: 0;
+        }
+
         &.with-margin {
           margin: var(--vertical-padding)
             calc(var(--horizontal-padding) + var(--header-icon-padding));
@@ -244,7 +248,7 @@ body {
     @media (max-width: $smartphone-breakpoint) {
       main.noFooter,
       main + footer {
-        padding-bottom: 4rem;
+        padding-bottom: 5rem;
       }
     }
   }

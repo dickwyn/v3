@@ -30,8 +30,7 @@
 
     .description {
       p {
-        line-height: 1.75;
-        // margin-bottom: 0.69rem;
+        margin: 0 0 0.5rem;
       }
     }
 
@@ -42,7 +41,6 @@
 
       .profile-card {
         justify-content: center;
-        margin: 0 0 1.25rem;
 
         .title {
           order: 1;
