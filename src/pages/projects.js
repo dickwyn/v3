@@ -10,6 +10,12 @@ import Layout from '../components/layout';
 
 const PROJECTS = [
   {
+    name: 'Now',
+    description:
+      'A single page application to display what i\'m currently doing',
+    tryItUrl: 'https://now.dickwyn.xyz/',
+  },
+  {
     name: 'Standup Form',
     description:
       'A simple form built with Angular to generate standup checklist from today and yesterday to share with the team.',
