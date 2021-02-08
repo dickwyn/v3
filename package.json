@@ -1,7 +1,7 @@
 {
   "name": "www.dickwyn.xyz",
   "description": "Dickwyn's website",
-  "version": "3.6.3",
+  "version": "3.6.4",
   "author": "Dick Wyn Yong <dickwyn@outlook.com>",
   "dependencies": {
     "@material-ui/core": "^4.9.12",
