@@ -45,9 +45,15 @@
     .twitter-tweet-rendered {
       margin: 0 auto;
     }
+
+    .gatsby-resp-iframe-wrapper {
+      margin: 1rem 0;
+    }
   }
 
   .post-tags {
+    margin-bottom: 1rem;
+
     & > a {
       text-transform: lowercase;
     }
