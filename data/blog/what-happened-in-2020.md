@@ -12,7 +12,7 @@ tags:
   - youtube
 ---
 
-In 2020, this blog has taken somewhat of a back set in terms of my attention for it. In total, I wrote a grand total of __two__ blog entries in the whole of 2020 which is actually 1 less blog entry compared to 2019 when I [re-launched this blog](http://localhost:8000/blog/hello/).
+In 2020, this blog has taken somewhat of a back set in terms of my attention for it. In total, I wrote a grand total of **two** blog entries in the whole of 2020 which is actually 1 less blog entry compared to 2019 when I [re-launched this blog](http://dickwyn.xyz/blog/hello/).
 
 The main reason was honestly just YouTube. From the get-go, I set a personal goal to upload one video every week for the whole year. That meant that I needed to script, film, edit and upload 52 videos to my [YouTube channel](https://youtube.com/dickwyn) (subscribe if you haven't already). And that came at the expense of this blog or even the development of this website/portfolio.
 
@@ -28,6 +28,6 @@ Now, I'm not putting all the blame for low engagement on my videos directly on t
 
 So, that is my game plan for this blog in 2021.
 
-In the meantime, feel free to check out my video on the 20 things in 2020.  It's directly inspired by my [The 3 best things I did in 2019](http://localhost:8000/blog/the-3-best-things-i-did-in-2019/) entry.
+In the meantime, feel free to check out my video on the 20 things in 2020. It's directly inspired by my [The 3 best things I did in 2019](http://dickwyn.xyz/blog/the-3-best-things-i-did-in-2019/) entry.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nQ55OTQfZJg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
