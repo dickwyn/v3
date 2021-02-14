@@ -112,6 +112,7 @@ export const uses = [
               },
             ],
           },
+          { name: 'Ikea BEKANT desk corner desk-right' },
           { name: 'Dell U2415 24-inch Monitor' },
           {
             name: 'BenQ ScreenBar Plus',
@@ -119,17 +120,16 @@ export const uses = [
           },
           { name: 'Rain Design iLevel2' },
           { name: 'AmazonBasics Computer Speakers' },
-          { name: 'Tripp Lite 10 Outlet Surge Protector' },
-          { name: 'Anker 40W 5-port USB Wall Charger' },
-          { name: 'SitSmart Posture Plus Seat' },
-          { name: 'Ikea BEKANT desk' },
           { name: 'Logitech MX Anywhere 3' },
           {
             name: 'Happy Hacking Keyboard (HHKB) Professional HYBRID Type-S',
             url: 'https://happyhackingkb.com/',
           },
+          { name: 'DaVinci Resolve Speed Editor' },
           { name: 'LTT Northern Lights Desk Pad (1000mm x 600mm)' },
-          // { name: 'DaVinci Resolve Speed Editor' },
+          { name: 'Tripp Lite 10 Outlet Surge Protector' },
+          { name: 'Anker 40W 5-port USB Wall Charger' },
+          { name: 'SitSmart Posture Plus Seat' },
         ],
       },
       {
@@ -244,6 +244,7 @@ export const uses = [
           { name: 'Audacity' },
           { name: 'Microsoft To Do' },
           { name: 'Microsoft Edge' },
+          { name: 'FreeFileSync' },
         ],
       },
       {
@@ -265,12 +266,7 @@ export const uses = [
       {
         name: 'windows',
         sort: true,
-        list: [
-          { name: 'FreeFileSync' },
-          { name: 'MiKTeX' },
-          { name: 'PhotoScape' },
-          { name: 'Windows Terminal' },
-        ],
+        list: [{ name: 'MiKTeX' }, { name: 'PhotoScape' }, { name: 'Windows Terminal' }],
       },
       {
         name: 'android',
