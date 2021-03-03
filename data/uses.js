@@ -53,12 +53,16 @@ export const uses = [
         ],
       },
       {
-        name: 'Samsung Galaxy Watch Active2 40mm LTE',
+        name: 'Samsung Galaxy Watch Active2 44mm LTE',
         attributeList: [
-          { name: 'Barton Elite Silicone Watch Band', url: 'https://www.amazon.com/dp/B07B5JGM9S' },
+          { name: 'AVOD 22mm Nylon Sport Band', url: 'https://amazon.com/gp/product/B085Q3B2QG' },
           {
             name:
               "I don't actually use the LTE, got it over the bluetooth version because of the stainless steel casing.",
+          },
+          {
+            name: 'RIP to my old 40mm Galaxy Watch Active2',
+            url: 'https://www.youtube.com/watch?v=m2LrdIIIhEI',
           },
         ],
       },
@@ -245,6 +249,7 @@ export const uses = [
           { name: 'Microsoft To Do' },
           { name: 'Microsoft Edge' },
           { name: 'FreeFileSync' },
+          { name: 'f.lux' },
         ],
       },
       {
