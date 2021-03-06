@@ -40,7 +40,7 @@ main {
 
   .title-container {
     // TODO calculate this dynamically
-    max-width: calc(818px - (var(--horizontal-padding) * 2) - (var(--header-icon-padding) * 2));
+    max-width: calc(768px - (var(--horizontal-padding) * 2) - (var(--header-icon-padding) * 2));
     width: 100%;
     margin: 0 auto;
 
@@ -70,6 +70,11 @@ main {
     }
   }
 
+  @media (max-width: $tablet-breakpoint) {
+    .title-container {
+      max-width: 100%;
+    }
+  }
   @media (max-width: $smartphone-breakpoint) {
     .title-container > h1 {
       padding: 0 calc((var(--horizontal-padding)) + var(--header-icon-padding));
