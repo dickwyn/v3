@@ -34,11 +34,13 @@
       }
     }
 
-    @media only screen and (max-width: $smartphone-breakpoint) {
+    @media only screen and (max-width: $tablet-breakpoint) {
       &.with-margin.homepage {
         margin-top: 1.5rem;
       }
+    }
 
+    @media only screen and (max-width: $smartphone-breakpoint) {
       .profile-card {
         justify-content: center;
 

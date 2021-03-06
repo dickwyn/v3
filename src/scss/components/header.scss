@@ -92,22 +92,24 @@ header {
       display: flex;
       justify-content: flex-end;
     }
+  }
 
-    @media (max-width: $smartphone-breakpoint) {
+  @media (max-width: $tablet-breakpoint) {
+    .content-container {
       grid-template-columns: auto 1fr;
-      padding: var(--horizontal-padding);
       padding: calc(var(--vertical-padding) / 2) var(--horizontal-padding);
+      box-shadow: 0px 0px 4px 1px var(--divider);
 
       a.home {
         grid-area: 1 / 1 / 2 / 2;
       }
 
       nav {
-        position: absolute;
+        display: none;
         top: calc(var(--vertical-padding) + var(--header-height));
+        position: absolute;
         width: -webkit-fill-available;
         background-color: var(--background-secondary);
-        display: none;
         padding: var(--horizontal-padding)
           calc(var(--horizontal-padding) + var(--header-icon-padding));
 
@@ -153,11 +155,14 @@ header {
     z-index: 999;
 
     .content-container {
-      box-shadow: 0px 0px 4px 1px var(--divider);
-      
       nav {
         top: auto;
         bottom: calc(var(--vertical-padding) + var(--header-height));
+        position: absolute;
+        width: -webkit-fill-available;
+        background-color: var(--background-secondary);
+        padding: var(--horizontal-padding)
+          calc(var(--horizontal-padding) + var(--header-icon-padding));
       }
     }
   }
