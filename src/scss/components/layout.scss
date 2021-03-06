@@ -47,15 +47,20 @@ main {
     .hero-image-container {
       position: relative;
 
-      &.invert {
+      &.invert-light {
         .blog-hero-image {
           filter: var(--invert-light);
         }
       }
 
+      &.invert-dark {
+        .blog-hero-image {
+          filter: var(--invert-dark);
+        }
+      }
+
       .blog-hero-image {
         height: 230px;
-        filter: var(--invert-dark);
       }
 
       h1 {
