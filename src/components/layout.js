@@ -18,6 +18,8 @@ const Layout = ({
   mainTitle,
   mainHeroImage,
   mainHeroImageAlt,
+  mainHeroImageObjectFit,
+  mainHeroImageObjectPosition,
   invertMainImageFilter,
 }) => {
   return (
@@ -36,6 +38,8 @@ const Layout = ({
                 className="blog-hero-image"
                 fileName={mainHeroImage}
                 alt={mainHeroImageAlt}
+                objectFit={mainHeroImageObjectFit}
+                objectPosition={mainHeroImageObjectPosition}
               ></Image>
               <h1>{mainTitle}</h1>
             </div>
@@ -62,6 +66,8 @@ Layout.propTypes = {
   mainTitle: PropTypes.string,
   mainHeroImage: PropTypes.string,
   mainHeroImageAlt: PropTypes.string,
+  mainHeroImageObjectFit: PropTypes.string,
+  mainHeroImageObjectFit: PropTypes.string,
   invertMainImageFilter: PropTypes.bool,
 };
 
@@ -76,6 +82,8 @@ Layout.defaultProps = {
   mainTitle: '',
   mainHeroImage: '',
   mainHeroImageAlt: '',
+  mainHeroImageObjectFit: 'fill',
+  mainHeroImageObjectFit: '50% 50%',
   invertMainImageFilter: false,
 };
 
