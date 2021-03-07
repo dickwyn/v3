@@ -11,6 +11,12 @@ import isDarkMode from '../utils/isDarkMode';
 const NAV_LINKS = [
   {
     id: shortid.generate(),
+    name: 'about',
+    path: '/about',
+    internal: true,
+  },
+  {
+    id: shortid.generate(),
     name: 'blog',
     path: '/blog',
     internal: true,

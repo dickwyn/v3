@@ -18,7 +18,10 @@ const Layout = ({
   mainTitle,
   mainHeroImage,
   mainHeroImageAlt,
+  mainHeroImageObjectFit,
+  mainHeroImageObjectPosition,
   invertMainImageFilter,
+  disableMainImageFilter,
 }) => {
   return (
     <div className="root-container">
@@ -31,11 +34,17 @@ const Layout = ({
       <main className={`${className} ${hideFooter && 'noFooter'}`}>
         <div className="title-container" style={{ display: mainHeroImage ? 'block' : 'none' }}>
           {mainHeroImage ? (
-            <div className={`hero-image-container ${invertMainImageFilter && 'invert'}`}>
+            <div
+              className={`hero-image-container ${
+                disableMainImageFilter ? '' : invertMainImageFilter ? 'invert-light' : 'invert-dark'
+              }`}
+            >
               <Image
                 className="blog-hero-image"
                 fileName={mainHeroImage}
                 alt={mainHeroImageAlt}
+                objectFit={mainHeroImageObjectFit}
+                objectPosition={mainHeroImageObjectPosition}
               ></Image>
               <h1>{mainTitle}</h1>
             </div>
@@ -62,7 +71,10 @@ Layout.propTypes = {
   mainTitle: PropTypes.string,
   mainHeroImage: PropTypes.string,
   mainHeroImageAlt: PropTypes.string,
+  mainHeroImageObjectFit: PropTypes.string,
+  mainHeroImageObjectFit: PropTypes.string,
   invertMainImageFilter: PropTypes.bool,
+  disableMainImageFilter: PropTypes.bool,
 };
 
 Layout.defaultProps = {
@@ -76,7 +88,10 @@ Layout.defaultProps = {
   mainTitle: '',
   mainHeroImage: '',
   mainHeroImageAlt: '',
+  mainHeroImageObjectFit: 'fill',
+  mainHeroImageObjectFit: '50% 50%',
   invertMainImageFilter: false,
+  disableMainImageFilter: false,
 };
 
 export default Layout;

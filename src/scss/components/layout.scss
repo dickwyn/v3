@@ -39,6 +39,7 @@ main {
   }
 
   .title-container {
+    // TODO calculate this dynamically
     max-width: calc(768px - (var(--horizontal-padding) * 2) - (var(--header-icon-padding) * 2));
     width: 100%;
     margin: 0 auto;
@@ -46,15 +47,20 @@ main {
     .hero-image-container {
       position: relative;
 
-      &.invert {
+      &.invert-light {
         .blog-hero-image {
           filter: var(--invert-light);
         }
       }
 
+      &.invert-dark {
+        .blog-hero-image {
+          filter: var(--invert-dark);
+        }
+      }
+
       .blog-hero-image {
         height: 230px;
-        filter: var(--invert-dark);
       }
 
       h1 {
@@ -69,6 +75,11 @@ main {
     }
   }
 
+  @media (max-width: $tablet-breakpoint) {
+    .title-container {
+      max-width: 100%;
+    }
+  }
   @media (max-width: $smartphone-breakpoint) {
     .title-container > h1 {
       padding: 0 calc((var(--horizontal-padding)) + var(--header-icon-padding));
