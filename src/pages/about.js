@@ -28,7 +28,7 @@ const AboutPage = () => {
           <h3>Quick facts</h3>
           <ul>
             <li>I don't have a middle name, my first name has two words (Dick Wyn).</li>
-            <li>I was born an raised in Kuala Lumpur, Malaysia.</li>
+            <li>I was born and raised in Kuala Lumpur, Malaysia.</li>
             <li>
               A lot of people see me as the 'quiet' one when they first meet me but once you get to
               know me a little, I have quite a voice for my thoughts.
