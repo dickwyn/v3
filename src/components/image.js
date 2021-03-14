@@ -18,7 +18,7 @@ const Image = ({ className, fileName, alt, objectFit, objectPosition }) => (
               relativePath
               name
               childImageSharp {
-                fluid(maxWidth: 600) {
+                fluid(maxWidth: 2400) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }

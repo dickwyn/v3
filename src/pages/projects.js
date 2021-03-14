@@ -66,6 +66,8 @@ const ProjectsPage = () => {
       mainHeroImage="timj-ots0EOYuGtU-unsplash"
       mainHeroImageAlt="timj-unsplash"
       invertMainImageFilter={true}
+      mainHeroImageObjectFit="cover"
+      mainHeroImageObjectPosition="0 70%"
     >
       <div className="wrapper">
         <div className="content-container with-padding">

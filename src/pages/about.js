@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Layout from '../components/layout';
 
 const AboutPage = () => {
@@ -10,7 +11,8 @@ const AboutPage = () => {
       mainHeroImage="P1002080"
       mainHeroImageAlt="cover photo of dick wyn yong"
       mainHeroImageObjectFit="cover"
-      mainHeroImageObjectPosition="0 38%"
+      mainHeroImageObjectPosition="0 33%"
+      mainHeroImageTall={true}
       disableMainImageFilter={true}
     >
       <div className="wrapper">
@@ -25,6 +27,14 @@ const AboutPage = () => {
             the internet. Take a look around to get to know me a little. And feel free to{' '}
             <b>contact me</b> if you have any questions.
           </p>
+          <ul>
+            <li>
+              <a href="/dickwyn-resume.pdf">My resume</a>
+            </li>
+            <li>
+              <Link to="/projects">My side projects</Link>
+            </li>
+          </ul>
           <h3>Quick facts</h3>
           <ul>
             <li>I don't have a middle name, my first name has two words (Dick Wyn).</li>
