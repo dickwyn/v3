@@ -10,7 +10,8 @@ const AboutPage = () => {
       mainHeroImage="P1002080"
       mainHeroImageAlt="cover photo of dick wyn yong"
       mainHeroImageObjectFit="cover"
-      mainHeroImageObjectPosition="0 38%"
+      mainHeroImageObjectPosition="0 33%"
+      mainHeroImageTall={true}
       disableMainImageFilter={true}
     >
       <div className="wrapper">

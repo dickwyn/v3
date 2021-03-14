@@ -20,6 +20,7 @@ const Layout = ({
   mainHeroImageAlt,
   mainHeroImageObjectFit,
   mainHeroImageObjectPosition,
+  mainHeroImageTall,
   invertMainImageFilter,
   disableMainImageFilter,
 }) => {
@@ -40,7 +41,9 @@ const Layout = ({
               }`}
             >
               <Image
-                className="blog-hero-image"
+                className={`blog-hero-image ${
+                mainHeroImageTall ? 'tall' : 'default'
+              }`}
                 fileName={mainHeroImage}
                 alt={mainHeroImageAlt}
                 objectFit={mainHeroImageObjectFit}
@@ -73,6 +76,7 @@ Layout.propTypes = {
   mainHeroImageAlt: PropTypes.string,
   mainHeroImageObjectFit: PropTypes.string,
   mainHeroImageObjectFit: PropTypes.string,
+  mainHeroImageTall: PropTypes.bool,
   invertMainImageFilter: PropTypes.bool,
   disableMainImageFilter: PropTypes.bool,
 };
@@ -90,6 +94,7 @@ Layout.defaultProps = {
   mainHeroImageAlt: '',
   mainHeroImageObjectFit: 'fill',
   mainHeroImageObjectFit: '50% 50%',
+  mainHeroImageTall: false,
   invertMainImageFilter: false,
   disableMainImageFilter: false,
 };

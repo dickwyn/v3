@@ -39,8 +39,6 @@ main {
   }
 
   .title-container {
-    // TODO calculate this dynamically
-    max-width: calc(768px - (var(--horizontal-padding) * 2) - (var(--header-icon-padding) * 2));
     width: 100%;
     margin: 0 auto;
 
@@ -61,6 +59,10 @@ main {
 
       .blog-hero-image {
         height: 230px;
+
+        &.tall {
+          height: 380px;
+        }
       }
 
       h1 {
@@ -78,6 +80,14 @@ main {
   @media (max-width: $tablet-breakpoint) {
     .title-container {
       max-width: 100%;
+      .hero-image-container {
+        .blog-hero-image {
+          &,
+          &.tall {
+            height: 230px;
+          }
+        }
+      }
     }
   }
   @media (max-width: $smartphone-breakpoint) {
