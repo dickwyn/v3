@@ -37,7 +37,7 @@ function initialize() {
 Looking for something?
 
 👨‍💻 https://www.github.com/dickwyn
-📄 https://dickwyn.xyz/resume
+📄 https://dickwyn.xyz/dickwyn-resume.pdf
 🐛 https://dickwyn.xyz/debug
 
 built: unsetTimestamp`,
