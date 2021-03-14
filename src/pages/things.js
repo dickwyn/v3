@@ -14,7 +14,26 @@ const ThingsPage = () => {
       mainHeroImageObjectPosition="0 88%"
     >
       <div className="wrapper">
-        <div className="content-container with-padding"></div>
+        <div className="content-container with-padding">
+          <p>A list of things that I like</p>
+          <ul>
+            <li>
+              <a href="https://www.nytimes.com/wirecutter">Wirecutter</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UC1of9ELYwB623fWaAMRDVFA">Grandpa Kitchen</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCXuqSBlHAE6Xw-yeJA0Tunw">Linus Tech Tips</a>
+            </li>
+            <li>
+              <a href="https://www.doctorofcredit.com">Doctor Of Credit</a>
+            </li>
+            <li>
+              <a href="https://www.theverge.com">The Verge</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </Layout>
   );
