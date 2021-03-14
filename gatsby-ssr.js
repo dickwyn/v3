@@ -37,7 +37,8 @@ function initialize() {
 Looking for something?
 
 👨‍💻 https://www.github.com/dickwyn
-🐛 https://dickwyn.xyz/debug/
+📄 https://dickwyn.xyz/resume
+🐛 https://dickwyn.xyz/debug
 
 built: unsetTimestamp`,
       'font-family:monospace;'
