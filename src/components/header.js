@@ -23,21 +23,21 @@ const NAV_LINKS = [
   },
   {
     id: shortid.generate(),
+    name: 'things',
+    path: '/things',
+    internal: true,
+  },
+  {
+    id: shortid.generate(),
     name: 'projects',
-    path: '/projects/',
+    path: '/projects',
     internal: true,
   },
   {
     id: shortid.generate(),
-    name: 'Uses',
-    path: '/uses/',
+    name: 'gear',
+    path: '/uses',
     internal: true,
-  },
-  {
-    id: shortid.generate(),
-    name: 'Resume',
-    path: '/dickwyn-resume.pdf',
-    internal: false,
   },
 ];
 
@@ -68,7 +68,7 @@ const Header = ({ hide, invisible }) => {
 
   useEffect(() => {
     setDarkMode(isDarkMode());
-    
+
     if (typeof window !== `undefined` && !window.MutationObserver) {
       require('mutationobserver-shim');
     }
@@ -80,11 +80,9 @@ const Header = ({ hide, invisible }) => {
         }
       });
     });
-    
+
     mutationObserver.observe(document.querySelector('body'), { attributes: true });
   });
-
-
 
   const toggleMobileNav = (path) => {
     if ((path === '/' && open) || typeof path === 'object' || path === undefined) {
