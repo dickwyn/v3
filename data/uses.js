@@ -133,7 +133,7 @@ export const uses = [
           { name: 'LTT Northern Lights Desk Pad (1000mm x 600mm)' },
           { name: 'Tripp Lite 10 Outlet Surge Protector' },
           { name: 'Anker 40W 5-port USB Wall Charger' },
-          { name: 'SitSmart Posture Plus Seat' },
+          { name: 'BackJoy SitSmart Posture Plus Seat' },
         ],
       },
       {
