@@ -44,7 +44,7 @@ const UsesPage = () => {
             hardware and software that I use on a daily basis to create and consume content.
           </p>
           <p>I enjoy trying out new things so this list will be updated accordingly.</p>
-          {/* {uses.map((section, sectionIndex) => (
+          {uses.map((section, sectionIndex) => (
             <React.Fragment key={`section${sectionIndex}`}>
               <h2 className="section">{section.name}</h2>
               <p>{section.description}</p>
@@ -65,7 +65,7 @@ const UsesPage = () => {
                 />
               )}
             </React.Fragment>
-          ))} */}
+          ))}
         </div>
       </div>
     </Layout>
