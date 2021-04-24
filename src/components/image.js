@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 
 /*
@@ -18,9 +18,7 @@ const Image = ({ className, fileName, alt, objectFit, objectPosition }) => (
               relativePath
               name
               childImageSharp {
-                fluid(maxWidth: 2400) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData
               }
             }
           }
@@ -36,10 +34,10 @@ const Image = ({ className, fileName, alt, objectFit, objectPosition }) => (
       }
 
       return (
-        <Img
+        <GatsbyImage
           className={className}
           alt={alt}
-          fluid={image.node.childImageSharp.fluid}
+          image={getImage(image.node)}
           imgStyle={{
             objectFit: objectFit,
             objectPosition: objectPosition,

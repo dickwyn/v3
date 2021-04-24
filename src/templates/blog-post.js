@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage  } from 'gatsby-plugin-image';
 import shortid from 'shortid';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
@@ -40,7 +40,7 @@ const BlogPost = ({
               | {timeToRead} min read
             </h2>
           </div>
-          {featuredImage && <Img fluid={featuredImage.childImageSharp.fluid} />}
+          {featuredImage && <GatsbyImage image={getImage(featuredImage)} />}
           <div className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
           <div className="post-tags">
             <b>tagged</b>:{' '}
@@ -114,9 +114,7 @@ export const pageQuery = graphql`
         tags
         featuredImage {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+            gatsbyImageData
           }
         }
       }
