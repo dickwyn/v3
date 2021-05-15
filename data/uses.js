@@ -146,13 +146,15 @@ export const uses = [
               { name: 'Viltrox EF-M2 II' },
               { name: '128GB SanDisk Extreme PRO SD Card' },
               { name: 'Manfrotto 200PL Quick Release Plate' },
+              { name: 'Portkeys P6' },
+              { name: 'NICEYRIG Multipurpose Camera Base Plate' },
             ],
           },
           {
             name: 'Sound Devices MixPre-3 II',
             attributeList: [
               { name: '64GB SanDisk Extreme SD Card' },
-              { name: 'Rode VideoMic NTG' },
+              { name: 'Rode NTG5' },
               { name: 'Sony MDR-7506' },
               { name: 'Anker PowerCore Slim 10000 PD' },
             ],
@@ -204,7 +206,12 @@ export const uses = [
       {
         name: 'audio',
         sort: true,
-        list: [{ name: 'Rode VideoMicro' }, { name: 'Tascam DR-10L' }, { name: 'Zoom H1' }],
+        list: [
+          { name: 'Rode VideoMicro' },
+          { name: 'Tascam DR-10L' },
+          { name: 'Zoom H1' },
+          { name: 'Rode VideoMic NTG' },
+        ],
       },
       {
         name: 'camera accessories',
@@ -250,6 +257,7 @@ export const uses = [
           { name: 'Microsoft Edge' },
           { name: 'FreeFileSync' },
           { name: 'f.lux' },
+          { name: 'iZotope RX 8' },
         ],
       },
       {
@@ -266,6 +274,9 @@ export const uses = [
           { name: 'Pixelmator Pro' },
           { name: 'DevSwatch' },
           { name: 'IINA' },
+          { name: 'Hidden Bar' },
+          { name: 'Karabiner-Elements' },
+          { name: 'Muzzle' },
         ],
       },
       {
