@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 dayjs.extend(relativeTime);
 
 const Cip2021Page = () => {
-  const currentTime = dayjs(currentTime);
+  const currentTime = dayjs();
   const releaseTime = dayjs(1621566000000);
 
   return (
