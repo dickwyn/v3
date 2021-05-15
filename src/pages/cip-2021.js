@@ -15,7 +15,7 @@ const Cip2021Page = () => {
       className="cip-2021"
       mainTitle="Code in Place 2021 - Section 183"
       mainHeroImage="P1003265"
-      mainHeroImageAlt=""
+      mainHeroImageAlt="dickwyn's code in place 2021 desk setup for teaching sections"
       mainHeroImageObjectFit="cover"
       mainHeroImageObjectPosition="0 38%"
       mainHeroImageTall={true}
