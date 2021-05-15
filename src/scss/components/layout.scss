@@ -77,6 +77,15 @@ main {
     }
   }
 
+  &.cip-2021 {
+    .title-container {
+      h1 {
+        color: var(--white);
+        text-shadow: 2px 2px 0px var(--text-secondary), 5px 4px 0px rgba(0,0,0,0.15);
+      }
+    }
+  }
+
   @media (max-width: $tablet-breakpoint) {
     .title-container {
       max-width: 100%;
