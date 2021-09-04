@@ -9,6 +9,9 @@ export const uses = [
         name: 'Breadband Wallet',
         attributeList: [
           {
+            name: 'Tile Slim (2020)',
+          },
+          {
             name: 'Check out other wallets that I like',
             url: 'https://youtu.be/LNc06yF3IAQ',
           },
@@ -19,14 +22,15 @@ export const uses = [
         ],
       },
       {
-        name: 'Hedley & Bennett Wake Up & Fight Mask',
-        url: 'https://www.hedleyandbennett.com/products/wake-up-and-fight-mask',
+        name: 'Powecom KN95 Respirator Face Mask',
+        url: 'https://bonafidemasks.com/Powecom-kn-95/',
         attributeList: [
           {
-            name: "Something for this new normal that we're living in.",
+            name: 'I pair it with these Ursa Maskies for all-day comfort',
+            url: 'https://smile.amazon.com/gp/product/B08NXG8DD8?psc=1',
           },
           {
-            name: 'Check out my video review',
+            name: 'Previous using the Hedley & Bennett Wake Up and Fight Mask',
             url: 'https://youtu.be/Yc53Yg2xY6Y',
           },
         ],
@@ -53,28 +57,14 @@ export const uses = [
         ],
       },
       {
-        name: 'Samsung Galaxy Watch Active2 44mm LTE',
+        name: 'Samsung Galaxy Watch4',
         attributeList: [
+          { name: '44mm Silver' },
           { name: 'AVOD 22mm Nylon Sport Band', url: 'https://amazon.com/gp/product/B085Q3B2QG' },
           {
-            name:
-              "I don't actually use the LTE, got it over the bluetooth version because of the stainless steel casing.",
+            name: 'Check out my unboxing and first impressions',
+            url: 'https://youtu.be/bt294ldaSS4',
           },
-          {
-            name: 'RIP to my old 40mm Galaxy Watch Active2',
-            url: 'https://www.youtube.com/watch?v=m2LrdIIIhEI',
-          },
-        ],
-      },
-      {
-        name: 'iPad Pro 11-inch (2nd generation)',
-        attributeList: [
-          { name: 'Apple Pencil 2' },
-          {
-            name: 'Zugu Case The Alpha Case',
-            url: 'https://www.zugucase.com/the-alpha-case-2020-ipad-pro-11-2nd-gen-new-model/',
-          },
-          { name: 'I use this primarily for note taking and visualizing programming problems.' },
         ],
       },
       {
@@ -89,7 +79,7 @@ export const uses = [
         name: 'Roav Sunglasses',
         url: 'https://roaveyewear.com/collections/origin-series/products/freddy-black-moonrise',
         attributeList: [
-          { name: 'I have the Freddy frame/shape in Black/Sunrise colorway' },
+          { name: 'Freddy frame/shape in Black/Sunrise colorway.' },
           { name: 'These are durable, lightweight and folds into my pocket.' },
         ],
       },
@@ -116,21 +106,73 @@ export const uses = [
               },
             ],
           },
-          { name: 'Ikea BEKANT desk corner desk-right' },
-          { name: 'Dell U2415 24-inch Monitor' },
+          {
+            name: 'iPad Pro 11-inch (2nd generation)',
+            attributeList: [
+              { name: 'Apple Pencil 2' },
+              {
+                name: 'Zugu Case The Alpha Case',
+                url: 'https://www.zugucase.com/the-alpha-case-2020-ipad-pro-11-2nd-gen-new-model/',
+              },
+              {
+                name: 'I use this primarily for note taking and visualizing programming problems.',
+              },
+            ],
+          },
+          {
+            name: 'Uplift V2 Standing Desk',
+            attributeList: [
+              { name: '72"x30" Whiteboard Laminate' },
+              { name: 'V2 C-Frame - Black' },
+              { name: 'Advanced Comfort Keypad - Black' },
+            ],
+          },
+          {
+            name: 'Dell U2720Q 27-inch Monitor',
+            attributeList: [
+              {
+                name: 'Upgraded from my trusty Dell U2415',
+                url: 'https://twitter.com/dickwyn/status/1433207786528075781',
+              },
+              {
+                name: 'I got this so that I can natively master/edit my YouTube videos on this 10-bit 4K panel',
+              },
+            ],
+          },
           {
             name: 'BenQ ScreenBar Plus',
             url: 'https://www.benq.com/en-us/lamps/computer-desklamp/screenbar-plus.html',
           },
-          { name: 'Rain Design iLevel2' },
-          { name: 'AmazonBasics Computer Speakers' },
+          {
+            name: 'Amazon Basics Single Monitor Stand',
+            attributeList: [
+              { name: 'Paired with an Amazon Basics Notebook Laptop Stand Arm Mount Tray' },
+              { name: 'I use this to prop up my laptop' },
+            ],
+          },
+          {
+            name: 'PreSonus Eris E3.5 studio monitors',
+            attributeList: [
+              { name: 'I have these sitting on top of sound isolation pads from Sound Addicted' },
+            ],
+          },
           { name: 'Logitech MX Anywhere 3' },
           {
             name: 'Happy Hacking Keyboard (HHKB) Professional HYBRID Type-S',
             url: 'https://happyhackingkb.com/',
+            attributeList: [
+              {
+                name: 'KBDFans Blank White and Gray PBT Keycaps',
+                url: 'https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=6809',
+              },
+            ],
           },
           { name: 'DaVinci Resolve Speed Editor' },
-          { name: 'LTT Northern Lights Desk Pad (1000mm x 600mm)' },
+          // { name: 'LTT Northern Lights Desk Pad (1000mm x 600mm)' },
+          {
+            name: 'Samsung Wireless Charger Pad 9W',
+            attributeList: [{ name: 'Charges both my smartwatch and smartphone' }],
+          },
           { name: 'Tripp Lite 10 Outlet Surge Protector' },
           { name: 'Anker 40W 5-port USB Wall Charger' },
           { name: 'BackJoy SitSmart Posture Plus Seat' },
@@ -140,14 +182,23 @@ export const uses = [
         name: 'youtube setup',
         list: [
           {
-            name: 'Panasonic Lumix DC-G9',
+            name: 'Panasonic Lumix DC-G9 (A-Camera)',
             attributeList: [
               { name: 'Sigma 18-35mm f/1.8 for Canon EF' },
               { name: 'Viltrox EF-M2 II' },
+              { name: 'SmallRig Lens Adapter Support' },
+              { name: '128GB SanDisk Extreme PRO SD Card' },
+              { name: 'SmallRig Cage (2125)' },
+              { name: 'Portkeys P6' },
+              { name: 'Ace Camera Mounting Plate' },
+            ],
+          },
+          {
+            name: 'Panasonic Lumix DC-G7 (B-Camera)',
+            attributeList: [
+              { name: 'Olympus 12-40mm f/2.8 PRO' },
               { name: '128GB SanDisk Extreme PRO SD Card' },
               { name: 'Manfrotto 200PL Quick Release Plate' },
-              { name: 'Portkeys P6' },
-              { name: 'NICEYRIG Multipurpose Camera Base Plate' },
             ],
           },
           {
@@ -156,14 +207,26 @@ export const uses = [
               { name: '64GB SanDisk Extreme SD Card' },
               { name: 'Rode NTG5' },
               { name: 'Sony MDR-7506' },
-              { name: 'Anker PowerCore Slim 10000 PD' },
+              { name: 'Ikea Ladda AA 2450mAh' },
             ],
+          },
+          {
+            name: 'Sachtler Ace M System Black Edition with Tripod & Mid-Level Spreader',
           },
           {
             name: 'Manfrotto Element Traveller Tripod',
             attributeList: [
               { name: 'Manfrotto XPRO Fluid Head' },
               { name: 'Tri-Wheel Leveling Base with Bubble Level' },
+            ],
+          },
+          {
+            name: 'Desview T2 Teleprompter',
+            attributeList: [
+              {
+                name: 'My secret to speaking naturally in front of the camera',
+                url: 'https://youtu.be/KqPJ82diq-g',
+              },
             ],
           },
           {
@@ -177,16 +240,30 @@ export const uses = [
             name: 'Aputure MC RGBWW LED Light',
           },
           {
+            name: 'Aputure Accent B7c LED RGBWW Light',
+          },
+          {
             name: 'GVM 480LS Bi-color LED Light',
           },
           { name: 'Elvid 9-Section Acrylic Production Slate with Color Clapper Sticks' },
           { name: 'X-Rite ColorChecker Passport Video' },
+          {
+            name: 'Sure-Max Pro Economy Moving Blanket',
+            attributeList: [{ name: 'I use this for sound treating a room' }],
+          },
         ],
       },
       {
         name: 'storage',
         sort: true,
-        list: [{ name: '500GB Samsung T5 SSD' }, { name: '5TB Western Digital My Passport Ultra' }],
+        list: [
+          {
+            name: '2TB Samsung T5 SSD',
+            attributeList: [{ name: "This drive mirrors the files on my MacBook Pro's SSD" }],
+          },
+          { name: '500GB Samsung T5 SSD' },
+          { name: '5TB Western Digital My Passport Ultra' },
+        ],
       },
       {
         name: 'camera',
@@ -199,7 +276,6 @@ export const uses = [
         list: [
           { name: 'Canon 50mm f/1.4 FD' },
           { name: 'Helios 44-2 58mm f/2.0' },
-          { name: 'Olympus 12-40mm f/2.8 PRO' },
           { name: 'Panasonic 7-14mm f/4.0' },
         ],
       },
@@ -211,6 +287,8 @@ export const uses = [
           { name: 'Tascam DR-10L' },
           { name: 'Zoom H1' },
           { name: 'Rode VideoMic NTG' },
+          { name: 'Deity W.Lav Pro' },
+          { name: 'Bubblebee Industries Lav Concealer' },
         ],
       },
       {
@@ -227,6 +305,9 @@ export const uses = [
           { name: 'Rycote Undercover with Stickies' },
           { name: 'Bongo Ties' },
           { name: 'Robo-Grip Pliers' },
+          { name: 'Spring 1/4" Glow-in-The-Dark', url: 'https://www.getsprig.co' },
+          { name: 'Pancro Professional Lens Cleaner' },
+          { name: 'Kimtech Kimwipes Delicate Task Wipers' },
         ],
       },
     ],
@@ -247,12 +328,10 @@ export const uses = [
           { name: 'Google Chrome' },
           { name: 'Malwarebytes' },
           { name: 'Microsoft Office' },
-          { name: 'Notion' },
           { name: 'Spotify' },
           { name: 'Visual Studio Code' },
           { name: 'WhatsApp' },
           { name: 'Logi Options' },
-          { name: 'Audacity' },
           { name: 'Microsoft To Do' },
           { name: 'Microsoft Edge' },
           { name: 'FreeFileSync' },
@@ -312,6 +391,7 @@ export const uses = [
           { name: 'Save to Pocket' },
           { name: 'The Camelizer' },
           { name: 'ClearURLs' },
+          { name: 'Honey' },
         ],
       },
       {
