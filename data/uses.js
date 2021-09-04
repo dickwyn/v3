@@ -131,11 +131,11 @@ export const uses = [
             name: 'Dell U2720Q 27-inch Monitor',
             attributeList: [
               {
-                name: 'Upgraded from my trusty Dell U2415',
+                name: 'Upgraded from my trusty Dell U2415.',
                 url: 'https://twitter.com/dickwyn/status/1433207786528075781',
               },
               {
-                name: 'I got this so that I can natively master/edit my YouTube videos on this 10-bit 4K panel',
+                name: 'I got this so that I can natively master/edit my YouTube videos on this 10-bit 4K panel.',
               },
             ],
           },
@@ -146,14 +146,14 @@ export const uses = [
           {
             name: 'Amazon Basics Single Monitor Stand',
             attributeList: [
-              { name: 'Paired with an Amazon Basics Notebook Laptop Stand Arm Mount Tray' },
-              { name: 'I use this to prop up my laptop' },
+              { name: 'Paired with an Amazon Basics Notebook Laptop Stand Arm Mount Tray.' },
+              { name: 'I use this to prop up my laptop.' },
             ],
           },
           {
             name: 'PreSonus Eris E3.5 studio monitors',
             attributeList: [
-              { name: 'I have these sitting on top of sound isolation pads from Sound Addicted' },
+              { name: 'I have these sitting on top of sound isolation pads from Sound Addicted.' },
             ],
           },
           { name: 'Logitech MX Anywhere 3' },
@@ -171,7 +171,7 @@ export const uses = [
           // { name: 'LTT Northern Lights Desk Pad (1000mm x 600mm)' },
           {
             name: 'Samsung Wireless Charger Pad 9W',
-            attributeList: [{ name: 'Charges both my smartwatch and smartphone' }],
+            attributeList: [{ name: 'Charges both my smartwatch and smartphone.' }],
           },
           { name: 'Tripp Lite 10 Outlet Surge Protector' },
           { name: 'Anker 40W 5-port USB Wall Charger' },
@@ -224,7 +224,7 @@ export const uses = [
             name: 'Desview T2 Teleprompter',
             attributeList: [
               {
-                name: 'My secret to speaking naturally in front of the camera',
+                name: 'My secret to speaking naturally in front of the camera.',
                 url: 'https://youtu.be/KqPJ82diq-g',
               },
             ],
@@ -232,8 +232,8 @@ export const uses = [
           {
             name: 'Godox VL150 LED Video Light',
             attributeList: [
-              { name: 'I use this as my main key light' },
               { name: 'Glow EZ Lock Deep Parabolic Quick Softbox (28")' },
+              { name: 'I use this as my main key light.' },
             ],
           },
           {
@@ -249,7 +249,7 @@ export const uses = [
           { name: 'X-Rite ColorChecker Passport Video' },
           {
             name: 'Sure-Max Pro Economy Moving Blanket',
-            attributeList: [{ name: 'I use this for sound treating a room' }],
+            attributeList: [{ name: 'I use this for sound treating a room.' }],
           },
         ],
       },
@@ -259,7 +259,7 @@ export const uses = [
         list: [
           {
             name: '2TB Samsung T5 SSD',
-            attributeList: [{ name: "This drive mirrors the files on my MacBook Pro's SSD" }],
+            attributeList: [{ name: "This drive mirrors the files on my MacBook Pro's SSD." }],
           },
           { name: '500GB Samsung T5 SSD' },
           { name: '5TB Western Digital My Passport Ultra' },
