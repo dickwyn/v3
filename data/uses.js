@@ -48,11 +48,11 @@ export const uses = [
         ],
       },
       {
-        name: 'Samsung Galaxy S10+',
+        name: 'Samsung Galaxy S22 Ultra',
         attributeList: [
           {
-            name: 'dbrand Kind of Purple skin',
-            url: 'https://dbrand.com/shop/samsung-galaxy-s10-plus-skins',
+            name: 'Check out my first impressions video',
+            url: 'https://youtu.be/hxbOaLf4sRA',
           },
         ],
       },
@@ -60,10 +60,13 @@ export const uses = [
         name: 'Samsung Galaxy Watch4',
         attributeList: [
           { name: '44mm Silver' },
-          { name: 'AVOD 22mm Nylon Sport Band', url: 'https://amazon.com/gp/product/B085Q3B2QG' },
           {
-            name: 'Check out my unboxing and first impressions',
-            url: 'https://youtu.be/bt294ldaSS4',
+            name: 'DaQin Stretchy Nylon Band (Plum)',
+            url: 'https://amazon.com/gp/product/B09JW6W84L',
+          },
+          {
+            name: 'Watch my full review of this smartwatch',
+            url: 'https://youtu.be/ZN9mA3_JG7E',
           },
         ],
       },
@@ -127,6 +130,8 @@ export const uses = [
               { name: 'Advanced Comfort Keypad - Black' },
             ],
           },
+          { name: 'Herman Miller Aeron' },
+          { name: 'Elgato Wave Panels' },
           {
             name: 'Dell U2720Q 27-inch Monitor',
             attributeList: [
@@ -165,36 +170,48 @@ export const uses = [
                 name: 'KBDFans Blank White and Gray PBT Keycaps',
                 url: 'https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=6809',
               },
+              {
+                name: 'Check out my full review of this keyboard',
+                url: 'https://youtu.be/jG-0pFJ1oNE',
+              },
             ],
           },
+          {
+            name: 'Stack Overflow The Key Macropad',
+            url: 'https://drop.com/buy/stack-overflow-the-key-macropad',
+          },
           { name: 'DaVinci Resolve Speed Editor' },
-          // { name: 'LTT Northern Lights Desk Pad (1000mm x 600mm)' },
           {
             name: 'Samsung Wireless Charger Pad 9W',
             attributeList: [{ name: 'Charges both my smartwatch and smartphone.' }],
           },
           { name: 'Tripp Lite 10 Outlet Surge Protector' },
           { name: 'Anker 40W 5-port USB Wall Charger' },
-          { name: 'BackJoy SitSmart Posture Plus Seat' },
         ],
       },
       {
         name: 'youtube setup',
         list: [
           {
-            name: 'Panasonic Lumix DC-G9 (A-Camera)',
+            name: 'Sony a7 IV (A-Camera)',
             attributeList: [
-              { name: 'Sigma 18-35mm f/1.8 for Canon EF' },
+              { name: 'Sigma 24-70mm f/2.8 DG DN (Sony E)' },
+              { name: '256GB ProGrade Digital V60 SD Card' },
+            ],
+          },
+          {
+            name: 'Panasonic Lumix G9 (B-Camera)',
+            attributeList: [
+              { name: 'Sigma 18-35mm f/1.8 DC (Canon EF)' },
               { name: 'Viltrox EF-M2 II' },
               { name: 'SmallRig Lens Adapter Support' },
               { name: '128GB SanDisk Extreme PRO SD Card' },
               { name: 'SmallRig Cage (2125)' },
               { name: 'Portkeys P6' },
-              { name: 'Ace Camera Mounting Plate' },
             ],
           },
           {
-            name: 'Panasonic Lumix DC-G7 (B-Camera)',
+            name: 'Panasonic Lumix GH4 (C-Camera)',
             attributeList: [
               { name: 'Olympus 12-40mm f/2.8 PRO' },
               { name: '128GB SanDisk Extreme PRO SD Card' },
@@ -285,7 +302,7 @@ export const uses = [
         list: [
           { name: 'Rode VideoMicro' },
           { name: 'Tascam DR-10L' },
-          { name: 'Zoom H1' },
+          { name: 'Tentacle Sync Track E' },
           { name: 'Rode VideoMic NTG' },
           { name: 'Deity W.Lav Pro' },
           { name: 'Bubblebee Industries Lav Concealer' },
@@ -308,6 +325,7 @@ export const uses = [
           { name: 'Spring 1/4" Glow-in-The-Dark', url: 'https://www.getsprig.co' },
           { name: 'Pancro Professional Lens Cleaner' },
           { name: 'Kimtech Kimwipes Delicate Task Wipers' },
+          { name: 'Tentacle Sync E Timecode Generator' },
         ],
       },
     ],
@@ -323,7 +341,6 @@ export const uses = [
         list: [
           { name: 'Affinity Photo' },
           { name: 'Davinci Resolve Studio' },
-          { name: 'Dropbox' },
           { name: 'Figma' },
           { name: 'Google Chrome' },
           { name: 'Malwarebytes' },
@@ -392,6 +409,8 @@ export const uses = [
           { name: 'The Camelizer' },
           { name: 'ClearURLs' },
           { name: 'Honey' },
+          { name: 'Return YouTube Dislike' },
+          { name: 'SponsorBlock for YouTube' },
         ],
       },
       {
@@ -408,6 +427,7 @@ export const uses = [
           { name: 'Prettier' },
           { name: 'Rainglow' },
           { name: 'Todo Tree' },
+          { name: 'Quokka.js' },
         ],
       },
     ],
