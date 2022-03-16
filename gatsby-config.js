@@ -16,6 +16,13 @@ module.exports = {
       options: {
         trackingIds: [`${process.env.GA4_TRACKING_ID}`],
       },
+      gtagConfig: {
+        anonymize_ip: true,
+      },
+      pluginConfig: {
+        head: true,
+        respectDNT: true,
+      },
     },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
