@@ -1,5 +1,5 @@
-import React from 'react';
 import Layout from '../components/layout';
+import React from 'react';
 
 const ThingsPage = () => {
   return (
@@ -31,6 +31,12 @@ const ThingsPage = () => {
             </li>
             <li>
               <a href="https://www.theverge.com">The Verge</a>
+            </li>
+            <li>
+              <a href="https://www.cbc.ca/news/marketplace">CBC Marketplace</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/c/KaiManWong/videos">Kai W</a>
             </li>
           </ul>
         </div>

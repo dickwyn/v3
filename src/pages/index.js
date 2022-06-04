@@ -1,5 +1,5 @@
-import React from 'react';
 import Layout from '../components/layout';
+import React from 'react';
 
 const IndexPage = () => (
   <Layout hideFooter invisible className="homepage">
@@ -23,9 +23,9 @@ const IndexPage = () => (
         </div>
         <div className="description">
           <p>
-            i'm a frontend engineer at{' '}
-            <a href="https://clairvoyantsoft.com" target="_blank" rel="noopener noreferrer">
-              Clairvoyant
+            i'm a software engineer at{' '}
+            <a href="https://microsoft.com" target="_blank" rel="noopener noreferrer">
+              Microsoft
             </a>
           </p>
           <p>
@@ -39,7 +39,7 @@ const IndexPage = () => (
             <a href="https://www.youtube.com/dickwyn" target="_blank" rel="noopener noreferrer">
               YouTube
             </a>{' '}
-            channel about how technology gets applied in everyday life
+            channel about how technology gets applied in my everyday life
           </p>
           <p>
             my weekly schedule minus sleeping comprises 20% coding, 10% meetings, 10% cooking, 30%
@@ -47,9 +47,6 @@ const IndexPage = () => (
           </p>
           <p>
             i like consumer technology, airplanes, photography and eating + cooking chicken rice
-          </p>
-          <p>
-            see what i'm doing <a href="https://now.dickwyn.xyz">now</a>
           </p>
         </div>
       </div>
