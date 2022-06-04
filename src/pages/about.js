@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'gatsby';
 import Layout from '../components/layout';
+import { Link } from 'gatsby';
+import React from 'react';
 
 const AboutPage = () => {
   return (
@@ -55,15 +55,13 @@ const AboutPage = () => {
             </span>
             Places
           </h3>
-          <p>
-            I am currently based in Tempe, Arizona just south of ASU's Tempe campus where i
-            completed my bachelor's degree in computer science.
-          </p>
+          <p>I am currently based in Redmond Washington.</p>
           <p>
             Places that I have previously lived, it's not a huge list but I hope to expand it as the
             time goes by:
           </p>
           <ul>
+            <li>Tempe, Arizona, USA</li>
             <li>Recife, Pernambuco, Brazil</li>
             <li>Sandwich, Massachusetts, USA</li>
             <li>Shenzhen, Guangdong, China</li>
