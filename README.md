@@ -1,4 +1,4 @@
-# [dickwyn.xyz](https://dickwyn.xyz/) [![Netlify](https://img.shields.io/netlify/55ea29f3-f556-45b2-8607-e57839dcfb2f)](https://app.netlify.com/sites/v5-dickwyn-xyz/deploys)
+# dickwyn.xyz v3 [![Netlify](https://img.shields.io/netlify/55ea29f3-f556-45b2-8607-e57839dcfb2f)](https://app.netlify.com/sites/v5-dickwyn-xyz/deploys)
 
 My personal website and blog. This is the first time I'm combining my portfolio and blog into the same site. For as long as I can remember, I have always had my blog on a separate site/service.
 
